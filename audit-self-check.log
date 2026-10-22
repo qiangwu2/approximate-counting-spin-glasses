@@ -1,0 +1,8 @@
+custom_axiom: REJECTED AS EXPECTED
+/var/folders/ky/zjvmj7g94_974tw6lq_gpzvc0000gn/T/manuscript-axiom-audit-65wurimz/custom_axiom.lean:13:0: error: Disallowed axiom Manuscript.AuditFixture.bogus in Manuscript.AuditFixture.bogus
+public_placeholder: REJECTED AS EXPECTED
+/var/folders/ky/zjvmj7g94_974tw6lq_gpzvc0000gn/T/manuscript-axiom-audit-65wurimz/public_placeholder.lean:13:0: error: Disallowed axiom sorryAx in Manuscript.AuditFixture.bogus
+private_placeholder: REJECTED AS EXPECTED
+/var/folders/ky/zjvmj7g94_974tw6lq_gpzvc0000gn/T/manuscript-axiom-audit-65wurimz/private_placeholder.lean:13:0: error: Disallowed axiom sorryAx in _private._stdin.0.Manuscript.AuditFixture.bogus
+outside_namespace_axiom: REJECTED AS EXPECTED
+/var/folders/ky/zjvmj7g94_974tw6lq_gpzvc0000gn/T/manuscript-axiom-audit-65wurimz/outside_namespace_axiom.lean:13:0: error: Disallowed axiom UnrelatedNamespace.bogus in UnrelatedNamespace.bogus

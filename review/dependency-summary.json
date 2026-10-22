@@ -1,0 +1,20 @@
+{
+  "status": "PASSED",
+  "roots": 8,
+  "summaries": [
+    "CLOSURE Manuscript.theorem_1_1_higher_primitive; total=45030; local=2075; axioms=[Quot.sound,",
+    "CLOSURE Manuscript.theorem_1_1_sk_primitive; total=58018; local=6133; axioms=[propext,",
+    "CLOSURE Manuscript.proposition_5_2_higher_primitive; total=44220; local=1816; axioms=[propext,",
+    "CLOSURE Manuscript.proposition_5_2_sk_primitive; total=57408; local=5861; axioms=[propext,",
+    "CLOSURE Manuscript.HigherOrderCorollaries.relative_counting; total=43921; local=1100; axioms=[propext,",
+    "CLOSURE Manuscript.HigherOrderCorollaries.polynomial_confidence; total=43952; local=1107; axioms=[propext,",
+    "CLOSURE Manuscript.SKCorollaries.relative_counting; total=54320; local=2583; axioms=[propext,",
+    "CLOSURE Manuscript.SKCorollaries.polynomial_confidence; total=54324; local=2589; axioms=[propext,"
+  ],
+  "allowed_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "unsafe_or_missing_dependencies": []
+}

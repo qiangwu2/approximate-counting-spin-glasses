@@ -1,0 +1,1114 @@
+Manuscript.ConditionalLowerTail.exponent_eq_inv_sqrt_sub_one {θ : ℝ} (hθ : 0 < θ) :
+  Manuscript.ConditionalLowerTail.exponent θ = (√θ)⁻¹ - 1
+Manuscript.ConditionalLowerTail.reverse_hypercontractivity.{u_2} {E : Type u_2} [Fintype E] [DecidableEq E] {θ q s : ℝ}
+  (hq : 0 < q) (hq1 : q < 1) (hs : 0 < s) (hθ : 0 < θ) (hparam : θ ≤ (1 - q) / (1 + s)) (f : (E → Bool) → ℝ)
+  (hf : ∀ (η : E → Bool), 0 < f η) :
+  (SpinGlass.Expansion.spinMean fun η => f η ^ q) ^ (1 / q) ≤
+    (SpinGlass.Expansion.spinMean fun η => SpinGlass.Noise.cubeNoise θ f η ^ (-s)) ^ (1 / -s)
+Manuscript.CurrentCutoff.lemma_5_1 (P : ℕ) {kapMin A c1 CΛ : ℝ} (hkapMin : 0 < kapMin) (hA : 1 ≤ A) (hc1 : 0 < c1)
+  (hCΛ : 1 ≤ CΛ) :
+  0 < Manuscript.Cutoffs.gamma kapMin A ∧
+    Manuscript.Cutoffs.gamma kapMin A < 1 / 4 ∧
+      0 < Manuscript.Cutoffs.nu kapMin A c1 ∧
+        P ≤ Manuscript.Cutoffs.sizeThreshold P kapMin A ∧
+          ∀ (N : ℕ) (kap u : ℝ),
+            Manuscript.Cutoffs.sizeThreshold P kapMin A ≤ N →
+              kapMin ≤ kap →
+                0 < u →
+                  u < 1 →
+                    CΛ * Real.exp (-Manuscript.Cutoffs.nu kapMin A c1 * ↑N) < u →
+                      ∃ k < ⌊Manuscript.Cutoffs.gamma kapMin A * ↑N⌋₊,
+                        Real.exp (-SpinGlass.CutoffTail.phi kap A ↑N ↑(k + 1)) ≤ u / CΛ ∧
+                          (∀ (t : ℝ),
+                              1 ≤ t →
+                                0 < Manuscript.Cutoffs.workConstant kapMin A t ∧
+                                  ∑ j ∈ Finset.range (k + 1), ↑(N.choose j) * t ^ j ≤
+                                    (↑N + 1) * (CΛ / u) ^ Manuscript.Cutoffs.workConstant kapMin A t) ∧
+                            (Manuscript.CutoffExecution.cutoffSearch kapMin kap A N (Real.log (CΛ / u))).found =
+                                some (k + 1) ∧
+                              (Manuscript.CutoffExecution.cutoffSearch kapMin kap A N (Real.log (CΛ / u))).operations ≤
+                                10 * N + 3
+Manuscript.DisorderOrthogonality.graphWeight_pair_integral.{u_1, u_2} {V : Type u_1} {E : Type u_2} [Fintype V]
+  [DecidableEq V] [Fintype E] [DecidableEq E] (μ : MeasureTheory.Measure ℝ) [MeasureTheory.IsProbabilityMeasure μ]
+  (hμ : SpinGlass.Disorder.SymmetricLaw μ) (incidence : E → Finset V) (h : ℝ) (a : E → ℝ) (Γ Γ' : Finset E) :
+  ∫ (J : E → ℝ),
+      Manuscript.DisorderOrthogonality.graphWeight incidence h a Γ J *
+        Manuscript.DisorderOrthogonality.graphWeight incidence h a Γ' J ∂SpinGlass.Disorder.iidLaw μ =
+    if Γ = Γ' then
+      Real.tanh h ^ (2 * (Manuscript.FieldExpansion.boundary incidence Γ).card) *
+        ∏ e ∈ Γ, SpinGlass.Disorder.secondMoment μ (a e)
+    else 0
+Manuscript.DisorderOrthogonality.independent_coefficients_second_moment.{u_1, u_2, u_3} {V : Type u_1} {E : Type u_2}
+  {Ω : Type u_3} [Fintype V] [DecidableEq V] [Fintype E] [DecidableEq E] [MeasurableSpace Ω]
+  (μ : MeasureTheory.Measure ℝ) [MeasureTheory.IsProbabilityMeasure μ] (hμ : SpinGlass.Disorder.SymmetricLaw μ)
+  (P : MeasureTheory.Measure Ω) [MeasureTheory.IsProbabilityMeasure P] (incidence : E → Finset V) (h : ℝ) (a : E → ℝ)
+  (A : Finset (Finset E)) (c : Ω → Finset E → ℝ) (hc : ∀ Γ ∈ A, Measurable fun ω => c ω Γ)
+  (hcsq : ∀ Γ ∈ A, MeasureTheory.Integrable (fun ω => c ω Γ ^ 2) P) :
+  ∫ (ωJ : Ω × (E → ℝ)),
+      (∑ Γ ∈ A, c ωJ.1 Γ * Manuscript.DisorderOrthogonality.graphWeight incidence h a Γ ωJ.2) ^
+        2 ∂P.prod (SpinGlass.Disorder.iidLaw μ) =
+    ∑ Γ ∈ A,
+      (∫ (ω : Ω), c ω Γ ^ 2 ∂P) * Real.tanh h ^ (2 * (Manuscript.FieldExpansion.boundary incidence Γ).card) *
+        ∏ e ∈ Γ, SpinGlass.Disorder.secondMoment μ (a e)
+Manuscript.DisorderOrthogonality.monomial_pair_integral.{u_2} {E : Type u_2} [Fintype E] [DecidableEq E]
+  (μ : MeasureTheory.Measure ℝ) [MeasureTheory.IsProbabilityMeasure μ] (hμ : SpinGlass.Disorder.SymmetricLaw μ)
+  (a : E → ℝ) (Γ Γ' : Finset E) :
+  ∫ (J : E → ℝ), SpinGlass.Disorder.monomial a Γ J * SpinGlass.Disorder.monomial a Γ' J ∂SpinGlass.Disorder.iidLaw μ =
+    if Γ = Γ' then ∏ e ∈ Γ, SpinGlass.Disorder.secondMoment μ (a e) else 0
+Manuscript.DisorderOrthogonality.physical_retained_family_error (μ : MeasureTheory.Measure ℝ)
+  [MeasureTheory.IsProbabilityMeasure μ] (hμ : SpinGlass.Disorder.SymmetricLaw μ) (N : ℕ) (P : Finset ℕ) (a : ℕ → ℝ)
+  (beta h : ℝ) (keep : Finset (Manuscript.Model.Edge N P) → Prop) [DecidablePred keep] :
+  ∫ (J : Manuscript.Model.Edge N P → ℝ),
+      (Manuscript.Model.normalizedPartition N P a beta h J -
+          ∑ Γ ∈ Finset.univ.powerset with keep Γ,
+            Manuscript.DisorderOrthogonality.graphWeight Subtype.val h
+              (Manuscript.DisorderOrthogonality.physicalScale N P a beta) Γ J) ^
+        2 ∂SpinGlass.Disorder.iidLaw μ =
+    ∑ Γ ∈ Finset.univ.powerset with ¬keep Γ,
+      Real.tanh h ^ (2 * (Manuscript.FieldExpansion.boundary Subtype.val Γ).card) *
+        ∏ e ∈ Γ, SpinGlass.Disorder.secondMoment μ (Manuscript.DisorderOrthogonality.physicalScale N P a beta e)
+Manuscript.HigherFieldExponent.selectedKappa_zero (N : ℕ) (rho : ℝ) {p : ℝ} (hp : 0 < p) :
+  Manuscript.HigherFieldExponent.selectedKappa N rho p 0 = (p - 2) / p
+Manuscript.HigherOrderAlgorithm.mse_bound (μ : MeasureTheory.Measure ℝ) [MeasureTheory.IsProbabilityMeasure μ]
+  (hμ : SpinGlass.Disorder.SymmetricLaw μ) (hunit : SpinGlass.Disorder.UnitSecondMoment μ) (N : ℕ) (P : Finset ℕ)
+  (a : ℕ → ℝ) (hP : P.Nonempty) (ha : ∀ p ∈ P, 0 < a p) (pmin : ℝ) (hpmin : 3 ≤ pmin) (horders : ∀ p ∈ P, pmin ≤ ↑p)
+  (pmax : ℕ) (hmax : ∀ p ∈ P, p ≤ pmax) (hpN : ∀ p ∈ P, p ≤ N) {beta B h rho u : ℝ} (hbeta : 0 ≤ beta)
+  (hbetaB : beta ≤ B) (hB : 0 < B) (hBT : B < Manuscript.MixedThreshold.betaF P a)
+  (hfield : |h| ≤ rho * ↑N ^ (-(1 / 4))) (hu : 0 < u) (hu1 : u < 1) :
+  ∫ (J : Manuscript.Model.Edge N P → ℝ),
+      (Manuscript.Model.normalizedPartition N P a beta h J -
+          (Manuscript.HigherOrderAlgorithm.run N pmax P a B rho pmin beta h u J).value) ^
+        2 ∂SpinGlass.Disorder.iidLaw μ ≤
+    u
+Manuscript.HigherOrderCorollaries.polynomial_confidence (P : Finset ℕ) (a : ℕ → ℝ) (hP : P.Nonempty)
+  (ha : ∀ p ∈ P, 0 < a p) (hp : ∀ p ∈ P, 3 ≤ p) {B rho b : ℝ} (hB : 0 < B)
+  (hBT : B < Manuscript.MixedThreshold.betaF P a) (hb : 0 < b) :
+  ∃ C,
+    0 < C ∧
+      ∀ (μ : MeasureTheory.Measure ℝ),
+        MeasureTheory.IsProbabilityMeasure μ →
+          SpinGlass.Disorder.SymmetricLaw μ →
+            SpinGlass.Disorder.UnitSecondMoment μ →
+              ∀ (m : ℝ),
+                2 * (↑(P.min' hP) + b) / (↑(P.min' hP) - 1) ≤ m →
+                  MeasureTheory.Integrable (fun x => |x| ^ m) μ →
+                    ∀ᶠ (N : ℕ) in Filter.atTop,
+                      ∀ (beta h epsilon : ℝ),
+                        0 ≤ beta →
+                          beta ≤ B →
+                            |h| ≤ rho * ↑N ^ (-(1 / 4)) →
+                              0 < epsilon →
+                                epsilon < 1 →
+                                  (SpinGlass.Disorder.iidLaw μ).real
+                                        {J |
+                                          epsilon <
+                                            |(Manuscript.HigherOrderCorollaries.confidenceExecute N P hP a B rho beta h
+                                                    epsilon b J).value -
+                                                Real.log (Manuscript.Model.partition N P a beta h J)|} ≤
+                                      ↑N ^ (-b) ∧
+                                    ∀ (J : Manuscript.Model.Edge N P → ℝ),
+                                      ↑(Manuscript.HigherOrderCorollaries.confidenceExecute N P hP a B rho beta h
+                                              epsilon b J).operations ≤
+                                        C * ↑N ^ C * epsilon ^ (-C)
+Manuscript.HigherOrderCorollaries.relative_counting (P : Finset ℕ) (a : ℕ → ℝ) (hP : P.Nonempty) (ha : ∀ p ∈ P, 0 < a p)
+  (hp : ∀ p ∈ P, 3 ≤ p) {B rho : ℝ} (hB : 0 < B) (hBT : B < Manuscript.MixedThreshold.betaF P a) :
+  ∃ C,
+    0 < C ∧
+      ∀ (μ : MeasureTheory.Measure ℝ),
+        MeasureTheory.IsProbabilityMeasure μ →
+          SpinGlass.Disorder.SymmetricLaw μ →
+            SpinGlass.Disorder.UnitSecondMoment μ →
+              ∀ (N : ℕ),
+                P.max' hP ≤ N →
+                  ∀ (beta h epsilon : ℝ),
+                    0 ≤ beta →
+                      beta ≤ B →
+                        |h| ≤ rho * ↑N ^ (-(1 / 4)) →
+                          0 < epsilon →
+                            epsilon < 1 →
+                              1 -
+                                      Manuscript.OriginalLawLowerTail.tau μ N P a B
+                                        (Manuscript.MixedThreshold.theta P a B) -
+                                    Manuscript.CountingConsequences.confidence N 1 ≤
+                                  (SpinGlass.Disorder.iidLaw μ).real
+                                    {J |
+                                      1 - epsilon ≤
+                                          (Manuscript.HigherOrderCorollaries.relativeExecute N P hP a B rho beta h
+                                                epsilon J).value /
+                                            Manuscript.Model.partition N P a beta h J ∧
+                                        (Manuscript.HigherOrderCorollaries.relativeExecute N P hP a B rho beta h epsilon
+                                                J).value /
+                                            Manuscript.Model.partition N P a beta h J ≤
+                                          1 + epsilon} ∧
+                                ∀ (J : Manuscript.Model.Edge N P → ℝ),
+                                  0 <
+                                      (Manuscript.HigherOrderCorollaries.relativeExecute N P hP a B rho beta h epsilon
+                                          J).value ∧
+                                    ↑(Manuscript.HigherOrderCorollaries.relativeExecute N P hP a B rho beta h epsilon
+                                            J).operations ≤
+                                      C * ↑N ^ C * epsilon ^ (-C)
+Manuscript.HigherOrderTail.physical_support_tail (μ : MeasureTheory.Measure ℝ) [MeasureTheory.IsProbabilityMeasure μ]
+  (hμ : SpinGlass.Disorder.SymmetricLaw μ) (hunit : SpinGlass.Disorder.UnitSecondMoment μ) (N : ℕ) (P : Finset ℕ)
+  (a : ℕ → ℝ) (hP : P.Nonempty) (ha : ∀ p ∈ P, 0 < a p) (pmin : ℝ) (hpmin : 3 ≤ pmin) (horders : ∀ p ∈ P, pmin ≤ ↑p)
+  (pmax : ℕ) (hmax : ∀ p ∈ P, p ≤ pmax) (hpN : ∀ p ∈ P, p ≤ N) {beta B h rho alpha : ℝ} (hbeta : 0 ≤ beta)
+  (hbetaB : beta ≤ B) (hB : 0 < B) (hBT : B < Manuscript.MixedThreshold.betaF P a)
+  (hfield : |h| ≤ rho * ↑N ^ (-(1 / 4))) (halpha : 1 / 4 ≤ alpha)
+  (hfieldAlpha : |Real.tanh h| ≤ max 1 rho * ↑N ^ (-alpha)) (k : ℕ)
+  (hcut :
+    k <
+      ⌊Manuscript.Cutoffs.gamma (Manuscript.SupportExponent.kappaMin pmin)
+            (Manuscript.HigherOrderTail.scale P a B rho pmin) *
+          ↑N⌋₊) :
+  ∫ (J : Manuscript.Model.Edge N P → ℝ),
+      (Manuscript.Model.normalizedPartition N P a beta h J -
+          (Manuscript.HigherOrderTail.evaluator N P a beta h k J).value) ^
+        2 ∂SpinGlass.Disorder.iidLaw μ ≤
+    2 *
+        Real.exp
+          (-SpinGlass.CutoffTail.phi (Manuscript.SupportExponent.kappa pmin alpha)
+              (Manuscript.HigherOrderTail.scale P a B rho pmin) (↑N) (↑k + 1)) +
+      Manuscript.UniformMixedMass.massConstant P a (Manuscript.MixedThreshold.betaPlus P a B ^ 2) rho *
+        Real.exp (-Manuscript.HigherOrderTail.c1 P a B rho pmin pmax * ↑N)
+Manuscript.Model.normalizedPartition_eq_graph_sum (N : ℕ) (P : Finset ℕ) (a : ℕ → ℝ) (beta h : ℝ)
+  (J : Manuscript.Model.Edge N P → ℝ) :
+  Manuscript.Model.normalizedPartition N P a beta h J =
+    ∑ Γ ∈ Finset.univ.powerset,
+      Manuscript.FieldExpansion.graphWeight Subtype.val h
+        (fun e => Real.tanh (Manuscript.Model.coefficient N P a beta J e)) Γ
+Manuscript.OriginalLawLowerTail.rawConstant_pos {beta0 θ : ℝ} (hB : 0 < beta0) (hθ : 0 < θ) (hθ1 : θ < 1) :
+  0 < Manuscript.OriginalLawLowerTail.rawConstant beta0 θ
+Manuscript.OutputMeasurability.higher_canonical_execute_measurable {N : ℕ} (hN : 0 < N) (P : Finset ℕ) (a : ℕ → ℝ)
+  (hP : P.Nonempty) (ha : ∀ p ∈ P, 0 < a p) (hp : ∀ p ∈ P, 3 ≤ p) {B rho beta h epsilon delta : ℝ} (hB : 0 < B)
+  (hBT : B < Manuscript.MixedThreshold.betaF P a) (hd : 0 < delta) :
+  Measurable fun J => (Manuscript.HigherOrderFinal.canonicalExecute N P hP a B rho beta h epsilon delta J).value
+Manuscript.OutputMeasurability.higher_failure_measurable {N : ℕ} (hN : 0 < N) (pmax : ℕ) (P : Finset ℕ) (a : ℕ → ℝ)
+  (B rho pmin beta h epsilon delta : ℝ) (hp : 0 < pmin) (hC : 0 < Manuscript.LogApprox.constant P a B rho)
+  (hd : 0 < delta) :
+  MeasurableSet
+    {J |
+      epsilon <
+        |(Manuscript.HigherOrderFinal.execute N pmax P a B rho pmin beta h epsilon delta J).value -
+            Real.log (Manuscript.Model.partition N P a beta h J)|}
+Manuscript.OutputMeasurability.higher_relative_success_measurable {N : ℕ} (hN : 0 < N) (pmax : ℕ) (P : Finset ℕ)
+  (a : ℕ → ℝ) (B rho pmin beta h epsilon delta : ℝ) (hp : 0 < pmin) (hC : 0 < Manuscript.LogApprox.constant P a B rho)
+  (hd : 0 < delta) (tolerance : ℝ) :
+  MeasurableSet
+    {J |
+      1 - tolerance ≤
+          Real.exp (Manuscript.HigherOrderFinal.execute N pmax P a B rho pmin beta h epsilon delta J).value /
+            Manuscript.Model.partition N P a beta h J ∧
+        Real.exp (Manuscript.HigherOrderFinal.execute N pmax P a B rho pmin beta h epsilon delta J).value /
+            Manuscript.Model.partition N P a beta h J ≤
+          1 + tolerance}
+Manuscript.OutputMeasurability.higher_success_measurable {N : ℕ} (hN : 0 < N) (pmax : ℕ) (P : Finset ℕ) (a : ℕ → ℝ)
+  (B rho pmin beta h epsilon delta : ℝ) (hp : 0 < pmin) (hC : 0 < Manuscript.LogApprox.constant P a B rho)
+  (hd : 0 < delta) :
+  MeasurableSet
+    {J |
+      |(Manuscript.HigherOrderFinal.execute N pmax P a B rho pmin beta h epsilon delta J).value -
+            Real.log (Manuscript.Model.partition N P a beta h J)| ≤
+        epsilon}
+Manuscript.OutputMeasurability.sk_execute_measurable {N : ℕ} (hN : 0 < N) (a : ℕ → ℝ) (ha : a 2 = 1)
+  {B rho beta h epsilon delta : ℝ} (hB : 0 < B) (hB1 : B < 1) (he : 0 < epsilon) (he1 : epsilon < 1) (hd : 0 < delta)
+  (hd1 : delta < 1) (hC : 0 < Manuscript.LogApprox.constant {2} a B rho) :
+  Measurable fun χJ => (Manuscript.SKFinal.execute N a B rho beta h epsilon delta hC hd χJ.1 χJ.2).value
+Manuscript.OutputMeasurability.sk_failure_measurable {N : ℕ} (hN : 0 < N) (a : ℕ → ℝ) (ha : a 2 = 1)
+  {B rho beta h epsilon delta : ℝ} (hB : 0 < B) (hB1 : B < 1) (he : 0 < epsilon) (he1 : epsilon < 1) (hd : 0 < delta)
+  (hd1 : delta < 1) (hC : 0 < Manuscript.LogApprox.constant {2} a B rho) :
+  MeasurableSet
+    {χJ |
+      epsilon <
+        |(Manuscript.SKFinal.execute N a B rho beta h epsilon delta hC hd χJ.1 χJ.2).value -
+            Real.log (Manuscript.Model.partition N {2} a beta h χJ.2)|}
+Manuscript.OutputMeasurability.sk_relative_success_measurable {N : ℕ} (hN : 0 < N) (a : ℕ → ℝ) (ha : a 2 = 1)
+  {B rho beta h epsilon delta : ℝ} (hB : 0 < B) (hB1 : B < 1) (he : 0 < epsilon) (he1 : epsilon < 1) (hd : 0 < delta)
+  (hd1 : delta < 1) (hC : 0 < Manuscript.LogApprox.constant {2} a B rho) (tolerance : ℝ) :
+  MeasurableSet
+    {χJ |
+      1 - tolerance ≤
+          Real.exp (Manuscript.SKFinal.execute N a B rho beta h epsilon delta hC hd χJ.1 χJ.2).value /
+            Manuscript.Model.partition N {2} a beta h χJ.2 ∧
+        Real.exp (Manuscript.SKFinal.execute N a B rho beta h epsilon delta hC hd χJ.1 χJ.2).value /
+            Manuscript.Model.partition N {2} a beta h χJ.2 ≤
+          1 + tolerance}
+Manuscript.OutputMeasurability.sk_success_measurable {N : ℕ} (hN : 0 < N) (a : ℕ → ℝ) (ha : a 2 = 1)
+  {B rho beta h epsilon delta : ℝ} (hB : 0 < B) (hB1 : B < 1) (he : 0 < epsilon) (he1 : epsilon < 1) (hd : 0 < delta)
+  (hd1 : delta < 1) (hC : 0 < Manuscript.LogApprox.constant {2} a B rho) :
+  MeasurableSet
+    {χJ |
+      |(Manuscript.SKFinal.execute N a B rho beta h epsilon delta hC hd χJ.1 χJ.2).value -
+            Real.log (Manuscript.Model.partition N {2} a beta h χJ.2)| ≤
+        epsilon}
+Manuscript.RestrictedCutoff.program_exec (params : Manuscript.RestrictedMachine.Parameters)
+  (input : Manuscript.RestrictedMachine.Inputs) (s : Manuscript.RestrictedMachine.State) (kapMin kap A Lambda : ℝ)
+  (N : ℕ) (hA : 0 < A) (hn : s.natReg 0 = N) (hk : s.realReg 1 = kap) (ha : s.realReg 2 = A) (hl : s.realReg 3 = Lambda)
+  (hg : s.realReg 4 = Manuscript.Cutoffs.gamma kapMin A) :
+  ∃ cost final,
+    Manuscript.RestrictedMachine.Exec params input Manuscript.RestrictedCutoff.program s cost final ∧
+      cost ≤ 78 * N + 65 ∧
+        final.natReg 20 = (Manuscript.CutoffExecution.cutoffSearch kapMin kap A N Lambda).found.getD 1 - 1 ∧
+          final.realMem = s.realMem ∧ final.natMem = s.natMem
+Manuscript.RestrictedHigherEndpoint.program_exec {N M : ℕ} (hN : 0 < N) (pmax : ℕ) (P : Finset ℕ) (a : ℕ → ℝ)
+  (hmax : ∀ p ∈ P, p ≤ pmax) (B rho pmin beta h epsilon delta : ℝ) (order : Fin M ≃ Manuscript.Model.Edge N P)
+  (J : Manuscript.Model.Edge N P → ℝ) (tape : ℕ → ℕ) :
+  ∃ count final,
+    Manuscript.RestrictedRecursiveMachine.Exec Manuscript.RestrictedHigherLayer.table
+        (Manuscript.RestrictedParameters.higher pmax P a B rho pmin)
+        (Manuscript.RestrictedInputEncoding.encode order beta h epsilon delta J tape)
+        (Manuscript.RestrictedHigherEndpoint.program pmax P a B rho pmin) Manuscript.RestrictedMachine.initial count
+        final ∧
+      final.realReg 3 = (Manuscript.HigherOrderFinal.execute N pmax P a B rho pmin beta h epsilon delta J).value ∧
+        count ≤
+          141 * M + 78 * N + 461 +
+            (59 * N + 26 + (66 * N + 56) * M + 300 * (N + 1) + 400) *
+              ∑ l ∈ Finset.range (Manuscript.RestrictedHigherEndpoint.cutoff N pmax P a B rho pmin h epsilon delta + 1),
+                N.choose l * 2 ^ l
+Manuscript.RestrictedHigherFinal.end_to_end (P : Finset ℕ) (a : ℕ → ℝ) (hP : P.Nonempty) (ha : ∀ p ∈ P, 0 < a p)
+  (pmin : ℝ) (hpmin : 3 ≤ pmin) (horders : ∀ p ∈ P, pmin ≤ ↑p) (pmax : ℕ) (hmax : ∀ p ∈ P, p ≤ pmax) {B rho : ℝ}
+  (hB : 0 < B) (hBT : B < Manuscript.MixedThreshold.betaF P a) :
+  ∃ C,
+    0 < C ∧
+      ∀ (μ : MeasureTheory.Measure ℝ),
+        MeasureTheory.IsProbabilityMeasure μ →
+          SpinGlass.Disorder.SymmetricLaw μ →
+            SpinGlass.Disorder.UnitSecondMoment μ →
+              ∀ (N M : ℕ),
+                (∀ p ∈ P, p ≤ N) →
+                  ∀ (beta h epsilon delta : ℝ),
+                    0 ≤ beta →
+                      beta ≤ B →
+                        |h| ≤ rho * ↑N ^ (-(1 / 4)) →
+                          0 < epsilon →
+                            epsilon < 1 →
+                              0 < delta →
+                                delta < 1 →
+                                  ∀ (order : Fin M ≃ Manuscript.Model.Edge N P) (tape : ℕ → ℕ),
+                                    (SpinGlass.Disorder.iidLaw μ).real
+                                          {J |
+                                            epsilon <
+                                              |(Manuscript.HigherOrderFinal.execute N pmax P a B rho pmin beta h epsilon
+                                                      delta J).value -
+                                                  Real.log (Manuscript.Model.partition N P a beta h J)|} ≤
+                                        delta +
+                                          Manuscript.OriginalLawLowerTail.tau μ N P a B
+                                            (Manuscript.MixedThreshold.theta P a B) ∧
+                                      ∀ (J : Manuscript.Model.Edge N P → ℝ),
+                                        ∃ count final,
+                                          Manuscript.RestrictedRecursiveMachine.Exec
+                                              Manuscript.RestrictedHigherLayer.table
+                                              (Manuscript.RestrictedParameters.higher pmax P a B rho pmin)
+                                              (Manuscript.RestrictedInputEncoding.encode order beta h epsilon delta J
+                                                tape)
+                                              (Manuscript.RestrictedHigherEndpoint.program pmax P a B rho pmin)
+                                              Manuscript.RestrictedMachine.initial count final ∧
+                                            final.realReg 3 =
+                                                (Manuscript.HigherOrderFinal.execute N pmax P a B rho pmin beta h
+                                                    epsilon delta J).value ∧
+                                              ↑count ≤ C * ↑N ^ C * epsilon ^ (-C) * delta ^ (-C)
+Manuscript.RestrictedHigherGraphEndpoint.program_exec {N M : ℕ} (hN : 0 < N) (pmax : ℕ) (P : Finset ℕ) (a : ℕ → ℝ)
+  (hmax : ∀ p ∈ P, p ≤ pmax) (B rho pmin beta h u : ℝ) (order : Fin M ≃ Manuscript.Model.Edge N P)
+  (J : Manuscript.Model.Edge N P → ℝ) (tape : ℕ → ℕ) :
+  ∃ count final,
+    Manuscript.RestrictedRecursiveMachine.Exec Manuscript.RestrictedHigherLayer.table
+        (Manuscript.RestrictedParameters.higher pmax P a B rho pmin)
+        (Manuscript.RestrictedInputEncoding.encode order beta h u 1 J tape)
+        (Manuscript.RestrictedHigherGraphEndpoint.program pmax P a B rho pmin) Manuscript.RestrictedMachine.initial
+        count final ∧
+      final.realReg 330 = (Manuscript.HigherOrderExecution.execute N pmax P a B rho pmin beta h u J).value ∧
+        count ≤
+          141 * M + 78 * N + 461 +
+            (59 * N + 26 + (66 * N + 56) * M + 300 * (N + 1) + 400) *
+              ∑ l ∈ Finset.range (Manuscript.RestrictedHigherGraphEndpoint.cutoff N pmax P a B rho pmin h u + 1),
+                N.choose l * 2 ^ l
+Manuscript.RestrictedHigherGraphFinal.end_to_end (P : Finset ℕ) (a : ℕ → ℝ) (hP : P.Nonempty) (ha : ∀ p ∈ P, 0 < a p)
+  (pmin : ℝ) (hpmin : 3 ≤ pmin) (horders : ∀ p ∈ P, pmin ≤ ↑p) (pmax : ℕ) (hmax : ∀ p ∈ P, p ≤ pmax) {B rho : ℝ}
+  (hB : 0 < B) (hBT : B < Manuscript.MixedThreshold.betaF P a) :
+  ∃ C,
+    0 < C ∧
+      ∀ (μ : MeasureTheory.Measure ℝ),
+        MeasureTheory.IsProbabilityMeasure μ →
+          SpinGlass.Disorder.SymmetricLaw μ →
+            SpinGlass.Disorder.UnitSecondMoment μ →
+              ∀ (N M : ℕ),
+                (∀ p ∈ P, p ≤ N) →
+                  ∀ (beta h u : ℝ),
+                    0 ≤ beta →
+                      beta ≤ B →
+                        |h| ≤ rho * ↑N ^ (-(1 / 4)) →
+                          0 < u →
+                            u < 1 →
+                              ∀ (order : Fin M ≃ Manuscript.Model.Edge N P) (tape : ℕ → ℕ),
+                                ∫ (J : Manuscript.Model.Edge N P → ℝ),
+                                      (Manuscript.Model.normalizedPartition N P a beta h J -
+                                          (Manuscript.HigherOrderExecution.execute N pmax P a B rho pmin beta h u
+                                              J).value) ^
+                                        2 ∂SpinGlass.Disorder.iidLaw μ ≤
+                                    u ∧
+                                  ∀ (J : Manuscript.Model.Edge N P → ℝ),
+                                    ∃ count final,
+                                      Manuscript.RestrictedRecursiveMachine.Exec Manuscript.RestrictedHigherLayer.table
+                                          (Manuscript.RestrictedParameters.higher pmax P a B rho pmin)
+                                          (Manuscript.RestrictedInputEncoding.encode order beta h u 1 J tape)
+                                          (Manuscript.RestrictedHigherGraphEndpoint.program pmax P a B rho pmin)
+                                          Manuscript.RestrictedMachine.initial count final ∧
+                                        final.realReg 330 =
+                                            (Manuscript.HigherOrderExecution.execute N pmax P a B rho pmin beta h u
+                                                J).value ∧
+                                          ↑count ≤ C * ↑N ^ C * u ^ (-C)
+Manuscript.RestrictedHigherGraphRuntime.polynomial (P : Finset ℕ) (a : ℕ → ℝ) (hP : P.Nonempty) (ha : ∀ p ∈ P, 0 < a p)
+  (pmin : ℝ) (hpmin : 3 ≤ pmin) (horders : ∀ p ∈ P, pmin ≤ ↑p) (pmax : ℕ) (hmax : ∀ p ∈ P, p ≤ pmax) {B rho : ℝ}
+  (hB : 0 < B) (hBT : B < Manuscript.MixedThreshold.betaF P a) :
+  ∃ C,
+    0 < C ∧
+      ∀ (N M : ℕ),
+        0 < N →
+          (∀ p ∈ P, p ≤ N) →
+            ∀ (beta h u : ℝ),
+              |h| ≤ rho * ↑N ^ (-(1 / 4)) →
+                0 < u →
+                  u < 1 →
+                    ∀ (order : Fin M ≃ Manuscript.Model.Edge N P) (J : Manuscript.Model.Edge N P → ℝ) (tape : ℕ → ℕ),
+                      ∃ count final,
+                        Manuscript.RestrictedRecursiveMachine.Exec Manuscript.RestrictedHigherLayer.table
+                            (Manuscript.RestrictedParameters.higher pmax P a B rho pmin)
+                            (Manuscript.RestrictedInputEncoding.encode order beta h u 1 J tape)
+                            (Manuscript.RestrictedHigherGraphEndpoint.program pmax P a B rho pmin)
+                            Manuscript.RestrictedMachine.initial count final ∧
+                          final.realReg 330 =
+                              (Manuscript.HigherOrderExecution.execute N pmax P a B rho pmin beta h u J).value ∧
+                            ↑count ≤ C * ↑N ^ C * u ^ (-C)
+Manuscript.RestrictedHigherRuntime.polynomial (P : Finset ℕ) (a : ℕ → ℝ) (hP : P.Nonempty) (ha : ∀ p ∈ P, 0 < a p)
+  (pmin : ℝ) (hpmin : 3 ≤ pmin) (horders : ∀ p ∈ P, pmin ≤ ↑p) (pmax : ℕ) (hmax : ∀ p ∈ P, p ≤ pmax) {B rho : ℝ}
+  (hB : 0 < B) (hBT : B < Manuscript.MixedThreshold.betaF P a) :
+  ∃ C,
+    0 < C ∧
+      ∀ (N M : ℕ),
+        0 < N →
+          (∀ p ∈ P, p ≤ N) →
+            ∀ (beta h epsilon delta : ℝ),
+              |h| ≤ rho * ↑N ^ (-(1 / 4)) →
+                0 < epsilon →
+                  epsilon < 1 →
+                    0 < delta →
+                      delta < 1 →
+                        ∀ (order : Fin M ≃ Manuscript.Model.Edge N P) (J : Manuscript.Model.Edge N P → ℝ)
+                          (tape : ℕ → ℕ),
+                          ∃ count final,
+                            Manuscript.RestrictedRecursiveMachine.Exec Manuscript.RestrictedHigherLayer.table
+                                (Manuscript.RestrictedParameters.higher pmax P a B rho pmin)
+                                (Manuscript.RestrictedInputEncoding.encode order beta h epsilon delta J tape)
+                                (Manuscript.RestrictedHigherEndpoint.program pmax P a B rho pmin)
+                                Manuscript.RestrictedMachine.initial count final ∧
+                              final.realReg 3 =
+                                  (Manuscript.HigherOrderFinal.execute N pmax P a B rho pmin beta h epsilon delta
+                                      J).value ∧
+                                ↑count ≤ C * ↑N ^ C * epsilon ^ (-C) * delta ^ (-C)
+Manuscript.RestrictedInputEncoding.tableEdge_physical {N M : ℕ} {P : Finset ℕ}
+  (order : Fin M ≃ Manuscript.Model.Edge N P) (beta h epsilon delta : ℝ) (J : Manuscript.Model.Edge N P → ℝ)
+  (tape : ℕ → ℕ) (a : ℕ → ℝ) (params : Manuscript.RestrictedMachine.Parameters) (hparams : ∀ p ∈ P, params p = a p)
+  (j : Fin M) :
+  Manuscript.RestrictedInteractions.tableEdge params
+      (Manuscript.RestrictedInputEncoding.encode order beta h epsilon delta J tape) ↑j =
+    Manuscript.InputPreparation.prepareEdge N (↑(order j)).card (a (↑(order j)).card) beta (J (order j))
+Manuscript.RestrictedPhysicalPreparation.physical_cache {N M : ℕ} (hN : 0 < N) {P : Finset ℕ}
+  (order : Fin M ≃ Manuscript.Model.Edge N P) (beta h epsilon delta : ℝ) (J : Manuscript.Model.Edge N P → ℝ)
+  (tape : ℕ → ℕ) (a : ℕ → ℝ) (params : Manuscript.RestrictedMachine.Parameters) (hparams : ∀ p ∈ P, params p = a p)
+  (budgetBase : ℕ) (s : Manuscript.RestrictedMachine.State)
+  (hs :
+    Manuscript.RestrictedPreparation.Ready params
+      (Manuscript.RestrictedInputEncoding.encode order beta h epsilon delta J tape) budgetBase s) :
+  (∀ (j : Fin M), s.natMem ↑j = Manuscript.RestrictedMaskBridge.encode ↑(order j)) ∧
+    (∀ (j : Fin M), s.realMem (2 * ↑j) = Real.tanh (Manuscript.Model.coefficient N P a beta J (order j))) ∧
+      s.realReg 510 = Manuscript.InputPreparation.logBase N P a beta h J
+Manuscript.RestrictedPreparation.program_exec (params : Manuscript.RestrictedMachine.Parameters)
+  (input : Manuscript.RestrictedMachine.Inputs) (s : Manuscript.RestrictedMachine.State) (budgetBase : ℕ) :
+  ∃ t,
+    Manuscript.RestrictedMachine.Exec params input (Manuscript.RestrictedPreparation.program budgetBase) s
+        (141 * input.nat 1 + 186) t ∧
+      Manuscript.RestrictedPreparation.Ready params input budgetBase t
+Manuscript.RestrictedSKController.program_exec_precise (input : Manuscript.RestrictedMachine.Inputs)
+  (s : Manuscript.RestrictedMachine.State) (a : ℕ → ℝ) (B rho : ℝ) :
+  ∃ count t,
+    Manuscript.RestrictedMachine.Exec (Manuscript.RestrictedParameters.sk a B rho) input
+        (Manuscript.RestrictedSKController.program a B rho) s count t ∧
+      count ≤
+          78 * s.natReg 500 + 9 * (Manuscript.SKControl.control (s.natReg 500) a B rho (s.realReg 508)).operations +
+            172 ∧
+        t.natReg 510 = (Manuscript.SKControl.control (s.natReg 500) a B rho (s.realReg 508)).branchLimit ∧
+          t.natReg 511 = (Manuscript.SKControl.control (s.natReg 500) a B rho (s.realReg 508)).exact.toNat ∧
+            t.natReg 512 = (Manuscript.SKControl.control (s.natReg 500) a B rho (s.realReg 508)).edgeLimit ∧
+              t.natReg 513 = (Manuscript.SKControl.control (s.natReg 500) a B rho (s.realReg 508)).trials ∧
+                (∀ (r : ℕ), 500 ≤ r → r < 510 ∨ 513 < r → t.natReg r = s.natReg r) ∧
+                  (∀ (r : ℕ), 500 ≤ r → t.realReg r = s.realReg r) ∧ t.realMem = s.realMem ∧ t.natMem = s.natMem
+Manuscript.RestrictedSKEndpoint.program_overhead {N M : ℕ} (hN : 2 ≤ N) (a : ℕ → ℝ) (ha : a 2 = 1)
+  {B rho beta h epsilon delta : ℝ} (hB : 0 < B) (hB1 : B < 1) (he : 0 < epsilon) (he1 : epsilon < 1) (hd : 0 < delta)
+  (hd1 : delta < 1) (order : Fin M ≃ Manuscript.Model.Edge N {2})
+  (χ : Manuscript.SKTheorem.Colors N a B rho epsilon delta) (J : Manuscript.Model.Edge N {2} → ℝ) :
+  ∃ count final,
+    Manuscript.RestrictedRecursiveMachine.Exec Manuscript.RestrictedHigherLayer.table
+        (Manuscript.RestrictedParameters.sk a B rho)
+        (Manuscript.RestrictedInputEncoding.encode order beta h epsilon delta J (Manuscript.SKRawColorTape.encode χ))
+        (Manuscript.RestrictedSKEndpoint.program a B rho) Manuscript.RestrictedMachine.initial count final ∧
+      final.realReg 3 = (Manuscript.SKFinal.execute N a B rho beta h epsilon delta ⋯ hd χ J).value ∧
+        count ≤ 20000 * (N + (Manuscript.SKFinal.execute N a B rho beta h epsilon delta ⋯ hd χ J).operations + 1) ^ 6
+Manuscript.RestrictedSKFinal.end_to_end (a : ℕ → ℝ) (ha : a 2 = 1) {B rho : ℝ} (hB : 0 < B) (hB1 : B < 1) :
+  ∃ C,
+    0 < C ∧
+      ∀ (μ : MeasureTheory.Measure ℝ),
+        MeasureTheory.IsProbabilityMeasure μ →
+          SpinGlass.Disorder.SymmetricLaw μ →
+            SpinGlass.Disorder.UnitSecondMoment μ →
+              ∀ (N M : ℕ),
+                2 ≤ N →
+                  ∀ (beta h epsilon delta : ℝ),
+                    0 ≤ beta →
+                      beta ≤ B →
+                        |h| ≤ rho * ↑N ^ (-(1 / 4)) →
+                          0 < epsilon →
+                            epsilon < 1 →
+                              ∀ (hd : 0 < delta),
+                                delta < 1 →
+                                  ∀ (order : Fin M ≃ Manuscript.Model.Edge N {2}),
+                                    ((Manuscript.SKTheorem.colorLaw N a B rho epsilon delta).prod
+                                              (SpinGlass.Disorder.iidLaw μ)).real
+                                          {χJ |
+                                            epsilon <
+                                              |(Manuscript.SKFinal.execute N a B rho beta h epsilon delta ⋯ hd χJ.1
+                                                      χJ.2).value -
+                                                  Real.log (Manuscript.Model.partition N {2} a beta h χJ.2)|} ≤
+                                        delta +
+                                          Manuscript.OriginalLawLowerTail.tau μ N {2} a B
+                                            (Manuscript.MixedThreshold.theta {2} a B) ∧
+                                      ∀ (χ : Manuscript.SKTheorem.Colors N a B rho epsilon delta)
+                                        (J : Manuscript.Model.Edge N {2} → ℝ),
+                                        ∃ count final,
+                                          Manuscript.RestrictedRecursiveMachine.Exec
+                                              Manuscript.RestrictedHigherLayer.table
+                                              (Manuscript.RestrictedParameters.sk a B rho)
+                                              (Manuscript.RestrictedInputEncoding.encode order beta h epsilon delta J
+                                                (Manuscript.SKRawColorTape.encode χ))
+                                              (Manuscript.RestrictedSKEndpoint.program a B rho)
+                                              Manuscript.RestrictedMachine.initial count final ∧
+                                            final.realReg 3 =
+                                                (Manuscript.SKFinal.execute N a B rho beta h epsilon delta ⋯ hd χ
+                                                    J).value ∧
+                                              ↑count ≤ C * ↑N ^ C * epsilon ^ (-C) * delta ^ (-C)
+Manuscript.RestrictedSKGraphEndpoint.program_overhead {N M : ℕ} (hN : 2 ≤ N) (a : ℕ → ℝ) (ha : a 2 = 1)
+  {B rho beta h u : ℝ} (hB : 0 < B) (hB1 : B < 1) (hu : 0 < u) (hu1 : u < 1)
+  (order : Fin M ≃ Manuscript.Model.Edge N {2}) (χ : Manuscript.SKAlgorithm.Colors N a B rho u)
+  (J : Manuscript.Model.Edge N {2} → ℝ) :
+  ∃ count final,
+    Manuscript.RestrictedRecursiveMachine.Exec Manuscript.RestrictedHigherLayer.table
+        (Manuscript.RestrictedParameters.sk a B rho)
+        (Manuscript.RestrictedInputEncoding.encode order beta h u 1 J (Manuscript.SKRawColorTape.encode χ))
+        (Manuscript.RestrictedSKGraphEndpoint.program a B rho) Manuscript.RestrictedMachine.initial count final ∧
+      final.realReg 572 = (Manuscript.SKPhysicalExecution.execute N a B rho beta h u χ J).value ∧
+        count ≤ 20000 * (N + (Manuscript.SKPhysicalExecution.execute N a B rho beta h u χ J).operations + 1) ^ 6
+Manuscript.RestrictedSKGraphFinal.end_to_end (a : ℕ → ℝ) (ha : a 2 = 1) {B rho : ℝ} (hB : 0 < B) (hB1 : B < 1) :
+  ∃ C,
+    0 < C ∧
+      ∀ (μ : MeasureTheory.Measure ℝ),
+        MeasureTheory.IsProbabilityMeasure μ →
+          SpinGlass.Disorder.SymmetricLaw μ →
+            SpinGlass.Disorder.UnitSecondMoment μ →
+              ∀ (N M : ℕ),
+                2 ≤ N →
+                  ∀ (beta h u : ℝ),
+                    0 ≤ beta →
+                      beta ≤ B →
+                        |h| ≤ rho * ↑N ^ (-(1 / 4)) →
+                          0 < u →
+                            u < 1 →
+                              ∀ (order : Fin M ≃ Manuscript.Model.Edge N {2}),
+                                ∫ (χJ : Manuscript.SKAlgorithm.Colors N a B rho u × (Manuscript.Model.Edge N {2} → ℝ)),
+                                      (Manuscript.SKAlgorithm.run N a B rho beta h u χJ.1 χJ.2 -
+                                          Manuscript.Model.normalizedPartition N {2} a beta h χJ.2) ^
+                                        2 ∂(Manuscript.SKAlgorithm.colorLaw N a B rho u).prod
+                                        (SpinGlass.Disorder.iidLaw μ) ≤
+                                    u ∧
+                                  ∀ (χ : Manuscript.SKAlgorithm.Colors N a B rho u)
+                                    (J : Manuscript.Model.Edge N {2} → ℝ),
+                                    ∃ count final,
+                                      Manuscript.RestrictedRecursiveMachine.Exec Manuscript.RestrictedHigherLayer.table
+                                          (Manuscript.RestrictedParameters.sk a B rho)
+                                          (Manuscript.RestrictedInputEncoding.encode order beta h u 1 J
+                                            (Manuscript.SKRawColorTape.encode χ))
+                                          (Manuscript.RestrictedSKGraphEndpoint.program a B rho)
+                                          Manuscript.RestrictedMachine.initial count final ∧
+                                        final.realReg 572 = Manuscript.SKAlgorithm.run N a B rho beta h u χ J ∧
+                                          ↑count ≤ C * ↑N ^ C * u ^ (-C)
+Manuscript.RestrictedSKGraphRuntime.polynomial (a : ℕ → ℝ) (ha : a 2 = 1) {B rho : ℝ} (hB : 0 < B) (hB1 : B < 1) :
+  ∃ C,
+    0 < C ∧
+      ∀ (N M : ℕ),
+        2 ≤ N →
+          ∀ (beta h u : ℝ),
+            0 < u →
+              u < 1 →
+                ∀ (order : Fin M ≃ Manuscript.Model.Edge N {2}) (χ : Manuscript.SKAlgorithm.Colors N a B rho u)
+                  (J : Manuscript.Model.Edge N {2} → ℝ),
+                  ∃ count final,
+                    Manuscript.RestrictedRecursiveMachine.Exec Manuscript.RestrictedHigherLayer.table
+                        (Manuscript.RestrictedParameters.sk a B rho)
+                        (Manuscript.RestrictedInputEncoding.encode order beta h u 1 J
+                          (Manuscript.SKRawColorTape.encode χ))
+                        (Manuscript.RestrictedSKGraphEndpoint.program a B rho) Manuscript.RestrictedMachine.initial
+                        count final ∧
+                      final.realReg 572 = Manuscript.SKAlgorithm.run N a B rho beta h u χ J ∧
+                        ↑count ≤ C * ↑N ^ C * u ^ (-C)
+Manuscript.RestrictedSKRuntime.polynomial (a : ℕ → ℝ) (ha : a 2 = 1) {B rho : ℝ} (hB : 0 < B) (hB1 : B < 1) :
+  ∃ C,
+    0 < C ∧
+      ∀ (N M : ℕ),
+        2 ≤ N →
+          ∀ (beta h epsilon delta : ℝ),
+            0 < epsilon →
+              epsilon < 1 →
+                ∀ (hd : 0 < delta),
+                  delta < 1 →
+                    ∀ (order : Fin M ≃ Manuscript.Model.Edge N {2})
+                      (χ : Manuscript.SKTheorem.Colors N a B rho epsilon delta) (J : Manuscript.Model.Edge N {2} → ℝ),
+                      ∃ count final,
+                        Manuscript.RestrictedRecursiveMachine.Exec Manuscript.RestrictedHigherLayer.table
+                            (Manuscript.RestrictedParameters.sk a B rho)
+                            (Manuscript.RestrictedInputEncoding.encode order beta h epsilon delta J
+                              (Manuscript.SKRawColorTape.encode χ))
+                            (Manuscript.RestrictedSKEndpoint.program a B rho) Manuscript.RestrictedMachine.initial count
+                            final ∧
+                          final.realReg 3 = (Manuscript.SKFinal.execute N a B rho beta h epsilon delta ⋯ hd χ J).value ∧
+                            ↑count ≤ C * ↑N ^ C * epsilon ^ (-C) * delta ^ (-C)
+Manuscript.RestrictedSKSharpOuter.program_exec {N M D L R : ℕ} (hL : 0 < L) (hR : 0 < R) (hD : D ≤ N)
+  (params : Manuscript.RestrictedMachine.Parameters) (order : Fin M ≃ Manuscript.Model.Edge N {2}) (a : ℕ → ℝ)
+  (beta h epsilon delta : ℝ) (J : Manuscript.Model.Edge N {2} → ℝ) (χ : Manuscript.SKColorEstimator.Colors (Fin N) L R)
+  (s : Manuscript.RestrictedMachine.State) (hs : Manuscript.SKCandidateContract.Core order a beta h J D L R s)
+  (hbase : s.natReg 501 ≤ s.natReg 576) :
+  ∃ count t,
+    Manuscript.RestrictedRecursiveMachine.Exec Manuscript.RestrictedHigherLayer.table params
+        (Manuscript.RestrictedInputEncoding.encode order beta h epsilon delta J (Manuscript.SKRawColorTape.encode χ))
+        Manuscript.RestrictedSKTruncated.program s count t ∧
+      t.realReg 572 =
+          (Manuscript.SKGeneratedExecution.estimator D L R χ (Real.tanh h)
+              (Manuscript.SKGhostCoefficient.inputWeight N a beta J)).value ∧
+        count ≤ 362000 * R * (N + 2 * L + 1) ^ 6 * 16 ^ L * ∑ b ∈ Finset.range (D + 1), N.choose b * 36 ^ b ∧
+          Manuscript.SKCandidateContract.Core order a beta h J D L R t ∧
+            (∀ (r : ℕ),
+                580 < r ∨ r = 500 ∨ r = 501 ∨ r = 510 ∨ r = 512 ∨ r = 513 ∨ r = 570 ∨ r = 576 →
+                  t.natReg r = s.natReg r) ∧
+              (∀ (r : ℕ), 573 ≤ r → t.realReg r = s.realReg r) ∧ ∀ j < s.natReg 576, t.natMem j = s.natMem j
+Manuscript.RestrictedSKTruncated.program_exec {N M D L R : ℕ} (hL : 0 < L)
+  (params : Manuscript.RestrictedMachine.Parameters) (order : Fin M ≃ Manuscript.Model.Edge N {2}) (a : ℕ → ℝ)
+  (beta h epsilon delta : ℝ) (J : Manuscript.Model.Edge N {2} → ℝ) (χ : Manuscript.SKColorEstimator.Colors (Fin N) L R)
+  (s : Manuscript.RestrictedMachine.State) (hs : Manuscript.SKCandidateContract.Core order a beta h J D L R s)
+  (hbase : s.natReg 501 ≤ s.natReg 576) :
+  ∃ count t,
+    Manuscript.RestrictedRecursiveMachine.Exec Manuscript.RestrictedHigherLayer.table params
+        (Manuscript.RestrictedInputEncoding.encode order beta h epsilon delta J (Manuscript.SKRawColorTape.encode χ))
+        Manuscript.RestrictedSKTruncated.program s count t ∧
+      t.realReg 572 =
+          (Manuscript.SKGeneratedExecution.estimator D L R χ (Real.tanh h)
+              (Manuscript.SKGhostCoefficient.inputWeight N a beta J)).value ∧
+        count ≤
+            Manuscript.RestrictedSKOuter.cost
+                (Manuscript.SKCandidateContract.bound χ (Real.tanh h)
+                  (Manuscript.SKGhostCoefficient.inputWeight N a beta J))
+                N R (D + 1) 0 +
+              12 ∧
+          Manuscript.SKCandidateContract.Core order a beta h J D L R t ∧
+            (∀ (r : ℕ),
+                580 < r ∨ r = 500 ∨ r = 501 ∨ r = 510 ∨ r = 512 ∨ r = 513 ∨ r = 570 ∨ r = 576 →
+                  t.natReg r = s.natReg r) ∧
+              (∀ (r : ℕ), 573 ≤ r → t.realReg r = s.realReg r) ∧ ∀ j < s.natReg 576, t.natMem j = s.natMem j
+Manuscript.RestrictedSupportCost.total_bound (d : Manuscript.RestrictedLocalSum.Data) {k : ℕ} (hk : k ≤ d.N) :
+  Manuscript.RestrictedSupportProgram.totalCost d k 0 (k + 1) + 12 ≤
+    Manuscript.RestrictedSupportCost.factor d * ∑ l ∈ Finset.range (k + 1), d.N.choose l * 2 ^ l + 12
+Manuscript.RestrictedSupportExecution.program_correct.{u_1} (params : Manuscript.RestrictedMachine.Parameters)
+  (input : Manuscript.RestrictedMachine.Inputs) (s : Manuscript.RestrictedMachine.State) {E : Type u_1} [Fintype E]
+  [DecidableEq E] (order : Fin (s.natReg 283) ≃ E) (incidence : E → Finset (Fin (s.natReg 282))) (w : E → ℝ) (h : ℝ)
+  (hE :
+    ∀ (e : Fin (s.natReg 283)),
+      s.natMem (s.natReg 284 + ↑e) = Manuscript.RestrictedMaskBridge.encode (incidence (order e)))
+  (hW : ∀ (e : Fin (s.natReg 283)), s.realMem (s.natReg 285 + 2 * ↑e) = w (order e))
+  (hp : s.realReg 250 = Manuscript.FieldExpansion.spinWeight h false)
+  (hm : s.realReg 251 = Manuscript.FieldExpansion.spinWeight h true) (hk : s.natReg 310 ≤ s.natReg 282)
+  (hspace : s.natReg 284 + s.natReg 283 ≤ s.natReg 312) :
+  ∃ c final,
+    Manuscript.RestrictedRecursiveMachine.Exec Manuscript.RestrictedHigherLayer.table params input
+        Manuscript.RestrictedSupportProgram.program s c final ∧
+      final.realReg 330 =
+          (Manuscript.SupportExecution.supportSum incidence Finset.univ (Manuscript.FieldExpansion.spinWeight h) w
+              (s.natReg 310)).value ∧
+        c ≤
+            Manuscript.RestrictedSupportCost.factor (Manuscript.RestrictedLocalSum.data s) *
+                ∑ l ∈ Finset.range (s.natReg 310 + 1), (s.natReg 282).choose l * 2 ^ l +
+              12 ∧
+          Manuscript.RestrictedLayerSemantics.core (Manuscript.RestrictedLocalSum.data final) =
+              Manuscript.RestrictedLayerSemantics.core (Manuscript.RestrictedLocalSum.data s) ∧
+            (∀ (r : ℕ), 340 ≤ r → final.natReg r = s.natReg r) ∧ ∀ (r : ℕ), 340 ≤ r → final.realReg r = s.realReg r
+Manuscript.RestrictedSupportProgram.program_realized (params : Manuscript.RestrictedMachine.Parameters)
+  (input : Manuscript.RestrictedMachine.Inputs) (s : Manuscript.RestrictedMachine.State)
+  (hspace : s.natReg 284 + s.natReg 283 ≤ s.natReg 312) :
+  ∃ final,
+    Manuscript.RestrictedRecursiveMachine.Exec Manuscript.RestrictedHigherLayer.table params input
+        Manuscript.RestrictedSupportProgram.program s
+        (Manuscript.RestrictedSupportProgram.totalCost
+            (Manuscript.RestrictedLayerSemantics.core (Manuscript.RestrictedLocalSum.data s)) (s.natReg 310) 0
+            (s.natReg 310 + 1) +
+          12)
+        final ∧
+      final.realReg 330 =
+          Manuscript.RestrictedSupportProgram.totalValue
+            (Manuscript.RestrictedLayerSemantics.core (Manuscript.RestrictedLocalSum.data s)) (s.natReg 310) 0
+            (s.natReg 310 + 1) ∧
+        Manuscript.RestrictedLayerSemantics.core (Manuscript.RestrictedLocalSum.data final) =
+            Manuscript.RestrictedLayerSemantics.core (Manuscript.RestrictedLocalSum.data s) ∧
+          (∀ (r : ℕ), 340 ≤ r → final.natReg r = s.natReg r) ∧ ∀ (r : ℕ), 340 ≤ r → final.realReg r = s.realReg r
+Manuscript.RestrictedSupportSharpCost.physical_trace_bound (d : Manuscript.RestrictedLocalSum.Data) {Pmax : ℕ}
+  (hN : 0 < d.N) (P : Finset ℕ) (hP : ∀ p ∈ P, p ≤ Pmax) (order : Fin d.M ≃ Manuscript.Model.Edge d.N P) {k : ℕ}
+  (hk : k ≤ d.N) :
+  Manuscript.RestrictedSupportProgram.totalCost d k 0 (k + 1) + 12 ≤
+    1000 * (P.card + 1) * (d.N + 1) ^ (Pmax + 2) * ∑ j ∈ Finset.range (k + 1), d.N.choose j * 2 ^ j
+Manuscript.SKAlgorithm.mse_bound (μ : MeasureTheory.Measure ℝ) [MeasureTheory.IsProbabilityMeasure μ]
+  (hμ : SpinGlass.Disorder.SymmetricLaw μ) (hunit : SpinGlass.Disorder.UnitSecondMoment μ) (N : ℕ) (hN : 2 ≤ N)
+  (a : ℕ → ℝ) (ha : a 2 = 1) {beta B h rho u : ℝ} (hbeta : 0 ≤ beta) (hbetaB : beta ≤ B) (hB : 0 < B) (hB1 : B < 1)
+  (hfield : |h| ≤ rho * ↑N ^ (-(1 / 4))) (hu : 0 < u) (hu1 : u < 1) :
+  ∫ (χJ : Manuscript.SKAlgorithm.Colors N a B rho u × (Manuscript.Model.Edge N {2} → ℝ)),
+      (Manuscript.SKAlgorithm.run N a B rho beta h u χJ.1 χJ.2 -
+          Manuscript.Model.normalizedPartition N {2} a beta h χJ.2) ^
+        2 ∂(Manuscript.SKAlgorithm.colorLaw N a B rho u).prod (SpinGlass.Disorder.iidLaw μ) ≤
+    u
+Manuscript.SKAugmentFinset.augment_erase.{u_1} {V : Type u_1} [Fintype V] [DecidableEq V]
+  (Δ : Finset (Finset (Option V))) (hΔ : ∀ e ∈ Δ, e.card = 2)
+  (heven : ∀ (v : V), Even (SpinGlass.Expansion.degree id Δ (some v))) :
+  Manuscript.SKAugmentFinset.augment (Manuscript.SKAugmentFinset.erase Δ) = Δ
+Manuscript.SKBranching.branchCard_mass_bound.{u_1} {V : Type u_1} [Fintype V] [DecidableEq V] (b : ℕ) (hb : 0 < b)
+  {B F φ r : ℝ} (hN : 0 < Fintype.card V) (hB : 0 ≤ B) (hB1 : B < 1) (hF : 0 ≤ F) (hφ : 0 ≤ φ) (hr : 0 ≤ r)
+  (hNr : ↑(Fintype.card V) * r ≤ B ^ 2) (hφN : φ * √↑(Fintype.card V) ≤ F) :
+  ∑ Γ ∈ Manuscript.SKBranching.branchCardFamily b, φ ^ (Manuscript.FieldExpansion.boundary id Γ).card * r ^ Γ.card ≤
+    Manuscript.SKBranching.massConstant B F * (Manuscript.SKBranching.branchConstant B F * ↑b / ↑(Fintype.card V)) ^ b
+Manuscript.SKCandidateCoefficientOutput.candidate_exec.{u_1} {V : Type u_1} [DecidableEq V]
+  (p : Manuscript.RestrictedMachine.Parameters) (i : Manuscript.RestrictedMachine.Inputs)
+  (d : Manuscript.SKCandidateLayout.Layout) (hK : 1 ≤ d.root.K) (q : Fin d.root.B → ℕ) (branch : Fin d.root.B → V)
+  (outside : Fin d.root.N → V) (χ : Fin d.root.N → Fin d.root.K) (f : Finset V → ℝ)
+  (s : Manuscript.RestrictedMachine.State)
+  (hs :
+    Manuscript.SKRootCache.InputsReady d.root χ
+      (fun x y => SpinGlass.SKFastEvaluator.pairWeight f (outside x) (outside y))
+      (fun x y => SpinGlass.SKFastEvaluator.pairWeight f (branch x) (outside y)) s)
+  (hl : Manuscript.SKCandidateLayout.Inputs d s) (hq : ∀ (x : Fin d.root.B), s.natMem (d.chargeBase + ↑x) = q x)
+  (hw :
+    ∀ (a c : Fin d.root.B),
+      s.realMem (d.branchWeightBase + ↑a * d.root.B + ↑c) =
+        SpinGlass.SKFastEvaluator.pairWeight f (branch a) (branch c)) :
+  ∃ count t,
+    Manuscript.RestrictedMachine.Exec p i Manuscript.SKRestrictedCandidateExecution.program s count t ∧
+      count ≤ Manuscript.SKRestrictedCandidateExecution.operationBound d ∧
+        t.realReg 310 =
+            (Manuscript.SKChargedTrialExecution.trial q branch outside χ f d.retained
+                (Manuscript.SKExtractionCell.accepted d.ghost)).value ∧
+          Manuscript.SKRestrictedArrays.Represents d.base (Manuscript.SKChargedExecution.evaluate q branch outside χ f)
+              t.realMem ∧
+            (∀ address < d.root.arena, t.realMem address = s.realMem address) ∧
+              (∀ address < d.metadataBase, t.natMem address = s.natMem address) ∧
+                (∀ (r : ℕ), 500 ≤ r → t.natReg r = s.natReg r) ∧ ∀ (r : ℕ), 500 ≤ r → t.realReg r = s.realReg r
+Manuscript.SKChargeProjection.manuscript_array_size (b L : ℕ) :
+  Fintype.card (Manuscript.SKChargeProjection.RetainedBasis (b + 1) L (2 * L)) = (L + 1) * 4 ^ L * 6 ^ (b + 1)
+Manuscript.SKChargeProjection.projectedAlgorithm_eq_disorder.{u_1} {V : Type u_1} [Fintype V] [DecidableEq V]
+  (D L R : ℕ) (hL : 0 < L) (χ : Manuscript.SKColorEstimator.Colors V L R) (h : ℝ) (a J : Finset V → ℝ) :
+  (Manuscript.SKChargeProjection.projectedAlgorithm D L R χ h fun e => Real.tanh (a e * J e)) =
+    Manuscript.SKColorEstimator.estimator id (Finset.powersetCard 2 Finset.univ) D L R h a χ J
+Manuscript.SKChargeProjection.projectedAlgorithm_eq_generated.{u_1} {V : Type u_1} [Fintype V] [DecidableEq V]
+  (D L R : ℕ) (χ : Manuscript.SKColorEstimator.Colors V L R) (h : ℝ) (w : Finset V → ℝ) :
+  Manuscript.SKChargeProjection.projectedAlgorithm D L R χ h w =
+    (Manuscript.SKGeneratedExecution.estimator D L R χ (Real.tanh h) w).value
+Manuscript.SKColorEstimator.coloring_mse_le.{u_1, u_2} {V : Type u_1} {E : Type u_2} [Fintype V] [DecidableEq V]
+  [Fintype E] [DecidableEq E] (μ : MeasureTheory.Measure ℝ) [MeasureTheory.IsProbabilityMeasure μ]
+  (hμ : SpinGlass.Disorder.SymmetricLaw μ) (incidence : E → Finset V) (edges : Finset E) (D : ℕ) {L R : ℕ} (hL : 0 < L)
+  (hR : 0 < R) (hp : ∀ e ∈ edges, (incidence e).card = 2) (h : ℝ) (a : E → ℝ) :
+  ∫ (χJ : Manuscript.SKColorEstimator.Colors V L R × (E → ℝ)),
+      (Manuscript.SKColorEstimator.estimator incidence edges D L R h a χJ.1 χJ.2 -
+          Manuscript.SKColorEstimator.retainedSum incidence edges D L h a χJ.2) ^
+        2 ∂(Manuscript.SKColorEstimator.colorLaw V L R).prod (SpinGlass.Disorder.iidLaw μ) ≤
+    Real.exp (2 * ↑L) / ↑R * ∑ Γ ∈ edges.powerset, Manuscript.SKColorEstimator.graphMass μ incidence h a Γ
+Manuscript.SKColorEstimator.partition_mse_eq.{u_1, u_2} {V : Type u_1} {E : Type u_2} [Fintype V] [DecidableEq V]
+  [Fintype E] [DecidableEq E] (μ : MeasureTheory.Measure ℝ) [MeasureTheory.IsProbabilityMeasure μ]
+  (hμ : SpinGlass.Disorder.SymmetricLaw μ) (incidence : E → Finset V) (edges : Finset E) (D : ℕ) {L R : ℕ} (hL : 0 < L)
+  (hR : 0 < R) (hp : ∀ e ∈ edges, (incidence e).card = 2) (h : ℝ) (a : E → ℝ) :
+  ∫ (χJ : Manuscript.SKColorEstimator.Colors V L R × (E → ℝ)),
+      (Manuscript.SKColorEstimator.estimator incidence edges D L R h a χJ.1 χJ.2 -
+          Manuscript.FieldExpansion.normalizedPartition incidence edges h fun e => a e * χJ.2 e) ^
+        2 ∂(Manuscript.SKColorEstimator.colorLaw V L R).prod (SpinGlass.Disorder.iidLaw μ) =
+    ∫ (χJ : Manuscript.SKColorEstimator.Colors V L R × (E → ℝ)),
+        (Manuscript.SKColorEstimator.estimator incidence edges D L R h a χJ.1 χJ.2 -
+            Manuscript.SKColorEstimator.retainedSum incidence edges D L h a χJ.2) ^
+          2 ∂(Manuscript.SKColorEstimator.colorLaw V L R).prod (SpinGlass.Disorder.iidLaw μ) +
+      ∑ Γ ∈ edges.powerset with ¬Manuscript.SKGraph.Retained incidence D L Γ,
+        Manuscript.SKColorEstimator.graphMass μ incidence h a Γ
+Manuscript.SKColorEstimator.partition_mse_le.{u_1, u_2} {V : Type u_1} {E : Type u_2} [Fintype V] [DecidableEq V]
+  [Fintype E] [DecidableEq E] (μ : MeasureTheory.Measure ℝ) [MeasureTheory.IsProbabilityMeasure μ]
+  (hμ : SpinGlass.Disorder.SymmetricLaw μ) (incidence : E → Finset V) (edges : Finset E) (D : ℕ) {L R : ℕ} (hL : 0 < L)
+  (hR : 0 < R) (hp : ∀ e ∈ edges, (incidence e).card = 2) (h : ℝ) (a : E → ℝ) :
+  ∫ (χJ : Manuscript.SKColorEstimator.Colors V L R × (E → ℝ)),
+      (Manuscript.SKColorEstimator.estimator incidence edges D L R h a χJ.1 χJ.2 -
+          Manuscript.FieldExpansion.normalizedPartition incidence edges h fun e => a e * χJ.2 e) ^
+        2 ∂(Manuscript.SKColorEstimator.colorLaw V L R).prod (SpinGlass.Disorder.iidLaw μ) ≤
+    Real.exp (2 * ↑L) / ↑R * ∑ Γ ∈ edges.powerset, Manuscript.SKColorEstimator.graphMass μ incidence h a Γ +
+      ∑ Γ ∈ edges.powerset with ¬Manuscript.SKGraph.Retained incidence D L Γ,
+        Manuscript.SKColorEstimator.graphMass μ incidence h a Γ
+Manuscript.SKColorfulCoefficientOutput.end_to_end {N : ℕ} (p : Manuscript.RestrictedMachine.Parameters)
+  (input : Manuscript.RestrictedMachine.Inputs) (d : Manuscript.SKCandidateLayout.Layout) (L : ℕ) (hL : 1 ≤ L)
+  (hK : d.root.K = 2 * L) (A : Finset (Fin N)) (hn : d.root.N ≤ N) (hbcard : d.root.B = A.card + 1)
+  (lab : Fin d.root.B → Option (Fin N)) (out : Fin d.root.N → Option (Fin N)) (hb : Function.Injective lab)
+  (ho : Function.Injective out)
+  (hbr : ∀ (v : Option (Fin N)), v ∈ Manuscript.SKGhostAdmissible.distinguished A ↔ ∃ j, lab j = v)
+  (hor : ∀ (v : Option (Fin N)), v ∉ Manuscript.SKGhostAdmissible.distinguished A ↔ ∃ j, out j = v)
+  (hg : lab d.ghost = none) (χ : Fin N → Fin d.root.K) (h : ℝ) (w : Finset (Fin N) → ℝ)
+  (s : Manuscript.RestrictedMachine.State)
+  (hs :
+    Manuscript.SKRootCache.InputsReady d.root (Manuscript.SKColorfulCoefficientOutput.extendColor ⋯ χ ∘ out)
+      (fun x y => SpinGlass.SKFastEvaluator.pairWeight (Manuscript.SKAugmentFinset.edgeWeight h w) (out x) (out y))
+      (fun x y => SpinGlass.SKFastEvaluator.pairWeight (Manuscript.SKAugmentFinset.edgeWeight h w) (lab x) (out y)) s)
+  (hl : Manuscript.SKCandidateLayout.Inputs d s)
+  (hq : ∀ (x : Fin d.root.B), s.natMem (d.chargeBase + ↑x) = if lab x = none then 0 else 1)
+  (hw :
+    ∀ (a c : Fin d.root.B),
+      s.realMem (d.branchWeightBase + ↑a * d.root.B + ↑c) =
+        SpinGlass.SKFastEvaluator.pairWeight (Manuscript.SKAugmentFinset.edgeWeight h w) (lab a) (lab c)) :
+  ∃ count t,
+    Manuscript.RestrictedMachine.Exec p input Manuscript.SKRestrictedCandidateExecution.program s count t ∧
+      count ≤ 360000 * (N + 2 * L + 1) ^ 6 * 16 ^ L * 36 ^ A.card ∧
+        ∀ (k : Fin (d.root.K + 1)) (S : Finset (Fin d.root.K)),
+          Manuscript.SKColorfulCoefficientOutput.readout d.base d.ghost t.realMem k S =
+            ∑ Γ ∈ Manuscript.SKBranching.branchFamily A,
+              if
+                  Γ.card = ↑k ∧
+                    Finset.image χ (Manuscript.SKGraph.outside id Γ) = S ∧
+                      Set.InjOn χ ↑(Manuscript.SKGraph.outside id Γ) then
+                Manuscript.FieldExpansion.graphWeight id h w Γ
+              else 0
+Manuscript.SKCorollaries.polynomial_confidence (a : ℕ → ℝ) (ha : a 2 = 1) {B rho b : ℝ} (hB : 0 < B) (hB1 : B < 1)
+  (hb : 0 < b) :
+  ∃ C,
+    0 < C ∧
+      ∀ (μ : MeasureTheory.Measure ℝ),
+        MeasureTheory.IsProbabilityMeasure μ →
+          SpinGlass.Disorder.SymmetricLaw μ →
+            SpinGlass.Disorder.UnitSecondMoment μ →
+              ∀ (m : ℝ),
+                4 + 2 * b ≤ m →
+                  MeasureTheory.Integrable (fun x => |x| ^ m) μ →
+                    ∀ᶠ (N : ℕ) in Filter.atTop,
+                      ∃ (hN : 2 ≤ N),
+                        ∀ (beta h epsilon : ℝ),
+                          0 ≤ beta →
+                            beta ≤ B →
+                              |h| ≤ rho * ↑N ^ (-(1 / 4)) →
+                                0 < epsilon →
+                                  epsilon < 1 →
+                                    ((Manuscript.SKTheorem.colorLaw N a B rho epsilon
+                                                  (Manuscript.CountingConsequences.confidence N b)).prod
+                                              (SpinGlass.Disorder.iidLaw μ)).real
+                                          {χJ |
+                                            epsilon <
+                                              |(Manuscript.SKCorollaries.confidenceExecute N ⋯ a B rho beta h epsilon b
+                                                      ⋯ ⋯ χJ.1 χJ.2).value -
+                                                  Real.log (Manuscript.Model.partition N {2} a beta h χJ.2)|} ≤
+                                        ↑N ^ (-b) ∧
+                                      ∀ (χ : Manuscript.SKCorollaries.ConfidenceColors N a B rho epsilon b)
+                                        (J : Manuscript.Model.Edge N {2} → ℝ),
+                                        ↑(Manuscript.SKCorollaries.confidenceExecute N ⋯ a B rho beta h epsilon b ⋯ ⋯ χ
+                                                J).operations ≤
+                                          C * ↑N ^ C * epsilon ^ (-C)
+Manuscript.SKCorollaries.relative_counting (a : ℕ → ℝ) (ha : a 2 = 1) {B rho : ℝ} (hB : 0 < B) (hB1 : B < 1) :
+  ∃ C,
+    0 < C ∧
+      ∀ (μ : MeasureTheory.Measure ℝ),
+        MeasureTheory.IsProbabilityMeasure μ →
+          SpinGlass.Disorder.SymmetricLaw μ →
+            SpinGlass.Disorder.UnitSecondMoment μ →
+              ∀ (N : ℕ) (hN : 2 ≤ N) (beta h epsilon : ℝ),
+                0 ≤ beta →
+                  beta ≤ B →
+                    |h| ≤ rho * ↑N ^ (-(1 / 4)) →
+                      0 < epsilon →
+                        epsilon < 1 →
+                          1 -
+                                  Manuscript.OriginalLawLowerTail.tau μ N {2} a B
+                                    (Manuscript.MixedThreshold.theta {2} a B) -
+                                Manuscript.CountingConsequences.confidence N 1 ≤
+                              ((Manuscript.SKTheorem.colorLaw N a B rho
+                                        (Manuscript.CountingConsequences.relativeTolerance epsilon)
+                                        (Manuscript.CountingConsequences.confidence N 1)).prod
+                                    (SpinGlass.Disorder.iidLaw μ)).real
+                                {χJ |
+                                  1 - epsilon ≤
+                                      (Manuscript.SKCorollaries.relativeExecute N ⋯ a B rho beta h epsilon ⋯ χJ.1
+                                            χJ.2).value /
+                                        Manuscript.Model.partition N {2} a beta h χJ.2 ∧
+                                    (Manuscript.SKCorollaries.relativeExecute N ⋯ a B rho beta h epsilon ⋯ χJ.1
+                                            χJ.2).value /
+                                        Manuscript.Model.partition N {2} a beta h χJ.2 ≤
+                                      1 + epsilon} ∧
+                            ∀ (χ : Manuscript.SKCorollaries.RelativeColors N a B rho epsilon)
+                              (J : Manuscript.Model.Edge N {2} → ℝ),
+                              0 < (Manuscript.SKCorollaries.relativeExecute N ⋯ a B rho beta h epsilon ⋯ χ J).value ∧
+                                ↑(Manuscript.SKCorollaries.relativeExecute N ⋯ a B rho beta h epsilon ⋯ χ
+                                        J).operations ≤
+                                  C * ↑N ^ C * epsilon ^ (-C)
+Manuscript.SKGhostAdmissible.admissible_iff.{u_1} {V : Type u_1} [Fintype V] [DecidableEq V] (A : Finset V)
+  (Δ : Finset (Finset (Option V))) :
+  Manuscript.SKGhostAdmissible.Admissible A Δ ↔
+    ∃ Γ ∈ Manuscript.SKBranching.branchFamily A, Manuscript.SKAugmentFinset.augment Γ = Δ
+Manuscript.SKGhostCoefficient.algorithm_eq_physical (N D L R : ℕ) (hL : 0 < L)
+  (χ : Manuscript.SKColorEstimator.Colors (Fin N) L R) (a : ℕ → ℝ) (beta h : ℝ) (J : Manuscript.Model.Edge N {2} → ℝ) :
+  Manuscript.SKGhostCoefficient.algorithm D L R χ h (Manuscript.SKGhostCoefficient.inputWeight N a beta J) =
+    Manuscript.SKColorEstimator.estimator Subtype.val Finset.univ D L R h
+      (Manuscript.DisorderOrthogonality.physicalScale N {2} a beta) χ J
+Manuscript.SKGhostCoefficient.coefficient_original.{u_1} {V : Type u_1} [Fintype V] [DecidableEq V] {K : ℕ}
+  (A : Finset V) (χ : V → Fin K) (hK : 0 < K) (h : ℝ) (w : Finset V → ℝ) (k : Fin (K + 1)) (S : Finset (Fin K)) :
+  ∑ d ∈ Manuscript.SKGhostAdmissible.accepted A,
+      Manuscript.SKGhostCoefficient.evaluate A χ h w (Manuscript.SKChargedMonomial.target k S d) =
+    ∑ Γ ∈ Manuscript.SKBranching.branchFamily A,
+      if
+          Γ.card = ↑k ∧
+            Finset.image χ (Manuscript.SKGraph.outside id Γ) = S ∧ Set.InjOn χ ↑(Manuscript.SKGraph.outside id Γ) then
+        Manuscript.FieldExpansion.graphWeight id h w Γ
+      else 0
+Manuscript.SKPhysicalEstimator.coloring_mse (μ : MeasureTheory.Measure ℝ) [MeasureTheory.IsProbabilityMeasure μ]
+  (hμ : SpinGlass.Disorder.SymmetricLaw μ) (hunit : SpinGlass.Disorder.UnitSecondMoment μ) {N D L R : ℕ} (hN : 2 ≤ N)
+  (hL : 0 < L) (hR : 0 < R) (a : ℕ → ℝ) (ha : a 2 = 1) {beta B h rho : ℝ} (hb : 0 ≤ beta) (hbB : beta ≤ B) (hB : 0 < B)
+  (hB1 : B < 1) (hfield : |h| ≤ rho * ↑N ^ (-(1 / 4))) :
+  ∫ (χJ : Manuscript.SKColorEstimator.Colors (Fin N) L R × (Manuscript.Model.Edge N {2} → ℝ)),
+      (Manuscript.SKPhysicalEstimator.value N D L R a beta h χJ.1 χJ.2 -
+          Manuscript.SKPhysicalModel.truncation N D L a beta h χJ.2) ^
+        2 ∂(Manuscript.SKColorEstimator.colorLaw (Fin N) L R).prod (SpinGlass.Disorder.iidLaw μ) ≤
+    Manuscript.UniformMixedMass.massConstant {2} a (Manuscript.MixedThreshold.betaPlus {2} a B ^ 2) rho *
+        Real.exp (2 * ↑L) /
+      ↑R
+Manuscript.SKPhysicalEstimator.unbiased (N D L R : ℕ) (hL : 0 < L) (hR : 0 < R) (a : ℕ → ℝ) (beta h : ℝ)
+  (J : Manuscript.Model.Edge N {2} → ℝ) :
+  ∫ (χ : Manuscript.SKColorEstimator.Colors (Fin N) L R),
+      Manuscript.SKPhysicalEstimator.value N D L R a beta h χ J ∂Manuscript.SKColorEstimator.colorLaw (Fin N) L R =
+    Manuscript.SKPhysicalModel.truncation N D L a beta h J
+Manuscript.SKPhysicalEstimator.value_eq (N D L R : ℕ) (hL : 0 < L) (a : ℕ → ℝ) (beta h : ℝ)
+  (χ : Manuscript.SKColorEstimator.Colors (Fin N) L R) (J : Manuscript.Model.Edge N {2} → ℝ) :
+  Manuscript.SKPhysicalEstimator.value N D L R a beta h χ J =
+    Manuscript.SKColorEstimator.estimator Subtype.val Finset.univ D L R h
+      (Manuscript.DisorderOrthogonality.physicalScale N {2} a beta) χ J
+Manuscript.SKPhysicalModel.truncation_mse (μ : MeasureTheory.Measure ℝ) [MeasureTheory.IsProbabilityMeasure μ]
+  (hμ : SpinGlass.Disorder.SymmetricLaw μ) (hunit : SpinGlass.Disorder.UnitSecondMoment μ) {N D L : ℕ} (hN : 2 ≤ N)
+  (a : ℕ → ℝ) (ha : a 2 = 1) {beta B Bplus h rho C alpha : ℝ} (hbeta : 0 ≤ beta) (hbetaB : beta ≤ B) (hB : 0 < B)
+  (hBplus : B < Bplus) (hplus1 : Bplus < 1) (hfield : |h| ≤ rho * ↑N ^ (-(1 / 4))) (hC : 0 < C)
+  (hBC : Manuscript.SKBranching.branchConstant B (rho ^ 2) ≤ C) (halpha : 0 < alpha)
+  (hgap : 2 ≤ Real.log (1 / (C * alpha)) - 1) (hcut : D < ⌊alpha * ↑N⌋₊) :
+  ∫ (J : Manuscript.Model.Edge N {2} → ℝ),
+      (Manuscript.Model.normalizedPartition N {2} a beta h J - Manuscript.SKPhysicalModel.truncation N D L a beta h J) ^
+        2 ∂SpinGlass.Disorder.iidLaw μ ≤
+    Manuscript.UniformMixedMass.massConstant {2} (fun x => 1) (Bplus ^ 2) rho * ((B / Bplus) ^ 2) ^ (L + 1) +
+        2 * Manuscript.SKBranching.massConstant B (rho ^ 2) * Real.exp (-SpinGlass.CutoffTail.phi 1 C (↑N) (↑D + 1)) +
+      Manuscript.UniformMixedMass.massConstant {2} (fun x => 1) (Bplus ^ 2) rho *
+        ((B / Bplus) ^ 2) ^ (3 * alpha * ↑N / 2)
+Manuscript.SKProjectedOutput.accuracy (μ : MeasureTheory.Measure ℝ) [MeasureTheory.IsProbabilityMeasure μ]
+  (hμ : SpinGlass.Disorder.SymmetricLaw μ) (hunit : SpinGlass.Disorder.UnitSecondMoment μ) (N : ℕ) (hN : 2 ≤ N)
+  (a : ℕ → ℝ) (ha : a 2 = 1) {beta B h rho epsilon delta : ℝ} (hbeta : 0 ≤ beta) (hbetaB : beta ≤ B) (hB : 0 < B)
+  (hB1 : B < 1) (hfield : |h| ≤ rho * ↑N ^ (-(1 / 4))) (he : 0 < epsilon) (he1 : epsilon < 1) (hd : 0 < delta)
+  (hd1 : delta < 1) :
+  ((Manuscript.SKTheorem.colorLaw N a B rho epsilon delta).prod (SpinGlass.Disorder.iidLaw μ)).real
+      {χJ |
+        epsilon <
+          |Manuscript.SKProjectedOutput.output N a B rho beta h epsilon delta ⋯ hd χJ.1 χJ.2 -
+              Real.log (Manuscript.Model.partition N {2} a beta h χJ.2)|} ≤
+    delta + Manuscript.OriginalLawLowerTail.tau μ N {2} a B (Manuscript.MixedThreshold.theta {2} a B)
+Manuscript.SKProjectedOutput.output_eq_execute (N : ℕ) (a : ℕ → ℝ) (B rho beta h epsilon delta : ℝ)
+  (hC : 0 < Manuscript.LogApprox.constant {2} a B rho) (hd : 0 < delta)
+  (χ : Manuscript.SKTheorem.Colors N a B rho epsilon delta) (J : Manuscript.Model.Edge N {2} → ℝ) :
+  Manuscript.SKProjectedOutput.output N a B rho beta h epsilon delta hC hd χ J =
+    (Manuscript.SKFinal.execute N a B rho beta h epsilon delta hC hd χ J).value
+Manuscript.SKRawCandidate.encoded_program_exec {N M L R : ℕ} (params : Manuscript.RestrictedMachine.Parameters)
+  (order : Fin M ≃ Manuscript.Model.Edge N {2}) (aCoeff : ℕ → ℝ) (beta h epsilon delta : ℝ)
+  (J : Manuscript.Model.Edge N {2} → ℝ) (χ : Manuscript.SKColorEstimator.Colors (Fin N) L R)
+  (s : Manuscript.RestrictedMachine.State) (A : Finset (Fin N)) (r : Fin R) (hL : 0 < L) (hret : s.natReg 512 = L)
+  (hA : s.natReg 520 = Manuscript.RestrictedMaskBridge.encode A)
+  (hptr : s.natReg 522 = 2 * M + 2 + (Manuscript.RestrictedMaskBridge.encode A * R + ↑r) * N)
+  (hphysical : Manuscript.SKCandidateSource.PhysicalData order aCoeff beta h J s) (hmaskFit : M ≤ s.natReg 530)
+  (hlayout : Manuscript.RestrictedCandidateLabelPreparation.Layout s) :
+  ∃ count t,
+    Manuscript.RestrictedMachine.Exec params
+        (Manuscript.RestrictedInputEncoding.encode order beta h epsilon delta J (Manuscript.SKRawColorTape.encode χ))
+        Manuscript.SKRawCandidate.program s count t ∧
+      count ≤ Manuscript.SKRawCandidate.operationBound s A ∧
+        t.realReg 310 =
+            (Manuscript.SKGeneratedExecution.trial L A (χ A r) (Real.tanh h)
+                (Manuscript.SKGhostCoefficient.inputWeight N aCoeff beta J)).value ∧
+          (∀ address < s.natReg 530, t.natMem address = s.natMem address) ∧
+            (∀ address < 2 * s.natReg 501, t.realMem address = s.realMem address) ∧
+              (∀ (r : ℕ), 500 ≤ r → r < 540 ∨ 550 ≤ r → t.natReg r = s.natReg r) ∧
+                ∀ (r : ℕ), 500 ≤ r → t.realReg r = s.realReg r
+Manuscript.SKRestrictedCandidateExecution.program_exec.{u_1} {V : Type u_1} [DecidableEq V]
+  (p : Manuscript.RestrictedMachine.Parameters) (i : Manuscript.RestrictedMachine.Inputs)
+  (d : Manuscript.SKCandidateLayout.Layout) (hK : 1 ≤ d.root.K) (q : Fin d.root.B → ℕ) (branch : Fin d.root.B → V)
+  (outside : Fin d.root.N → V) (χ : Fin d.root.N → Fin d.root.K) (f : Finset V → ℝ)
+  (s : Manuscript.RestrictedMachine.State)
+  (hs :
+    Manuscript.SKRootCache.InputsReady d.root χ
+      (fun x y => SpinGlass.SKFastEvaluator.pairWeight f (outside x) (outside y))
+      (fun x y => SpinGlass.SKFastEvaluator.pairWeight f (branch x) (outside y)) s)
+  (hl : Manuscript.SKCandidateLayout.Inputs d s) (hq : ∀ (x : Fin d.root.B), s.natMem (d.chargeBase + ↑x) = q x)
+  (hw :
+    ∀ (a c : Fin d.root.B),
+      s.realMem (d.branchWeightBase + ↑a * d.root.B + ↑c) =
+        SpinGlass.SKFastEvaluator.pairWeight f (branch a) (branch c)) :
+  ∃ count t,
+    Manuscript.RestrictedMachine.Exec p i Manuscript.SKRestrictedCandidateExecution.program s count t ∧
+      count ≤ Manuscript.SKRestrictedCandidateExecution.operationBound d ∧
+        t.realReg 310 =
+            (Manuscript.SKChargedTrialExecution.trial q branch outside χ f d.retained
+                (Manuscript.SKExtractionCell.accepted d.ghost)).value ∧
+          (∀ address < d.root.arena, t.realMem address = s.realMem address) ∧
+            (∀ address < d.metadataBase, t.natMem address = s.natMem address) ∧
+              (∀ (r : ℕ), 500 ≤ r → t.natReg r = s.natReg r) ∧ ∀ (r : ℕ), 500 ≤ r → t.realReg r = s.realReg r
+Manuscript.SKRestrictedCandidateSharpCost.candidate_bound (d : Manuscript.SKCandidateLayout.Layout) (N L b : ℕ)
+  (hn : d.root.N ≤ N) (hb : d.root.B = b + 1) (hbn : b ≤ N) (hK : d.root.K = 2 * L) :
+  Manuscript.SKRestrictedCandidateExecution.operationBound d ≤ 360000 * (N + 2 * L + 1) ^ 6 * 16 ^ L * 36 ^ b
+Manuscript.SKRestrictedCandidateSharpCost.raw_candidate_bound {N M : ℕ} (order : Fin M ≃ Manuscript.Model.Edge N {2})
+  (s : Manuscript.RestrictedMachine.State) (hM : s.natReg 501 = M) (A : Finset (Fin N)) :
+  Manuscript.SKRawCandidate.operationBound s A ≤
+    361000 * (N + 2 * s.natReg 512 + 1) ^ 6 * 16 ^ s.natReg 512 * 36 ^ A.card
+Manuscript.SupportDisorder.secondMoment_physical_le_bound (μ : MeasureTheory.Measure ℝ)
+  [MeasureTheory.IsProbabilityMeasure μ] (hunit : SpinGlass.Disorder.UnitSecondMoment μ) (N : ℕ) (P : Finset ℕ)
+  (a : ℕ → ℝ) {beta B : ℝ} (hbeta : 0 ≤ beta) (hbetaB : beta ≤ B) (e : Manuscript.Model.Edge N P) (hp : 0 < (↑e).card) :
+  SpinGlass.Disorder.secondMoment μ (Manuscript.DisorderOrthogonality.physicalScale N P a beta e) ≤
+    B ^ 2 * a (↑e).card ^ 2 / ↑N ^ ((↑e).card - 1)
+Manuscript.SupportEvaluation.collapsed_local_sum.{u_1, u_2} {V : Type u_1} {E : Type u_2} [Fintype V] [DecidableEq V]
+  [DecidableEq E] (incidence : E → Finset V) (edges : Finset E) (h : ℝ) (w : E → ℝ) (k : ℕ) (hk : k < Fintype.card V) :
+  ∑ S ∈ Finset.univ.powerset with S.card ≤ k,
+      Manuscript.SupportEvaluation.coefficient (Fintype.card V) k S.card *
+        Manuscript.SupportEvaluation.localG incidence edges h w S =
+    ∑ Γ ∈ edges.powerset with (Manuscript.SupportEvaluation.support incidence Γ).card ≤ k,
+      Manuscript.FieldExpansion.graphWeight incidence h w Γ
+Manuscript.SupportExecution.supportSum_cost.{u_1, u_2} {V : Type u_1} {E : Type u_2} [Fintype V] [DecidableEq V]
+  [DecidableEq E] (incidence : E → Finset V) (edges : Finset E) (b : Bool → ℝ) (w : E → ℝ) {k : ℕ}
+  (hk : k ≤ Fintype.card V) :
+  (Manuscript.SupportExecution.supportSum incidence edges b w k).operations ≤
+    Manuscript.SupportExecution.layerConstant (Fintype.card V) edges.card *
+      ∑ s ∈ Finset.range (k + 1), (Fintype.card V).choose s * 2 ^ s
+Manuscript.SupportExponent.kappa_eq_zero_field (p alpha : ℝ) (hp : 0 < p) (ha : (p - 1) / (2 * p) ≤ alpha) :
+  Manuscript.SupportExponent.kappa p alpha = (p - 2) / p
+Manuscript.SupportMassBound.physical_supportMass_bound (N v : ℕ) (P : Finset ℕ) (pmin : ℝ) (hpmin : 3 ≤ pmin)
+  (horders : ∀ p ∈ P, pmin ≤ ↑p) (hv : 0 < v) (hvN : v ≤ N) (h rho alpha : ℝ) (hrho : 1 ≤ rho) (ha : 1 / 4 ≤ alpha)
+  (hfield : |Real.tanh h| ≤ rho * ↑N ^ (-alpha)) (c : ℕ → ℝ) (hc : ∀ p ∈ P, 0 ≤ c p) (r : Manuscript.Model.Edge N P → ℝ)
+  (hr : ∀ (e : Manuscript.Model.Edge N P), 0 ≤ r e)
+  (hrc : ∀ (e : Manuscript.Model.Edge N P), r e ≤ c (↑e).card / ↑N ^ ((↑e).card - 1)) :
+  Manuscript.SupportMassCounting.supportMass Subtype.val Finset.univ h r v ≤
+    Manuscript.SupportMassBound.massConstant P c rho ^ v *
+      (↑v / ↑N) ^ (Manuscript.SupportExponent.kappa pmin alpha * ↑v)
+Manuscript.SupportMassScale.bound_le_scaled_power (P : Finset ℕ) (c : ℕ → ℝ) (rho pmin alpha t : ℝ) (v : ℕ)
+  (hc : ∀ p ∈ P, 0 ≤ c p) (hrho : 1 ≤ rho) (hpmin : 3 ≤ pmin) (ha : 1 / 4 ≤ alpha) (ht : 0 ≤ t) :
+  Manuscript.SupportMassBound.massConstant P c rho ^ v * t ^ (Manuscript.SupportExponent.kappa pmin alpha * ↑v) ≤
+    (Manuscript.SupportMassScale.supportScale P c rho pmin * t) ^ (Manuscript.SupportExponent.kappa pmin alpha * ↑v)
+Manuscript.UniformLowerTail.physical_lower_tail_uniform (μ : MeasureTheory.Measure ℝ)
+  [MeasureTheory.IsProbabilityMeasure μ] (hμ : SpinGlass.Disorder.SymmetricLaw μ)
+  (hunit : SpinGlass.Disorder.UnitSecondMoment μ) (N : ℕ) (P : Finset ℕ) (a : ℕ → ℝ) (hP : P.Nonempty)
+  (ha : ∀ p ∈ P, 0 < a p) (hp : ∀ p ∈ P, 2 ≤ p) (hpN : ∀ p ∈ P, p ≤ N) {beta B h rho z : ℝ} (hbeta : 0 ≤ beta)
+  (hbetaB : beta ≤ B) (hB : 0 < B) (hBT : B < Manuscript.MixedThreshold.betaF P a)
+  (hfield : |h| ≤ rho * ↑N ^ (-(1 / 4))) (hz : 0 < z) :
+  (SpinGlass.Disorder.iidLaw μ).real {J | Manuscript.Model.normalizedPartition N P a beta h J < z} ≤
+    Manuscript.UniformMixedMass.massConstant P a (Manuscript.MixedThreshold.betaPlus P a B ^ 2) rho *
+        z ^ Manuscript.ConditionalLowerTail.exponent (Manuscript.MixedThreshold.theta P a B) +
+      Manuscript.OriginalLawLowerTail.tau μ N P a B (Manuscript.MixedThreshold.theta P a B)
+Manuscript.UniformLowerTail.raw_negative_moment_uniform (μ : MeasureTheory.Measure ℝ)
+  [MeasureTheory.IsProbabilityMeasure μ] (hμ : SpinGlass.Disorder.SymmetricLaw μ)
+  (hunit : SpinGlass.Disorder.UnitSecondMoment μ) (N : ℕ) (P : Finset ℕ) (a : ℕ → ℝ) (hP : P.Nonempty)
+  (ha : ∀ p ∈ P, 0 < a p) (hp : ∀ p ∈ P, 2 ≤ p) (hpN : ∀ p ∈ P, p ≤ N) {beta B h rho : ℝ} (hbeta : 0 ≤ beta)
+  (hbetaB : beta ≤ B) (hB : 0 < B) (hBT : B < Manuscript.MixedThreshold.betaF P a)
+  (hfield : |h| ≤ rho * ↑N ^ (-(1 / 4))) :
+  ∫ (J : Manuscript.Model.Edge N P → ℝ) in
+      Manuscript.OriginalLawLowerTail.physicalRawCutoff N P a B (Manuscript.MixedThreshold.theta P a B),
+      Manuscript.Model.normalizedPartition N P a beta h J ^
+        (-Manuscript.ConditionalLowerTail.exponent
+            (Manuscript.MixedThreshold.theta P a B)) ∂SpinGlass.Disorder.iidLaw μ ≤
+    Manuscript.UniformMixedMass.massConstant P a (Manuscript.MixedThreshold.betaPlus P a B ^ 2) rho
+Manuscript.UniformMixedMass.uniform_graphical_mass (N : ℕ) (P : Finset ℕ) (a : ℕ → ℝ) (hP : P.Nonempty)
+  (ha : ∀ p ∈ P, 0 < a p) (hp : ∀ p ∈ P, 2 ≤ p) (hpN : ∀ p ∈ P, p ≤ N) {v h rho : ℝ} (hv : 0 < v)
+  (hvT : v < Manuscript.MixedThreshold.thresholdSquared P a) (hfield : |h| ≤ rho * ↑N ^ (-(1 / 4))) :
+  Manuscript.UniformGraphMass.graphMass Subtype.val Finset.univ.powerset h
+      (Manuscript.MixedCoefficient.comparisonWeight N P a v) ≤
+    Manuscript.UniformMixedMass.massConstant P a v rho
+Manuscript.UniformMixedMass.uniform_graphical_mass_midpoint (N : ℕ) (P : Finset ℕ) (a : ℕ → ℝ) (hP : P.Nonempty)
+  (ha : ∀ p ∈ P, 0 < a p) (hp : ∀ p ∈ P, 2 ≤ p) (hpN : ∀ p ∈ P, p ≤ N) {B h rho : ℝ} (hB : 0 < B)
+  (hBT : B < Manuscript.MixedThreshold.betaF P a) (hfield : |h| ≤ rho * ↑N ^ (-(1 / 4))) :
+  Manuscript.UniformGraphMass.graphMass Subtype.val Finset.univ.powerset h
+      (Manuscript.MixedCoefficient.comparisonWeight N P a (Manuscript.MixedThreshold.betaPlus P a B ^ 2)) ≤
+    Manuscript.UniformMixedMass.massConstant P a (Manuscript.MixedThreshold.betaPlus P a B ^ 2) rho
+Manuscript.UniformPhysicalMass.physical_edge_tail (μ : MeasureTheory.Measure ℝ) [MeasureTheory.IsProbabilityMeasure μ]
+  (hunit : SpinGlass.Disorder.UnitSecondMoment μ) (N : ℕ) (P : Finset ℕ) (a : ℕ → ℝ) (hP : P.Nonempty)
+  (ha : ∀ p ∈ P, 0 < a p) (hp : ∀ p ∈ P, 2 ≤ p) (hpN : ∀ p ∈ P, p ≤ N) {beta B h rho t : ℝ} (hbeta : 0 ≤ beta)
+  (hbetaB : beta ≤ B) (hB : 0 < B) (hBT : B < Manuscript.MixedThreshold.betaF P a)
+  (hfield : |h| ≤ rho * ↑N ^ (-(1 / 4))) (ht : 0 ≤ t) :
+  (Manuscript.UniformGraphMass.graphMass Subtype.val ({Γ ∈ Finset.univ.powerset | t < ↑Γ.card}) h fun e =>
+        SpinGlass.Disorder.secondMoment μ (Manuscript.DisorderOrthogonality.physicalScale N P a beta e)) ≤
+      Manuscript.UniformMixedMass.massConstant P a (Manuscript.MixedThreshold.betaPlus P a B ^ 2) rho *
+        Manuscript.MixedThreshold.theta P a B ^ (2 * ⌊t⌋₊ + 2) ∧
+    Manuscript.UniformMixedMass.massConstant P a (Manuscript.MixedThreshold.betaPlus P a B ^ 2) rho *
+        Manuscript.MixedThreshold.theta P a B ^ (2 * ⌊t⌋₊ + 2) ≤
+      Manuscript.UniformMixedMass.massConstant P a (Manuscript.MixedThreshold.betaPlus P a B ^ 2) rho *
+        Manuscript.MixedThreshold.theta P a B ^ (2 * t)
+Manuscript.UniformPhysicalMass.physical_graphical_mass (μ : MeasureTheory.Measure ℝ)
+  [MeasureTheory.IsProbabilityMeasure μ] (hunit : SpinGlass.Disorder.UnitSecondMoment μ) (N : ℕ) (P : Finset ℕ)
+  (a : ℕ → ℝ) (hP : P.Nonempty) (ha : ∀ p ∈ P, 0 < a p) (hp : ∀ p ∈ P, 2 ≤ p) (hpN : ∀ p ∈ P, p ≤ N) {beta B h rho : ℝ}
+  (hbeta : 0 ≤ beta) (hbetaB : beta ≤ B) (hB : 0 < B) (hBT : B < Manuscript.MixedThreshold.betaF P a)
+  (hfield : |h| ≤ rho * ↑N ^ (-(1 / 4))) :
+  (Manuscript.UniformGraphMass.graphMass Subtype.val Finset.univ.powerset h fun e =>
+      SpinGlass.Disorder.secondMoment μ (Manuscript.DisorderOrthogonality.physicalScale N P a beta e)) ≤
+    Manuscript.UniformMixedMass.massConstant P a (Manuscript.MixedThreshold.betaPlus P a B ^ 2) rho
+Manuscript.UniformTau.tau_eventually_zero_of_bounded (μ : MeasureTheory.Measure ℝ)
+  [MeasureTheory.IsProbabilityMeasure μ] (P : Finset ℕ) (a : ℕ → ℝ) (ha : ∀ p ∈ P, 0 < a p) (hp : ∀ p ∈ P, 2 ≤ p)
+  {B θ M : ℝ} (hB : 0 < B) (hθ : 0 < θ) (hθ1 : θ < 1) (hbound : ∀ᵐ (x : ℝ) ∂μ, |x| ≤ M) :
+  ∀ᶠ (N : ℕ) in Filter.atTop, Manuscript.OriginalLawLowerTail.tau μ N P a B θ = 0
+Manuscript.UniformTau.tau_polynomial_tendsto_zero (μ : MeasureTheory.Measure ℝ) [MeasureTheory.IsProbabilityMeasure μ]
+  (P : Finset ℕ) (a : ℕ → ℝ) (ha : ∀ p ∈ P, 0 < a p) (pm : ℕ) (hpm : 2 ≤ pm) (hpp : ∀ p ∈ P, pm ≤ p) {B θ m b : ℝ}
+  (hB : 0 < B) (hθ : 0 < θ) (hθ1 : θ < 1) (hb : 0 < b) (hm : 2 * (↑pm + b) / (↑pm - 1) ≤ m)
+  (hint : MeasureTheory.Integrable (fun x => |x| ^ m) μ) :
+  Filter.Tendsto (fun N => ↑N ^ b * Manuscript.OriginalLawLowerTail.tau μ N P a B θ) Filter.atTop (nhds 0)
+Manuscript.UniformTau.tau_tendsto_zero_fourth (μ : MeasureTheory.Measure ℝ) [MeasureTheory.IsProbabilityMeasure μ]
+  (P : Finset ℕ) (a : ℕ → ℝ) (ha : ∀ p ∈ P, 0 < a p) (hp : ∀ p ∈ P, 2 ≤ p) {B θ : ℝ} (hB : 0 < B) (hθ : 0 < θ)
+  (hθ1 : θ < 1) (h4 : MeasureTheory.Integrable (fun x => |x| ^ 4) μ) :
+  Filter.Tendsto (fun N => Manuscript.OriginalLawLowerTail.tau μ N P a B θ) Filter.atTop (nhds 0)
+SpinGlass.FiniteLowerTail.noisy_negative_moment_le_second_moment.{u_1} {ι : Type u_1} [Fintype ι] [DecidableEq ι]
+  {θ : ℝ} (hθ : 0 < θ) (hθ1 : θ < 1) (f : (ι → Bool) → ℝ) (hf : ∀ (ε : ι → Bool), 0 < f ε)
+  (hmean : SpinGlass.Expansion.spinMean f = 1) :
+  (SpinGlass.Expansion.spinMean fun ε => SpinGlass.Noise.cubeNoise θ f ε ^ (-((1 - √θ) / √θ))) ≤
+    SpinGlass.Expansion.spinMean fun ε => f ε ^ 2
+SpinGlass.SKBlockPartition.canonical_valid.{u_1, u_2} {V : Type u_1} {E : Type u_2} [Fintype V] [DecidableEq V]
+  [DecidableEq E] (incidence : E → Finset V) (A : Finset V) (Γ : Finset E) :
+  SpinGlass.SKBlockPartition.ValidSelection incidence A (SpinGlass.SKBlockPartition.blockFamily incidence A Γ)
+SpinGlass.SKBlockPartition.selection_unique.{u_1, u_2} {V : Type u_1} {E : Type u_2} [Fintype V] [DecidableEq V]
+  [DecidableEq E] (incidence : E → Finset V) (A : Finset V) (F G : Finset (Finset E)) (hFne : ∀ K ∈ F, K.Nonempty)
+  (hGne : ∀ K ∈ G, K.Nonempty) (hFc : ∀ K ∈ F, SpinGlass.SKBlockPartition.Connected incidence A K)
+  (hGc : ∀ K ∈ G, SpinGlass.SKBlockPartition.Connected incidence A K)
+  (hFd : (↑F).PairwiseDisjoint (SpinGlass.SKBlockPartition.outside incidence A))
+  (hGd : (↑G).PairwiseDisjoint (SpinGlass.SKBlockPartition.outside incidence A))
+  (hunion : F.biUnion id = G.biUnion id) : F = G
+SpinGlass.SKPrimitiveCatalogWalk.primitive_classification.{u_1} {V : Type u_1} [Fintype V] [DecidableEq V]
+  (A : Finset V) (K : Finset (Finset V)) (hne : K.Nonempty) (hc : SpinGlass.SKBlockPartition.Connected id A K)
+  (h2 : ∀ e ∈ K, e.card = 2) (hd : SpinGlass.SKBlockPartition.OutsideDegreeTwo id A K) :
+  (∃ a ∈ A, ∃ b ∈ A, a ≠ b ∧ K = {{a, b}}) ∨
+    (∃ a ∈ A,
+        ∃ b ∈ A,
+          a ≠ b ∧
+            ∃ l,
+              l.Nodup ∧
+                1 ≤ l.length ∧
+                  (∀ v ∈ l, v ∉ A) ∧
+                    l.toFinset = SpinGlass.SKBlockPartition.outside id A K ∧
+                      K = SpinGlass.SKTraversal.betweenEdges a b l) ∨
+      (∃ a ∈ A,
+          ∃ l,
+            l.Nodup ∧
+              2 ≤ l.length ∧
+                (∀ v ∈ l, v ∉ A) ∧
+                  l.toFinset = SpinGlass.SKBlockPartition.outside id A K ∧ K = SpinGlass.SKTraversal.rootedEdges a l) ∨
+        ∃ l,
+          l.Nodup ∧
+            3 ≤ l.length ∧
+              (∀ v ∈ l, v ∉ A) ∧
+                l.toFinset = SpinGlass.SKBlockPartition.outside id A K ∧ K = SpinGlass.SKTraversal.cycleEdges l

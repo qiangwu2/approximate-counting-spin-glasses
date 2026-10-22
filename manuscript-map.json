@@ -1,0 +1,522 @@
+{
+  "coverage": [
+    {
+      "manuscript": "Model (2)–(5)",
+      "declaration": "Manuscript.Model.normalizedPartition_eq_graph_sum",
+      "source": "Manuscript/Model.lean",
+      "scope": "Distinct unordered interactions; literal exponential Hamiltonian/partition; real half-integer scaling."
+    },
+    {
+      "manuscript": "Theorem 1.1, higher orders",
+      "declaration": "Manuscript.RestrictedHigherFinal.end_to_end",
+      "source": "Manuscript/RestrictedHigherFinal.lean",
+      "scope": "Fixed primitive program, finite procedure table and model parameters before all laws and raw inputs; execution from zero state, original-law logarithmic error, exact analyzed-output equality and a uniform all-input polynomial instruction bound.",
+      "tex_label": "thm:finite-size",
+      "tex_line": 997,
+      "supporting_declarations": [
+        {
+          "declaration": "Manuscript.RestrictedHigherEndpoint.program_exec",
+          "source": "Manuscript/RestrictedHigherEndpoint.lean"
+        },
+        {
+          "declaration": "Manuscript.RestrictedHigherRuntime.polynomial",
+          "source": "Manuscript/RestrictedHigherRuntime.lean"
+        },
+        {
+          "declaration": "Manuscript.OriginalLawLowerTail.rawConstant_pos",
+          "source": "Manuscript/OriginalLawLowerTail.lean"
+        }
+      ],
+      "operation_scope": "Actual restricted exact-real RAM execution. Kernel verification is recorded separately in verification-status.json."
+    },
+    {
+      "manuscript": "Theorem 1.1, SK",
+      "declaration": "Manuscript.RestrictedSKFinal.end_to_end",
+      "source": "Manuscript/RestrictedSKFinal.lean",
+      "scope": "Fixed primitive program from raw labeled couplings and raw independent colors; actual original-law logarithmic error, exact analyzed-output equality and a uniform polynomial instruction bound, with constants chosen before the disorder law.",
+      "tex_label": "thm:finite-size",
+      "tex_line": 997,
+      "supporting_declarations": [
+        {
+          "declaration": "Manuscript.RestrictedSKEndpoint.program_overhead",
+          "source": "Manuscript/RestrictedSKEndpoint.lean"
+        },
+        {
+          "declaration": "Manuscript.RestrictedSKRuntime.polynomial",
+          "source": "Manuscript/RestrictedSKRuntime.lean"
+        },
+        {
+          "declaration": "Manuscript.OriginalLawLowerTail.rawConstant_pos",
+          "source": "Manuscript/OriginalLawLowerTail.lean"
+        }
+      ],
+      "operation_scope": "Actual restricted exact-real RAM execution. Internal charge capacity is 2L; proved projection gives the manuscript capacity-L output. Kernel verification is recorded separately in verification-status.json."
+    },
+    {
+      "manuscript": "Remark 1.2(i)",
+      "declaration": "Manuscript.HigherOrderCorollaries.relative_counting; Manuscript.SKCorollaries.relative_counting",
+      "source": "Manuscript/HigherOrderCorollaries.lean; Manuscript/SKCorollaries.lean",
+      "scope": "Positive relative count and fourth-moment success allowance tending to one; the mathematical output is exactly the output realized by the new primitive endpoints.",
+      "tex_label": "rem:moment-consequences",
+      "tex_line": 1018,
+      "supporting_declarations": [
+        {
+          "declaration": "Manuscript.RestrictedHigherFinal.end_to_end",
+          "source": "Manuscript/RestrictedHigherFinal.lean"
+        },
+        {
+          "declaration": "Manuscript.RestrictedSKFinal.end_to_end",
+          "source": "Manuscript/RestrictedSKFinal.lean"
+        },
+        {
+          "declaration": "Manuscript.UniformTau.tau_tendsto_zero_fourth",
+          "source": "Manuscript/UniformTau.lean"
+        }
+      ],
+      "operation_scope": "Counting corollary statements retain the original counters. Actual primitive polynomial runtime follows by the final output equalities and endpoint bounds with the same logarithmic tolerance and failure-budget substitutions."
+    },
+    {
+      "manuscript": "Remark 1.2(ii)",
+      "declaration": "Manuscript.HigherOrderCorollaries.polynomial_confidence; Manuscript.SKCorollaries.polynomial_confidence",
+      "source": "Manuscript/HigherOrderCorollaries.lean; Manuscript/SKCorollaries.lean",
+      "scope": "Real moment threshold including equality; uniform eventual failure at most N^-b; actual primitive output equals the stated mathematical output.",
+      "tex_label": "rem:moment-consequences",
+      "tex_line": 1018,
+      "supporting_declarations": [
+        {
+          "declaration": "Manuscript.RestrictedHigherFinal.end_to_end",
+          "source": "Manuscript/RestrictedHigherFinal.lean"
+        },
+        {
+          "declaration": "Manuscript.RestrictedSKFinal.end_to_end",
+          "source": "Manuscript/RestrictedSKFinal.lean"
+        },
+        {
+          "declaration": "Manuscript.UniformTau.tau_polynomial_tendsto_zero",
+          "source": "Manuscript/UniformTau.lean"
+        }
+      ],
+      "operation_scope": "The new primitive endpoint bounds give the same polynomial class after delta=N^-b/2."
+    },
+    {
+      "manuscript": "Remark 1.2, bounded disorder",
+      "declaration": "Manuscript.UniformTau.tau_eventually_zero_of_bounded",
+      "source": "Manuscript/UniformTau.lean",
+      "scope": "Exact eventual vanishing of the finite-mixture raw-disorder tail remainder.",
+      "tex_label": "rem:moment-consequences",
+      "tex_line": 1018
+    },
+    {
+      "manuscript": "Lemma 2.1",
+      "declaration": "Manuscript.DisorderOrthogonality.graphWeight_pair_integral",
+      "source": "Manuscript/DisorderOrthogonality.lean",
+      "scope": "Original independent symmetric disorder law; nonuniform scales; distinct graph cross terms vanish. The independent-random-coefficient second-moment identity is proved, not assumed.",
+      "tex_label": "lem:orthogonality",
+      "tex_line": 1172,
+      "supporting_declarations": [
+        {
+          "declaration": "Manuscript.DisorderOrthogonality.monomial_pair_integral",
+          "source": "Manuscript/DisorderOrthogonality.lean"
+        },
+        {
+          "declaration": "Manuscript.DisorderOrthogonality.independent_coefficients_second_moment",
+          "source": "Manuscript/DisorderOrthogonality.lean"
+        },
+        {
+          "declaration": "Manuscript.DisorderOrthogonality.physical_retained_family_error",
+          "source": "Manuscript/DisorderOrthogonality.lean"
+        }
+      ]
+    },
+    {
+      "manuscript": "Proposition 2.2",
+      "declaration": "Manuscript.UniformMixedMass.uniform_graphical_mass_midpoint",
+      "source": "Manuscript/UniformMixedMass.lean",
+      "scope": "Uniform mixed external-field graphical mass with the manuscript midpoint temperature and explicit constant; physical original-law moments and floor/real edge-tail bounds.",
+      "tex_label": "prop:mass",
+      "tex_line": 1220,
+      "supporting_declarations": [
+        {
+          "declaration": "Manuscript.UniformMixedMass.uniform_graphical_mass",
+          "source": "Manuscript/UniformMixedMass.lean"
+        },
+        {
+          "declaration": "Manuscript.UniformPhysicalMass.physical_edge_tail",
+          "source": "Manuscript/UniformPhysicalMass.lean"
+        },
+        {
+          "declaration": "Manuscript.UniformPhysicalMass.physical_graphical_mass",
+          "source": "Manuscript/UniformPhysicalMass.lean"
+        }
+      ]
+    },
+    {
+      "manuscript": "Lemma 3.1",
+      "declaration": "Manuscript.SupportMassBound.physical_supportMass_bound",
+      "source": "Manuscript/SupportMassBound.lean",
+      "scope": "Combinatorial support mass bound, its scaled-power consequence and the zero-field exponent. Generic coefficient/field premises are discharged by the physical second-moment and weak-field lemmas.",
+      "tex_label": "lem:higher-support-mass",
+      "tex_line": 1353,
+      "supporting_declarations": [
+        {
+          "declaration": "Manuscript.SupportMassScale.bound_le_scaled_power",
+          "source": "Manuscript/SupportMassScale.lean"
+        },
+        {
+          "declaration": "Manuscript.SupportDisorder.secondMoment_physical_le_bound",
+          "source": "Manuscript/SupportDisorder.lean"
+        },
+        {
+          "declaration": "Manuscript.SupportExponent.kappa_eq_zero_field",
+          "source": "Manuscript/SupportExponent.lean"
+        },
+        {
+          "declaration": "Manuscript.HigherFieldExponent.selectedKappa_zero",
+          "source": "Manuscript/HigherFieldExponent.lean"
+        }
+      ]
+    },
+    {
+      "manuscript": "Proposition 3.2",
+      "declaration": "Manuscript.HigherOrderTail.physical_support_tail",
+      "source": "Manuscript/HigherOrderTail.lean",
+      "scope": "Actual original-law mean-square support truncation, including both support and edge-tail terms; physical model hypotheses, no target-error hypothesis.",
+      "tex_label": "prop:higher-truncation",
+      "tex_line": 1428
+    },
+    {
+      "manuscript": "Proposition 3.3",
+      "declaration": "Manuscript.SupportEvaluation.collapsed_local_sum",
+      "source": "Manuscript/SupportEvaluation.lean",
+      "scope": "Exact collapsed Mobius sum for arbitrary real weights and local biased-spin averages; actual subset/spin generation and primitive support evaluation are separately realized.",
+      "tex_label": "prop:pure-evaluation",
+      "tex_line": 1480,
+      "supporting_declarations": [
+        {
+          "declaration": "Manuscript.SupportExecution.supportSum_cost",
+          "source": "Manuscript/SupportExecution.lean"
+        },
+        {
+          "declaration": "Manuscript.RestrictedSupportProgram.program_realized",
+          "source": "Manuscript/RestrictedSupportProgram.lean"
+        },
+        {
+          "declaration": "Manuscript.RestrictedSupportCost.total_bound",
+          "source": "Manuscript/RestrictedSupportCost.lean"
+        },
+        {
+          "declaration": "Manuscript.RestrictedSupportSharpCost.physical_trace_bound",
+          "source": "Manuscript/RestrictedSupportSharpCost.lean"
+        },
+        {
+          "declaration": "Manuscript.RestrictedSupportExecution.program_correct",
+          "source": "Manuscript/RestrictedSupportExecution.lean"
+        }
+      ],
+      "operation_scope": "The actual support instruction trace satisfies 1000*(P.card+1)*(N+1)^(Pmax+2)*sum_{s<=k} choose(N,s)*2^s, including subset/spin generation and physical weight access. This is the displayed polynomial prefactor and binomial/cube sum."
+    },
+    {
+      "manuscript": "Lemma 4.1",
+      "declaration": "Manuscript.SKBranching.branchCard_mass_bound",
+      "source": "Manuscript/SKBranchingBound.lean",
+      "scope": "External-field Gaussian/pairing branching estimate with explicit constants. Its moment/field premises are instantiated from the physical SK model, not from an assumed branching estimate.",
+      "tex_label": "lem:sk-branching-mass",
+      "tex_line": 1582
+    },
+    {
+      "manuscript": "Proposition 4.2",
+      "declaration": "Manuscript.SKPhysicalModel.truncation_mse",
+      "source": "Manuscript/SKPhysicalModel.lean",
+      "scope": "Actual original-law SK mean-square truncation. Auxiliary mass/cutoff constants satisfy proved model-dependent inequalities in the algorithm instantiation.",
+      "tex_label": "prop:sk-truncation",
+      "tex_line": 1685
+    },
+    {
+      "manuscript": "Lemma 4.3",
+      "declaration": "SpinGlass.SKPrimitiveCatalogWalk.primitive_classification",
+      "source": "SpinGlass/SKPrimitiveCatalogWalk.lean",
+      "scope": "Existence and uniqueness of the direct-edge/path/return/cycle decomposition, with simple walks and cycle size restrictions; the ghost augmentation has a proved inverse and admissibility equivalence.",
+      "tex_label": "lem:sk-decomposition",
+      "tex_line": 1772,
+      "supporting_declarations": [
+        {
+          "declaration": "SpinGlass.SKBlockPartition.selection_unique",
+          "source": "SpinGlass/SKBlockPartition.lean"
+        },
+        {
+          "declaration": "SpinGlass.SKBlockPartition.canonical_valid",
+          "source": "SpinGlass/SKBlockPartitionDegree.lean"
+        },
+        {
+          "declaration": "Manuscript.SKGhostAdmissible.admissible_iff",
+          "source": "Manuscript/SKGhostAdmissible.lean"
+        },
+        {
+          "declaration": "Manuscript.SKAugmentFinset.augment_erase",
+          "source": "Manuscript/SKGhostBijection.lean"
+        }
+      ]
+    },
+    {
+      "manuscript": "Proposition 4.4",
+      "declaration": "Manuscript.SKColorfulCoefficientOutput.end_to_end",
+      "source": "Manuscript/SKColorfulCoefficientOutput.lean",
+      "scope": "Simultaneous original colorful graph sums for every k and color set S, as constant-size readouts from the actual retained RAM coefficient array, for arbitrary real edge weights and h. Source assumptions describe only labels, raw edge-weight matrices and colors; every path table and coefficient is built by the fixed program.",
+      "tex_label": "prop:sk-colorful",
+      "tex_line": 1869,
+      "supporting_declarations": [
+        {
+          "declaration": "Manuscript.SKGhostCoefficient.algorithm_eq_physical",
+          "source": "Manuscript/SKGhostPhysicalEvaluation.lean"
+        },
+        {
+          "declaration": "Manuscript.SKChargeProjection.projectedAlgorithm_eq_generated",
+          "source": "Manuscript/SKChargeProjection.lean"
+        },
+        {
+          "declaration": "Manuscript.SKChargeProjection.projectedAlgorithm_eq_disorder",
+          "source": "Manuscript/SKChargeProjection.lean"
+        },
+        {
+          "declaration": "Manuscript.SKChargeProjection.manuscript_array_size",
+          "source": "Manuscript/SKChargeProjection.lean"
+        },
+        {
+          "declaration": "Manuscript.SKRestrictedCandidateExecution.program_exec",
+          "source": "Manuscript/SKRestrictedCandidateExecution.lean"
+        },
+        {
+          "declaration": "Manuscript.SKRawCandidate.encoded_program_exec",
+          "source": "Manuscript/SKRawCandidate.lean"
+        },
+        {
+          "declaration": "Manuscript.SKRestrictedCandidateSharpCost.candidate_bound",
+          "source": "Manuscript/SKRestrictedCandidateSharpCost.lean"
+        },
+        {
+          "declaration": "Manuscript.SKRestrictedCandidateSharpCost.raw_candidate_bound",
+          "source": "Manuscript/SKRestrictedCandidateSharpCost.lean"
+        },
+        {
+          "declaration": "Manuscript.SKGhostCoefficient.coefficient_original",
+          "source": "Manuscript/SKGhostCoefficient.lean"
+        },
+        {
+          "declaration": "Manuscript.SKCandidateCoefficientOutput.candidate_exec",
+          "source": "Manuscript/SKCandidateCoefficientOutput.lean"
+        }
+      ],
+      "operation_scope": "Actual candidate instructions <=360000*(N+2L+1)^6*16^L*36^|A|; including raw physical matrix preparation gives 361000 times the same expression. Each f(k,S) is represented by the sum of its three accepted degree-coordinate entries. Capacity-L/palette-2L/loop-L output equality is proved; the actual machine uses capacity and loop 2L."
+    },
+    {
+      "manuscript": "Proposition 4.5",
+      "declaration": "Manuscript.SKPhysicalEstimator.unbiased; Manuscript.SKPhysicalEstimator.coloring_mse; Manuscript.RestrictedSKSharpOuter.program_exec",
+      "source": "Manuscript/SKPhysicalEstimator.lean; Manuscript/SKPhysicalEstimator.lean; Manuscript/RestrictedSKSharpOuter.lean",
+      "scope": "Literal conditional unbiasedness for each physical disorder input; original-law coloring MSE at most C_+ exp(2L)/R for arbitrary D,L,R; actual fixed primitive estimator with exact physical estimator output and the displayed sharp operation formula.",
+      "tex_label": "prop:sk-estimator",
+      "tex_line": 2091,
+      "supporting_declarations": [
+        {
+          "declaration": "Manuscript.SKColorEstimator.coloring_mse_le",
+          "source": "Manuscript/SKColorEstimator.lean"
+        },
+        {
+          "declaration": "Manuscript.SKColorEstimator.partition_mse_eq",
+          "source": "Manuscript/SKColorTotalError.lean"
+        },
+        {
+          "declaration": "Manuscript.SKColorEstimator.partition_mse_le",
+          "source": "Manuscript/SKColorTotalError.lean"
+        },
+        {
+          "declaration": "Manuscript.RestrictedSKTruncated.program_exec",
+          "source": "Manuscript/RestrictedSKTruncated.lean"
+        },
+        {
+          "declaration": "Manuscript.SKPhysicalEstimator.value_eq",
+          "source": "Manuscript/SKPhysicalEstimator.lean"
+        }
+      ],
+      "operation_scope": "Actual instruction count <=362000*R*(N+2L+1)^6*16^L*sum_{b<=D} choose(N,b)*36^b, including subset generation, all candidate preparation/evaluation, raw color reads and averaging. The input representation contract only describes previously prepared physical weights and scratch separation; it is discharged at the full raw endpoint."
+    },
+    {
+      "manuscript": "Lemma 5.1",
+      "declaration": "Manuscript.CurrentCutoff.lemma_5_1",
+      "source": "Manuscript/CurrentCutoff.lean",
+      "scope": "Current full-u statement with fixed gamma/nu/N0, one cutoff for every t>=1, truncation and enumeration bounds. First-crossing cutoff and controller are actual loops.",
+      "tex_label": "lem:cutoff-selection",
+      "tex_line": 2178,
+      "supporting_declarations": [
+        {
+          "declaration": "Manuscript.RestrictedCutoff.program_exec",
+          "source": "Manuscript/RestrictedCutoff.lean"
+        },
+        {
+          "declaration": "Manuscript.RestrictedSKController.program_exec_precise",
+          "source": "Manuscript/RestrictedSKControlCost.lean"
+        }
+      ],
+      "operation_scope": "Actual finite scan, ceiling and model-parameter arithmetic; no computed cutoff supplied as an input."
+    },
+    {
+      "manuscript": "Proposition 5.2, higher orders",
+      "declaration": "Manuscript.RestrictedHigherGraphFinal.end_to_end",
+      "source": "Manuscript/RestrictedHigherGraphFinal.lean",
+      "scope": "Every raw u in (0,1), original disorder-law mean-square error at most u, fixed actual program from zero state, exact graph-estimator output and uniform C*N^C*u^-C primitive count.",
+      "tex_label": "prop:mean-square",
+      "tex_line": 2249,
+      "operation_scope": "Actual primitive graph approximation endpoint; no logarithmic-budget restriction.",
+      "supporting_declarations": [
+        {
+          "declaration": "Manuscript.RestrictedHigherGraphEndpoint.program_exec",
+          "source": "Manuscript/RestrictedHigherGraphEndpoint.lean"
+        },
+        {
+          "declaration": "Manuscript.RestrictedHigherGraphRuntime.polynomial",
+          "source": "Manuscript/RestrictedHigherGraphRuntime.lean"
+        },
+        {
+          "declaration": "Manuscript.HigherOrderAlgorithm.mse_bound",
+          "source": "Manuscript/HigherOrderAlgorithm.lean"
+        }
+      ]
+    },
+    {
+      "manuscript": "Proposition 5.2, SK",
+      "declaration": "Manuscript.RestrictedSKGraphFinal.end_to_end",
+      "source": "Manuscript/RestrictedSKGraphFinal.lean",
+      "scope": "Every raw u in (0,1), original joint disorder/color mean-square error at most u, fixed actual program from zero state, exact graph-estimator output and uniform C*N^C*u^-C primitive count.",
+      "tex_label": "prop:mean-square",
+      "tex_line": 2249,
+      "supporting_declarations": [
+        {
+          "declaration": "Manuscript.RestrictedSKGraphEndpoint.program_overhead",
+          "source": "Manuscript/RestrictedSKGraphEndpoint.lean"
+        },
+        {
+          "declaration": "Manuscript.RestrictedSKGraphRuntime.polynomial",
+          "source": "Manuscript/RestrictedSKGraphRuntime.lean"
+        },
+        {
+          "declaration": "Manuscript.SKAlgorithm.mse_bound",
+          "source": "Manuscript/SKAlgorithm.lean"
+        }
+      ],
+      "operation_scope": "Actual primitive graph approximation endpoint; no logarithmic-budget restriction."
+    },
+    {
+      "manuscript": "Lemma 5.3",
+      "declaration": "SpinGlass.FiniteLowerTail.noisy_negative_moment_le_second_moment",
+      "source": "SpinGlass/FiniteLowerTail.lean",
+      "scope": "The stated negative moment of the actual finite-cube noise transform is bounded by the second moment for positive mean-one functions. Reverse hypercontractivity is proved from one-bit/tensorization/reverse-Holder results, not assumed.",
+      "tex_label": "lem:reverse-hypercontractivity",
+      "tex_line": 2312,
+      "supporting_declarations": [
+        {
+          "declaration": "Manuscript.ConditionalLowerTail.exponent_eq_inv_sqrt_sub_one",
+          "source": "Manuscript/ConditionalLowerTail.lean"
+        },
+        {
+          "declaration": "Manuscript.ConditionalLowerTail.reverse_hypercontractivity",
+          "source": "Manuscript/ConditionalLowerTail.lean"
+        }
+      ]
+    },
+    {
+      "manuscript": "Proposition 5.4",
+      "declaration": "Manuscript.UniformLowerTail.raw_negative_moment_uniform",
+      "source": "Manuscript/UniformLowerTail.lean",
+      "scope": "Both original-law restricted negative moment and lower-tail probability bounds, including literal raw-cutoff event, explicit positive tail threshold and actual tau remainder.",
+      "tex_label": "prop:lower-tail",
+      "tex_line": 2348,
+      "supporting_declarations": [
+        {
+          "declaration": "Manuscript.UniformLowerTail.physical_lower_tail_uniform",
+          "source": "Manuscript/UniformLowerTail.lean"
+        },
+        {
+          "declaration": "Manuscript.OriginalLawLowerTail.rawConstant_pos",
+          "source": "Manuscript/OriginalLawLowerTail.lean"
+        }
+      ]
+    },
+    {
+      "manuscript": "Measurability of final outputs and events",
+      "declaration": "Manuscript.OutputMeasurability.higher_canonical_execute_measurable; Manuscript.OutputMeasurability.sk_execute_measurable",
+      "source": "Manuscript/OutputMeasurability.lean",
+      "scope": "Ordinary measurable actual analyzed outputs and error/success/relative-success events; primitive endpoint output equalities transfer the same events.",
+      "supporting_declarations": [
+        {
+          "declaration": "Manuscript.OutputMeasurability.higher_failure_measurable",
+          "source": "Manuscript/OutputMeasurability.lean"
+        },
+        {
+          "declaration": "Manuscript.OutputMeasurability.sk_failure_measurable",
+          "source": "Manuscript/OutputMeasurability.lean"
+        },
+        {
+          "declaration": "Manuscript.OutputMeasurability.higher_success_measurable",
+          "source": "Manuscript/OutputMeasurability.lean"
+        },
+        {
+          "declaration": "Manuscript.OutputMeasurability.sk_success_measurable",
+          "source": "Manuscript/OutputMeasurability.lean"
+        },
+        {
+          "declaration": "Manuscript.OutputMeasurability.higher_relative_success_measurable",
+          "source": "Manuscript/OutputMeasurability.lean"
+        },
+        {
+          "declaration": "Manuscript.OutputMeasurability.sk_relative_success_measurable",
+          "source": "Manuscript/OutputMeasurability.lean"
+        }
+      ]
+    },
+    {
+      "manuscript": "Projected SK final mathematical output",
+      "declaration": "Manuscript.SKProjectedOutput.output_eq_execute; Manuscript.SKProjectedOutput.accuracy",
+      "source": "Manuscript/SKProjectedOutput.lean",
+      "scope": "Complete capacity-L projected logarithmic output, exact branch and positivity fallback; same original delta+tau error. Actual primitive endpoint realizes this value through equality with SKFinal.execute.",
+      "tex_label": "thm:finite-size",
+      "tex_line": 997,
+      "supporting_declarations": [
+        {
+          "declaration": "Manuscript.RestrictedSKFinal.end_to_end",
+          "source": "Manuscript/RestrictedSKFinal.lean"
+        }
+      ]
+    },
+    {
+      "manuscript": "Raw physical input preparation",
+      "declaration": "Manuscript.RestrictedPhysicalPreparation.physical_cache",
+      "source": "Manuscript/RestrictedPhysicalPreparation.lean",
+      "scope": "Actual raw interaction traversal, scalar weight preparation, incidence-mask copying and logarithmic-prefactor accumulation; computed weights and model-dependent controls are not raw inputs.",
+      "supporting_declarations": [
+        {
+          "declaration": "Manuscript.RestrictedPreparation.program_exec",
+          "source": "Manuscript/RestrictedPreparation.lean"
+        },
+        {
+          "declaration": "Manuscript.RestrictedInputEncoding.tableEdge_physical",
+          "source": "Manuscript/RestrictedInputEncoding.lean"
+        }
+      ]
+    }
+  ],
+  "implementation_variation": "The actual SK machine uses original-edge charge capacity 2L, exponential loop 2L and a 2L color palette, then extracts charges at most L. SKChargeProjection proves equality with charge-L projection after every update and exactly L exponential iterations, including the full estimator on actual disorder inputs. SKProjectedOutput extends this to the logarithmic output. The new fixed primitive program has a proved uniform polynomial bound; no claim of identical internal allocation or trace is made.",
+  "computational_model": "Restricted exact-real, unit-cost RAM with fixed finite program/procedure table and fixed model parameters, integer literals, raw labeled interaction inputs and addressable random tape; charged arithmetic/elementary functions, natural operations, addressed reads/writes and control/stack operations. Actual traces begin at the zero state. This is not bit complexity, finite-precision analysis or Lean-VM runtime.",
+  "historical_source_pdf_sha256": "840280aac7318f17cdb3f2d052504f999f39d6272d367de90ab4f68bf7687087",
+  "source_tex_sha256": "edbea067f5db10e67d31935a68778b0e1fcc786ed0e050ef06b1152b132642c6",
+  "source_tex": "paper/main-12-2-2.tex",
+  "source_original_path": "/Users/qiangwu/Downloads/main-12-2-2.tex",
+  "audit_date": "2026-10-22",
+  "formal_coverage_status": {
+    "mathematical_outputs": "Concrete original-law output identities and accuracy are proved by the mapped final endpoints. Kernel verification is recorded separately in verification-status.json.",
+    "operation_counts": "Actual complete primitive polynomial bounds for both logarithmic and full-u graph endpoints, plus the displayed sharp higher support and SK candidate/outer estimator bounds.",
+    "primitive_operation_refinement": "Fixed-program traces from raw inputs realize both main mathematical outputs; no output, runtime or generic callback contract remains in either final endpoint. Kernel verification is recorded separately in verification-status.json.",
+    "source_correspondence": "All 15 numbered theorem/lemma/proposition labels and Remark 1.2 have been reviewed against the frozen TeX hash. The map distinguishes internal allocation and constant-size output-readout representations from the original pseudocode while recording proved value equalities and actual operation bounds.",
+    "source_correspondence_review_complete": true,
+    "verification_status": "SEE_VERIFICATION_STATUS_JSON"
+  },
+  "source_correspondence_review_complete": true
+}

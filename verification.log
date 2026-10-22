@@ -1,0 +1,3328 @@
+MODULE Manuscript.GhostParity
+EXIT 0
+
+MODULE Manuscript.MomentExponents
+EXIT 0
+
+MODULE Manuscript.RestrictedMachine
+EXIT 0
+
+MODULE Manuscript.SupportExponent
+EXIT 0
+
+MODULE Manuscript.UniformTailMoment
+EXIT 0
+Manuscript/UniformTailMoment.lean:29:2: warning: try 'simp' instead of 'simpa'
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+Manuscript/UniformTailMoment.lean:41:19: warning: Variable name `hw` is not explicitly referenced.
+
+The binding can be removed (if unused) or named `_` (if used implicitly).
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+
+MODULE SpinGlass.CutoffTail
+EXIT 0
+
+MODULE SpinGlass.Degree
+EXIT 0
+
+MODULE SpinGlass.ErrorReduction
+EXIT 0
+
+MODULE SpinGlass.Expansion
+EXIT 0
+'SpinGlass.Expansion.mean_character' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SpinGlass.Expansion.graphical_expansion' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SpinGlass.Expansion.graphical_sum_pos' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SpinGlass.Expansion.pure_p_spin_expansion' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SpinGlass.Expansion.character_orthogonality' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SpinGlass.Expansion.polynomial_second_moment' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SpinGlass.Expansion.edge_subset_second_moment' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SpinGlass.Expansion.edge_subset_mean' depends on axioms: [propext, Classical.choice, Quot.sound]
+
+MODULE SpinGlass.LowerTail
+EXIT 0
+
+MODULE SpinGlass.ReverseHypercontractivityIngredients
+EXIT 0
+SpinGlass/ReverseHypercontractivityIngredients.lean:152:41: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+
+MODULE SpinGlass.SKBranchingPairings
+EXIT 0
+
+MODULE SpinGlass.SKGraphShapes
+EXIT 0
+SpinGlass/SKGraphShapes.lean:20:0: warning: automatically included section variable(s) unused in theorem `SpinGlass.SKGraphShapes.internal_neighborSet_eq`:
+  [DecidableEq V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+SpinGlass/SKGraphShapes.lean:60:0: warning: automatically included section variable(s) unused in theorem `SpinGlass.SKGraphShapes.reachable_stays`:
+  [Fintype V]
+  [DecidableEq V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] [DecidableEq V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+SpinGlass/SKGraphShapes.lean:130:30: warning: `_root_.not_imp` has been deprecated: Use `Classical.not_imp` instead
+
+MODULE SpinGlass.Support
+EXIT 0
+
+MODULE SpinGlass.SupportScalar
+EXIT 0
+
+MODULE SpinGlass.TanhBound
+EXIT 0
+
+MODULE Manuscript.RestrictedExpression
+EXIT 0
+
+MODULE Manuscript.RestrictedFrames
+EXIT 0
+
+MODULE Manuscript.RestrictedLoops
+EXIT 0
+
+MODULE Manuscript.RestrictedRecursiveMachine
+EXIT 0
+
+MODULE Manuscript.SKRestrictedKernels
+EXIT 0
+Manuscript/SKRestrictedKernels.lean:77:35: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+
+MODULE Manuscript.UniformEntropy
+EXIT 0
+Try this:
+  [apply] ring_nf
+  
+  The `ring` tactic failed to close the goal. Use `ring_nf` to obtain a normal form.
+    
+  Note that `ring` works primarily in *commutative* rings. If you have a noncommutative ring, abelian group or module, consider using `noncomm_ring`, `abel` or `module` instead.
+Manuscript/UniformEntropy.lean:24:10: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+Manuscript/UniformEntropy.lean:73:0: warning: automatically included section variable(s) unused in theorem `Manuscript.UniformEntropy.abs_signSum_le_card`:
+  [DecidableEq ι]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq ι] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+Manuscript/UniformEntropy.lean:112:0: warning: automatically included section variable(s) unused in theorem `Manuscript.UniformEntropy.tiltedWeight_pos`:
+  [DecidableEq ι]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq ι] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+Manuscript/UniformEntropy.lean:116:36: warning: This simp argument is unused:
+  h
+
+Hint: Omit it from the simp argument list.
+  simp [spinSign,̵ ̵h̵]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+Try this:
+  [apply] ring_nf
+  
+  The `ring` tactic failed to close the goal. Use `ring_nf` to obtain a normal form.
+    
+  Note that `ring` works primarily in *commutative* rings. If you have a noncommutative ring, abelian group or module, consider using `noncomm_ring`, `abel` or `module` instead.
+Manuscript/UniformEntropy.lean:119:0: warning: automatically included section variable(s) unused in theorem `Manuscript.UniformEntropy.log_tiltedWeight`:
+  [DecidableEq ι]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq ι] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+Manuscript/UniformEntropy.lean:125:38: warning: This simp argument is unused:
+  h
+
+Hint: Omit it from the simp argument list.
+  simp [spinSign,̵ ̵h̵]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+Manuscript/UniformEntropy.lean:132:38: warning: This simp argument is unused:
+  h
+
+Hint: Omit it from the simp argument list.
+  simp [spinSign,̵ ̵h̵]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+Manuscript/UniformEntropy.lean:138:2: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+Manuscript/UniformEntropy.lean:195:0: warning: automatically included section variable(s) unused in theorem `Manuscript.UniformEntropy.all_spins_one_of_one_le_overlap`:
+  [DecidableEq ι]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq ι] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+Manuscript/UniformEntropy.lean:250:8: warning: automatically included section variable(s) unused in theorem `Manuscript.UniformEntropy.overlap_complement`:
+  [DecidableEq ι]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq ι] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+Manuscript/UniformEntropy.lean:300:56: warning: Variable name `ht` is not explicitly referenced.
+
+The binding can be removed (if unused) or named `_` (if used implicitly).
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+
+MODULE SpinGlass.AccuracyBudget
+EXIT 0
+
+MODULE SpinGlass.Algebra
+EXIT 0
+
+MODULE SpinGlass.ColoringProbability
+EXIT 0
+SpinGlass/ColoringProbability.lean:34:11: warning: Variable name `χ` is not explicitly referenced.
+
+The binding can be removed (if unused) or named `_` (if used implicitly).
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+SpinGlass/ColoringProbability.lean:35:12: warning: Variable name `χ` is not explicitly referenced.
+
+The binding can be removed (if unused) or named `_` (if used implicitly).
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+SpinGlass/ColoringProbability.lean:51:21: warning: This simp argument is unused:
+  Fintype.card_fun
+
+Hint: Omit it from the simp argument list.
+  simp [probability, F̵i̵n̵t̵y̵p̵e̵.̵c̵a̵r̵d̵_̵f̵u̵n̵,̵ ̵div_eq_mul_inv, mul_comm]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+SpinGlass/ColoringProbability.lean:139:18: warning: This simp argument is unused:
+  ← mul_assoc
+
+Hint: Omit it from the simp argument list.
+  simp [mean, hk,̵ ̵←̵ ̵m̵u̵l̵_̵a̵s̵s̵o̵c̵]
+
+Note: Simp arguments with `←` have the additional effect of removing the other direction from the simp set, even if the simp argument itself is unused. If the hint above does not work, try replacing `←` with `-` to only get that effect and silence this warning.
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+
+MODULE SpinGlass.CutoffSelection
+EXIT 0
+SpinGlass/CutoffSelection.lean:98:18: warning: Variable name `hLam` is not explicitly referenced.
+
+The binding can be removed (if unused) or named `_` (if used implicitly).
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+SpinGlass/CutoffSelection.lean:150:72: warning: 'ring' tactic does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+SpinGlass/CutoffSelection.lean:159:12: warning: 'ring' tactic does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+SpinGlass/CutoffSelection.lean:150:72: warning: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+SpinGlass/CutoffSelection.lean:159:12: warning: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+
+MODULE SpinGlass.Mobius
+EXIT 0
+
+MODULE SpinGlass.Noise
+EXIT 0
+
+MODULE SpinGlass.Partition
+EXIT 0
+
+MODULE SpinGlass.RandomCoefficient
+EXIT 0
+
+MODULE SpinGlass.ReverseHolder
+EXIT 0
+
+MODULE SpinGlass.ReverseHypercontractivityTwoPoint
+EXIT 0
+
+MODULE SpinGlass.SKBranchingGaussian
+EXIT 0
+SpinGlass/SKBranchingGaussian.lean:37:8: warning: try 'simp' instead of 'simpa'
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+SpinGlass/SKBranchingGaussian.lean:41:17: warning: This simp argument is unused:
+  neg_pow
+
+Hint: Omit it from the simp argument list.
+  simp [f, n̵e̵g̵_̵p̵o̵w̵,̵ ̵pow_mul]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+
+MODULE SpinGlass.SKBranchingRealizations
+EXIT 0
+SpinGlass/SKBranchingRealizations.lean:51:8: warning: automatically included section variable(s) unused in theorem `_private.SpinGlass.SKBranchingRealizations.0.SpinGlass.SKBranching.exists_other`:
+  [Fintype V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+SpinGlass/SKBranchingRealizations.lean:86:12: warning: This simp argument is unused:
+  hne
+
+Hint: Omit it from the simp argument list.
+  simp [hne,̵ ̵h̵n̵e̵.symm, h.1, h.1.symm, h.2, h.2.symm, he] at hc
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+SpinGlass/SKBranchingRealizations.lean:86:27: warning: This simp argument is unused:
+  h.1
+
+Hint: Omit it from the simp argument list.
+  simp [hne, hne.symm, h.1,̵ ̵h̵.1̵.̵symm, h.2, h.2.symm, he] at hc
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+SpinGlass/SKBranchingRealizations.lean:86:42: warning: This simp argument is unused:
+  h.2
+
+Hint: Omit it from the simp argument list.
+  simp [hne, hne.symm, h.1, h.1.symm, h.2,̵ ̵h̵.2̵.̵symm, he] at hc
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+
+MODULE SpinGlass.SKBranchingScalar
+EXIT 0
+SpinGlass/SKBranchingScalar.lean:85:32: warning: Variable name `hr` is not explicitly referenced.
+
+The binding can be removed (if unused) or named `_` (if used implicitly).
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+
+MODULE SpinGlass.SKBranchingSeries
+EXIT 0
+
+MODULE SpinGlass.SKComponents
+EXIT 0
+SpinGlass/SKComponents.lean:29:0: warning: automatically included section variable(s) unused in theorem `SpinGlass.SKComponents.related_refl`:
+  [Fintype V]
+  [DecidableEq V]
+  [DecidableEq E]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] [DecidableEq V] [DecidableEq E] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+SpinGlass/SKComponents.lean:32:0: warning: automatically included section variable(s) unused in theorem `SpinGlass.SKComponents.related_symm`:
+  [Fintype V]
+  [DecidableEq V]
+  [DecidableEq E]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] [DecidableEq V] [DecidableEq E] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+SpinGlass/SKComponents.lean:36:0: warning: automatically included section variable(s) unused in theorem `SpinGlass.SKComponents.related_trans`:
+  [Fintype V]
+  [DecidableEq V]
+  [DecidableEq E]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] [DecidableEq V] [DecidableEq E] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+SpinGlass/SKComponents.lean:49:8: warning: automatically included section variable(s) unused in theorem `SpinGlass.SKComponents.mem_component`:
+  [Fintype V]
+  [DecidableEq V]
+  [DecidableEq E]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] [DecidableEq V] [DecidableEq E] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+SpinGlass/SKComponents.lean:109:0: warning: automatically included section variable(s) unused in theorem `SpinGlass.SKComponents.related_of_shared_outside`:
+  [Fintype V]
+  [DecidableEq V]
+  [DecidableEq E]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] [DecidableEq V] [DecidableEq E] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+SpinGlass/SKComponents.lean:177:0: warning: automatically included section variable(s) unused in theorem `SpinGlass.SKComponents.full_degree_eq`:
+  [Fintype V]
+  [DecidableEq E]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] [DecidableEq E] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+SpinGlass/SKComponents.lean:195:0: warning: automatically included section variable(s) unused in theorem `SpinGlass.SKComponents.outside_degree_two`:
+  [DecidableEq E]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq E] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+
+MODULE Manuscript.FieldExpansion
+EXIT 0
+
+MODULE Manuscript.LogRuntime
+EXIT 0
+Manuscript/LogRuntime.lean:48:5: warning: Variable name `hA` is not explicitly referenced.
+
+The binding can be removed (if unused) or named `_` (if used implicitly).
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+
+MODULE Manuscript.MixedThreshold
+EXIT 0
+Manuscript/MixedThreshold.lean:163:28: warning: Variable name `hvT` is not explicitly referenced.
+
+The binding can be removed (if unused) or named `_` (if used implicitly).
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+
+MODULE Manuscript.RestrictedArrays
+EXIT 0
+
+MODULE Manuscript.RestrictedDeterminism
+EXIT 0
+
+MODULE Manuscript.RestrictedIndices
+EXIT 0
+
+MODULE Manuscript.RestrictedRecursiveFrames
+EXIT 0
+
+MODULE Manuscript.RestrictedRecursiveRename
+EXIT 0
+
+MODULE Manuscript.SKRestrictedGrid
+EXIT 0
+Manuscript/SKRestrictedGrid.lean:37:53: warning: 'omega' tactic does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+Manuscript/SKRestrictedGrid.lean:37:53: warning: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+Manuscript/SKRestrictedGrid.lean:37:35: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+Manuscript/SKRestrictedGrid.lean:70:41: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+Manuscript/SKRestrictedGrid.lean:71:26: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+Manuscript/SKRestrictedGrid.lean:79:51: warning: 'omega' tactic does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+Manuscript/SKRestrictedGrid.lean:79:51: warning: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+Manuscript/SKRestrictedGrid.lean:79:33: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+
+MODULE Manuscript.UniformEntropyMoment
+EXIT 0
+Manuscript/UniformEntropyMoment.lean:15:10: warning: This simp argument is unused:
+  Fintype.card_fun
+
+Hint: Omit it from the simp argument list.
+  simp [Fintype.card_f̵u̵n̵,̵ ̵F̵i̵n̵t̵y̵p̵e̵.̵c̵a̵r̵d̵_̵bool, Nat.cast_pow]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+
+MODULE Manuscript.UniformOverlap
+EXIT 0
+Manuscript/UniformOverlap.lean:59:0: warning: automatically included section variable(s) unused in theorem `Manuscript.UniformOverlap.embedding_prod_eq`:
+  [Fintype V]
+  [DecidableEq V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] [DecidableEq V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+Manuscript/UniformOverlap.lean:86:0: warning: automatically included section variable(s) unused in theorem `Manuscript.UniformOverlap.tuple_sum_eq_power`:
+  [DecidableEq V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+Manuscript/UniformOverlap.lean:210:4: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+
+MODULE SpinGlass.AlgorithmBudgets
+EXIT 0
+SpinGlass/AlgorithmBudgets.lean:26:68: warning: Variable name `hLam` is not explicitly referenced.
+
+The binding can be removed (if unused) or named `_` (if used implicitly).
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+
+MODULE SpinGlass.BoundedSearch
+EXIT 0
+
+MODULE SpinGlass.ColoringRepetitions
+EXIT 0
+SpinGlass/ColoringRepetitions.lean:22:51: warning: This simp argument is unused:
+  inv_pow
+
+Hint: Omit it from the simp argument list.
+  simp only [mean, Fintype.card_fun, Nat.cast_pow,̵ ̵i̵n̵v̵_̵p̵o̵w̵]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+
+MODULE SpinGlass.DisorderModel
+EXIT 0
+
+MODULE SpinGlass.FiniteProbability
+EXIT 0
+
+MODULE SpinGlass.LocalCube
+EXIT 0
+
+MODULE SpinGlass.NoiseKernel
+EXIT 0
+
+MODULE SpinGlass.SKBlockPartition
+EXIT 0
+SpinGlass/SKBlockPartition.lean:26:0: warning: automatically included section variable(s) unused in theorem `SpinGlass.SKBlockPartition.blockFamily_eq_image`:
+  [Fintype V]
+  [DecidableEq V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] [DecidableEq V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+SpinGlass/SKBlockPartition.lean:41:0: warning: automatically included section variable(s) unused in theorem `SpinGlass.SKBlockPartition.plainComponent_subset`:
+  [Fintype V]
+  [DecidableEq V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] [DecidableEq V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+SpinGlass/SKBlockPartition.lean:73:0: warning: automatically included section variable(s) unused in theorem `SpinGlass.SKBlockPartition.related_mono`:
+  [Fintype V]
+  [DecidableEq V]
+  [DecidableEq E]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] [DecidableEq V] [DecidableEq E] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+SpinGlass/SKBlockPartition.lean:83:0: warning: automatically included section variable(s) unused in theorem `SpinGlass.SKBlockPartition.related_preserves_mem`:
+  [Fintype V]
+  [DecidableEq V]
+  [DecidableEq E]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] [DecidableEq V] [DecidableEq E] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+SpinGlass/SKBlockPartition.lean:184:0: warning: automatically included section variable(s) unused in theorem `SpinGlass.SKBlockPartition.selection_adjacent_closed`:
+  [Fintype V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+
+MODULE SpinGlass.SKBranchingMassFinite
+EXIT 0
+SpinGlass/SKBranchingMassFinite.lean:52:0: warning: automatically included section variable(s) unused in theorem `SpinGlass.SKBranching.degreeMonomial_eq`:
+  [DecidableEq V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+
+MODULE SpinGlass.SKCoefficient
+EXIT 0
+SpinGlass/SKCoefficient.lean:80:23: warning: This simp argument is unused:
+  h'
+
+Hint: Omit it from the simp argument list.
+  simp [basisMul, h,̵ ̵h̵'̵]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+SpinGlass/SKCoefficient.lean:97:24: warning: This simp argument is unused:
+  dxy
+
+Hint: Omit it from the simp argument list.
+  simp [dxy̵,̵ ̵d̵x̵z, dyz, ht, ht']
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+SpinGlass/SKCoefficient.lean:97:29: warning: This simp argument is unused:
+  dxz
+
+Hint: Omit it from the simp argument list.
+  simp [dxy, dx̵z̵,̵ ̵d̵yz, ht, ht']
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+SpinGlass/SKCoefficient.lean:97:34: warning: This simp argument is unused:
+  dyz
+
+Hint: Omit it from the simp argument list.
+  simp [dxy, dxz, d̵y̵z̵,̵ ̵ht, ht']
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+SpinGlass/SKCoefficient.lean:97:39: warning: This simp argument is unused:
+  ht
+
+Hint: Omit it from the simp argument list.
+  simp [dxy, dxz, dyz, ht,̵ ̵h̵t̵']
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+SpinGlass/SKCoefficient.lean:97:43: warning: This simp argument is unused:
+  ht'
+
+Hint: Omit it from the simp argument list.
+  simp [dxy, dxz, dyz, ht,̵ ̵h̵t̵'̵]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+
+MODULE SpinGlass.SKOutsideClassification
+EXIT 0
+SpinGlass/SKOutsideClassification.lean:65:6: warning: 'change b ∈ ((graph Γ).neighborSet v).toFinset' tactic does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+SpinGlass/SKOutsideClassification.lean:68:6: warning: 'change a ∈ ((graph Γ).neighborSet v).toFinset' tactic does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+SpinGlass/SKOutsideClassification.lean:73:0: warning: automatically included section variable(s) unused in theorem `SpinGlass.SKOutsideClassification.induced_neighbor_card_le`:
+  [DecidableEq V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+
+MODULE SpinGlass.Tensorization
+EXIT 0
+
+MODULE Manuscript.Cutoffs
+EXIT 0
+
+MODULE Manuscript.MixedThresholdParameters
+EXIT 0
+Manuscript/MixedThresholdParameters.lean:82:51: warning: try 'simp' instead of 'simpa'
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+
+MODULE Manuscript.Model
+EXIT 0
+
+MODULE Manuscript.RestrictedDeltaVector
+EXIT 0
+
+MODULE Manuscript.RuntimeOverhead
+EXIT 0
+
+MODULE Manuscript.SKMetadataGeneration
+EXIT 0
+
+MODULE Manuscript.SignPolynomial
+EXIT 0
+
+MODULE Manuscript.SupportEvaluation
+EXIT 0
+
+MODULE Manuscript.UniformFieldMoment
+EXIT 0
+Manuscript/UniformFieldMoment.lean:89:33: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+Manuscript/UniformFieldMoment.lean:117:6: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+
+MODULE Manuscript.UniformGraphMass
+EXIT 0
+Manuscript/UniformGraphMass.lean:17:0: warning: automatically included section variable(s) unused in theorem `Manuscript.UniformGraphMass.fieldFactor_nonneg`:
+  [DecidableEq E]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq E] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+
+MODULE SpinGlass.ArithmeticEvaluation
+EXIT 0
+SpinGlass/ArithmeticEvaluation.lean:102:8: warning: automatically included section variable(s) unused in theorem `SpinGlass.ArithmeticEvaluation.cubeNormalizer_value`:
+  [Fintype V]
+  [DecidableEq V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] [DecidableEq V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+SpinGlass/ArithmeticEvaluation.lean:104:42: warning: This simp argument is unused:
+  inv_pow
+
+Hint: Omit it from the simp argument list.
+  simp [cubeNormalizer, literal, one_div,̵ ̵i̵n̵v̵_̵p̵o̵w̵]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+SpinGlass/ArithmeticEvaluation.lean:106:8: warning: automatically included section variable(s) unused in theorem `SpinGlass.ArithmeticEvaluation.cubeNormalizer_operations`:
+  [Fintype V]
+  [DecidableEq V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] [DecidableEq V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+SpinGlass/ArithmeticEvaluation.lean:109:8: warning: automatically included section variable(s) unused in theorem `SpinGlass.ArithmeticEvaluation.character_value`:
+  [Fintype V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+SpinGlass/ArithmeticEvaluation.lean:113:8: warning: automatically included section variable(s) unused in theorem `SpinGlass.ArithmeticEvaluation.character_operations`:
+  [Fintype V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+
+MODULE SpinGlass.BilinearTwoPoint
+EXIT 0
+
+MODULE SpinGlass.ColorPath
+EXIT 0
+SpinGlass/ColorPath.lean:47:0: warning: automatically included section variable(s) unused in theorem `SpinGlass.ColorPath.head_of_mem_chains`:
+  [DecidableEq V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+SpinGlass/ColorPath.lean:64:0: warning: automatically included section variable(s) unused in theorem `SpinGlass.ColorPath.colors_of_mem_chains`:
+  [DecidableEq V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+SpinGlass/ColorPath.lean:93:0: warning: automatically included section variable(s) unused in theorem `SpinGlass.ColorPath.length_le_depth_of_mem_chains`:
+  [DecidableEq V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+SpinGlass/ColorPath.lean:120:0: warning: automatically included section variable(s) unused in theorem `SpinGlass.ColorPath.mem_chains_of_properties`:
+  [DecidableEq V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+SpinGlass/ColorPath.lean:197:0: warning: automatically included section variable(s) unused in theorem `SpinGlass.ColorPath.weight_cons_of_head`:
+  [Fintype V]
+  [DecidableEq V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] [DecidableEq V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+SpinGlass/ColorPath.lean:246:8: warning: automatically included section variable(s) unused in theorem `SpinGlass.ColorPath.pathTable_singleton`:
+  [DecidableEq V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+SpinGlass/ColorPath.lean:251:0: warning: automatically included section variable(s) unused in theorem `SpinGlass.ColorPath.pathTable_recurrence`:
+  [DecidableEq V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+SpinGlass/ColorPath.lean:266:0: warning: automatically included section variable(s) unused in theorem `SpinGlass.ColorPath.pathTable_invalid`:
+  [DecidableEq V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+SpinGlass/ColorPath.lean:305:57: warning: This simp argument is unused:
+  Nat.mul_assoc
+
+Hint: Omit it from the simp argument list.
+  simp [Fintype.card_prod, Fintype.card_finset, pow_two,̵ ̵N̵a̵t̵.̵m̵u̵l̵_̵a̵s̵s̵o̵c̵]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+
+MODULE SpinGlass.ColorRestriction
+EXIT 0
+
+MODULE SpinGlass.DisorderIndependentCoefficients
+EXIT 0
+SpinGlass/DisorderIndependentCoefficients.lean:105:0: warning: automatically included section variable(s) unused in theorem `SpinGlass.Disorder.integrable_independent_polynomial_square`:
+  [DecidableEq E]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq E] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+
+MODULE SpinGlass.DisorderMomentBounds
+EXIT 0
+
+MODULE SpinGlass.DisorderSigns
+EXIT 0
+
+MODULE SpinGlass.NoiseMomentReduction
+EXIT 0
+
+MODULE SpinGlass.PolynomialRuntime
+EXIT 0
+
+MODULE SpinGlass.SKAttachments
+EXIT 0
+SpinGlass/SKAttachments.lean:32:0: warning: automatically included section variable(s) unused in theorem `SpinGlass.SKAttachments.component_neighbor_card`:
+  [DecidableEq V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+
+MODULE SpinGlass.SKBlockPartitionDegree
+EXIT 0
+SpinGlass/SKBlockPartitionDegree.lean:33:0: warning: automatically included section variable(s) unused in theorem `SpinGlass.SKBlockPartition.outside_mono`:
+  [Fintype V]
+  [DecidableEq E]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] [DecidableEq E] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+SpinGlass/SKBlockPartitionDegree.lean:118:8: warning: Variable name `K` is not explicitly referenced.
+
+The binding can be removed (if unused) or named `_` (if used implicitly).
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+
+MODULE SpinGlass.SKBranchingMass
+EXIT 0
+SpinGlass/SKBranchingMass.lean:17:0: warning: automatically included section variable(s) unused in theorem `SpinGlass.SKBranching.degreeChoices_even`:
+  [Fintype V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+SpinGlass/SKBranchingMass.lean:152:0: warning: automatically included section variable(s) unused in theorem `SpinGlass.SKBranching.degree_majorant_eq`:
+  [DecidableEq V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+
+MODULE SpinGlass.SKExponential
+EXIT 0
+
+MODULE Manuscript.DisorderOrthogonality
+EXIT 0
+
+MODULE Manuscript.MixedCoefficient
+EXIT 0
+
+MODULE Manuscript.SKMetadataTable
+EXIT 0
+Manuscript/SKMetadataTable.lean:16:76: warning: This simp argument is unused:
+  Function.update_apply
+
+Hint: Omit it from the simp argument list.
+  simp [̵w̵r̵i̵t̵e̵R̵e̵c̵o̵r̵d̵,̵r̵e̵c̵o̵r̵d̵F̵i̵e̵l̵d̵,̵F̵u̵n̵c̵t̵i̵o̵n̵.̵u̵p̵d̵a̵t̵e̵_̵a̵p̵p̵l̵y̵]̵[̲w̲r̲i̲t̲e̲R̲e̲c̲o̲r̲d̲,̲ ̲r̲e̲c̲o̲r̲d̲F̲i̲e̲l̲d̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+Manuscript/SKMetadataTable.lean:20:20: warning: This simp argument is unused:
+  Function.update_apply
+
+Hint: Omit it from the simp argument list.
+  simp [̵w̵r̵i̵t̵e̵R̵e̵c̵o̵r̵d̵,̵F̵u̵n̵c̵t̵i̵o̵n̵.̵u̵p̵d̵a̵t̵e̵_̵a̵p̵p̵l̵y̵,̵s̵h̵o̵w̵ ̵a̵d̵d̵r̵e̵s̵s̵≠̵b̵a̵s̵e̵[̲w̲r̲i̲t̲e̲R̲e̲c̲o̲r̲d̲,̲ ̲s̲h̲o̲w̲ ̲a̲d̲d̲r̲e̲s̲s̲ ̲≠̲ ̲b̲a̲s̲e̲ by omega, show a̵d̵d̵r̵e̵s̵s̵≠̵b̵a̵s̵e̵+̵1̵a̲d̲d̲r̲e̲s̲s̲ ̲≠̲ ̲b̲a̲s̲e̲ ̲+̲ ̲1̲ by o̵m̵e̵g̵a̵,̵s̵h̵o̵w̵ ̵a̵d̵d̵r̵e̵s̵s̵≠̵b̵a̵s̵e̵+̵2̵ ̵b̵y̵ ̵o̵m̵e̵g̵a̵,̵s̵h̵o̵w̵ ̵a̵d̵d̵r̵e̵s̵s̵≠̵b̵a̵s̵e̵+̵3̵ ̵b̵y̵o̲m̲e̲g̲a̲,̲
+  ̲ ̲ ̲ ̲ ̲s̲h̲o̲w̲ ̲a̲d̲d̲r̲e̲s̲s̲ ̲≠̲ ̲b̲a̲s̲e̲ ̲+̲ ̲2̲ ̲b̲y̲ ̲o̲m̲e̲g̲a̲,̲ ̲s̲h̲o̲w̲ ̲a̲d̲d̲r̲e̲s̲s̲ ̲≠̲ ̲b̲a̲s̲e̲ ̲+̲ ̲3̲ ̲b̲y̲ omega]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+Manuscript/SKMetadataTable.lean:113:25: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+
+MODULE Manuscript.SKRootStart
+EXIT 0
+
+MODULE Manuscript.SupportCoefficientExecution
+EXIT 0
+
+MODULE Manuscript.SupportDegrees
+EXIT 0
+
+MODULE Manuscript.SupportIndices
+EXIT 0
+Manuscript/SupportIndices.lean:100:0: warning: automatically included section variable(s) unused in theorem `Manuscript.SupportIndices.chooseLists_eq`:
+  [DecidableEq α]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq α] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+Manuscript/SupportIndices.lean:162:52: warning: 'omega' tactic does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+Manuscript/SupportIndices.lean:162:52: warning: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+Manuscript/SupportIndices.lean:210:8: warning: automatically included section variable(s) unused in theorem `Manuscript.SupportIndices.chooseExecution_values`:
+  [DecidableEq α]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq α] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+Manuscript/SupportIndices.lean:288:8: warning: automatically included section variable(s) unused in theorem `Manuscript.SupportIndices.allExecution_values`:
+  [DecidableEq α]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq α] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+Manuscript/SupportIndices.lean:293:8: warning: automatically included section variable(s) unused in theorem `Manuscript.SupportIndices.allExecution_length`:
+  [DecidableEq α]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq α] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+
+MODULE Manuscript.UniformBiasedMean
+EXIT 0
+Manuscript/UniformBiasedMean.lean:37:0: warning: automatically included section variable(s) unused in theorem `Manuscript.UniformBiasedMean.biasedMean_character`:
+  [DecidableEq E]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq E] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+Manuscript/UniformBiasedMean.lean:76:0: warning: automatically included section variable(s) unused in theorem `Manuscript.UniformBiasedMean.spin_product_nonneg`:
+  [Fintype V]
+  [DecidableEq V]
+  [DecidableEq E]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] [DecidableEq V] [DecidableEq E] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+Manuscript/UniformBiasedMean.lean:85:0: warning: automatically included section variable(s) unused in theorem `Manuscript.UniformBiasedMean.spin_product_le_exp_sum`:
+  [Fintype V]
+  [DecidableEq V]
+  [DecidableEq E]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] [DecidableEq V] [DecidableEq E] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+Manuscript/UniformBiasedMean.lean:98:0: warning: automatically included section variable(s) unused in theorem `Manuscript.UniformBiasedMean.tiltedWeight_le_exp`:
+  [DecidableEq V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+
+MODULE SpinGlass.ColorCycleChain
+EXIT 0
+SpinGlass/ColorCycleChain.lean:28:0: warning: automatically included section variable(s) unused in theorem `SpinGlass.ColorCycleChain.table_eq_zero_of_start_zero`:
+  [DecidableEq V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+SpinGlass/ColorCycleChain.lean:74:6: warning: try 'simp' instead of 'simpa'
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+SpinGlass/ColorCycleChain.lean:95:0: warning: automatically included section variable(s) unused in theorem `SpinGlass.ColorCycleChain.weight_factor_start_last`:
+  [Fintype V]
+  [DecidableEq V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] [DecidableEq V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+
+MODULE SpinGlass.ColorMemoExecution
+EXIT 0
+SpinGlass/ColorMemoExecution.lean:32:8: warning: automatically included section variable(s) unused in theorem `SpinGlass.ColorMemoExecution.pathTable_empty`:
+  [DecidableEq V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+
+MODULE SpinGlass.ColoringEstimator
+EXIT 0
+SpinGlass/ColoringEstimator.lean:38:0: warning: automatically included section variable(s) unused in theorem `SpinGlass.ColoringEstimator.mean_graphCoefficient`:
+  [Fintype E]
+  [DecidableEq E]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype E] [DecidableEq E] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+SpinGlass/ColoringEstimator.lean:47:0: warning: automatically included section variable(s) unused in theorem `SpinGlass.ColoringEstimator.mean_graphCoefficient_variance`:
+  [Fintype E]
+  [DecidableEq E]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype E] [DecidableEq E] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+SpinGlass/ColoringEstimator.lean:58:0: warning: automatically included section variable(s) unused in theorem `SpinGlass.ColoringEstimator.mean_graphCoefficient_variance_le`:
+  [Fintype E]
+  [DecidableEq E]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype E] [DecidableEq E] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+
+MODULE SpinGlass.ReverseHypercontractivity
+EXIT 0
+
+MODULE SpinGlass.SKBranchingBridge
+EXIT 0
+
+MODULE SpinGlass.SKPrimitiveCatalog
+EXIT 0
+SpinGlass/SKPrimitiveCatalog.lean:19:0: warning: automatically included section variable(s) unused in theorem `SpinGlass.SKPrimitiveCatalog.mem_outside_of_edge`:
+  [Fintype V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+SpinGlass/SKPrimitiveCatalog.lean:24:0: warning: automatically included section variable(s) unused in theorem `SpinGlass.SKPrimitiveCatalog.pair_eq_of_mem`:
+  [Fintype V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+SpinGlass/SKPrimitiveCatalog.lean:152:6: warning: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+
+MODULE SpinGlass.SKRing
+EXIT 0
+
+MODULE Manuscript.InputIndices
+EXIT 0
+Manuscript/InputIndices.lean:69:4: warning: Try this: intro p q hpq e hep heq
+
+MODULE Manuscript.MixedEnergy
+EXIT 0
+
+MODULE Manuscript.RestrictedCoefficients
+EXIT 0
+Manuscript/RestrictedCoefficients.lean:61:43: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+Manuscript/RestrictedCoefficients.lean:62:27: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+Manuscript/RestrictedCoefficients.lean:82:27: warning: 'omega' tactic does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+Manuscript/RestrictedCoefficients.lean:82:27: warning: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+Manuscript/RestrictedCoefficients.lean:91:67: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+
+MODULE Manuscript.RestrictedSubsets
+EXIT 0
+Manuscript/RestrictedSubsets.lean:18:13: warning: Variable name `b` is not explicitly referenced.
+
+The binding can be removed (if unused) or named `_` (if used implicitly).
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+Manuscript/RestrictedSubsets.lean:66:14: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+Manuscript/RestrictedSubsets.lean:74:39: warning: This simp argument is unused:
+  eq_comm
+
+Hint: Omit it from the simp argument list.
+  simp [output, Function.update_apply,̵ ̵e̵q̵_̵c̵o̵m̵m̵]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+Manuscript/RestrictedSubsets.lean:96:10: warning: This simp argument is unused:
+  hr
+
+Hint: Omit it from the simp argument list.
+  simp [h̵r̵,̵ ̵Ne.symm hr]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+Manuscript/RestrictedSubsets.lean:94:79: warning: 'omega' tactic does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+Manuscript/RestrictedSubsets.lean:94:79: warning: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+Manuscript/RestrictedSubsets.lean:298:12: warning: This simp argument is unused:
+  Function.update_apply
+
+Hint: Omit it from the simp argument list.
+  simp [̵F̵u̵n̵c̵t̵i̵o̵n̵.̵u̵p̵d̵a̵t̵e̵_̵a̵p̵p̵l̵y̵,̵s̵h̵o̵w̵ ̵j̵≠̵s̵t̵a̵r̵t̵[̲s̲h̲o̲w̲ ̲j̲ ̲≠̲ ̲s̲t̲a̲r̲t̲ by omega]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+
+MODULE Manuscript.SKGraphBasics
+EXIT 0
+Manuscript/SKGraphBasics.lean:45:0: warning: automatically included section variable(s) unused in theorem `Manuscript.SKGraph.pair_totalDegree`:
+  [Fintype V]
+  [DecidableEq V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] [DecidableEq V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+
+MODULE Manuscript.SKRestrictedMemoCell
+EXIT 0
+
+MODULE Manuscript.SupportLocalExecution
+EXIT 0
+Manuscript/SupportLocalExecution.lean:16:0: warning: automatically included section variable(s) unused in theorem `Manuscript.SupportLocalExecution.localAssignments_sum`:
+  [Fintype V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+Manuscript/SupportLocalExecution.lean:23:8: warning: automatically included section variable(s) unused in theorem `Manuscript.SupportLocalExecution.localAssignments_length`:
+  [Fintype V]
+  [DecidableEq V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] [DecidableEq V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+Manuscript/SupportLocalExecution.lean:36:8: warning: automatically included section variable(s) unused in theorem `Manuscript.SupportLocalExecution.selectEdges_values`:
+  [Fintype V]
+  [DecidableEq E]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] [DecidableEq E] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+Manuscript/SupportLocalExecution.lean:52:0: warning: automatically included section variable(s) unused in theorem `Manuscript.SupportLocalExecution.selectEdges_work`:
+  [DecidableEq E]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq E] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+Manuscript/SupportLocalExecution.lean:69:8: warning: automatically included section variable(s) unused in theorem `Manuscript.SupportLocalExecution.character_value`:
+  [Fintype V]
+  [DecidableEq E]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] [DecidableEq E] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+Manuscript/SupportLocalExecution.lean:75:8: warning: automatically included section variable(s) unused in theorem `Manuscript.SupportLocalExecution.character_operations`:
+  [Fintype V]
+  [DecidableEq E]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] [DecidableEq E] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+
+MODULE Manuscript.SupportMassCounting
+EXIT 0
+Manuscript/SupportMassCounting.lean:24:0: warning: automatically included section variable(s) unused in theorem `Manuscript.SupportMassCounting.induced_order_card_le`:
+  [Fintype V]
+  [DecidableEq E]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] [DecidableEq E] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+Manuscript/SupportMassCounting.lean:86:0: warning: automatically included section variable(s) unused in theorem `Manuscript.SupportMassCounting.support_fiber_subset`:
+  [Fintype V]
+  [DecidableEq E]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] [DecidableEq E] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+
+MODULE SpinGlass.FiniteLowerTail
+EXIT 0
+
+MODULE SpinGlass.SKCountedExecutionCore
+EXIT 0
+SpinGlass/SKCountedExecutionCore.lean:39:34: warning: This simp argument is unused:
+  Function.update_of_ne hij
+
+Hint: Omit it from the simp argument list.
+  simp [hi, hij, cacheStep,̵ ̵F̵u̵n̵c̵t̵i̵o̵n̵.̵u̵p̵d̵a̵t̵e̵_̵o̵f̵_̵n̵e̵ ̵h̵i̵j̵]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+SpinGlass/SKCountedExecutionCore.lean:73:8: warning: automatically included section variable(s) unused in theorem `SpinGlass.SKCountedExecution.memoCell_value`:
+  [DecidableEq W]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq W] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+SpinGlass/SKCountedExecutionCore.lean:79:0: warning: automatically included section variable(s) unused in theorem `SpinGlass.SKCountedExecution.memoCell_operations_le`:
+  [DecidableEq W]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq W] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+SpinGlass/SKCountedExecutionCore.lean:83:58: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+
+MODULE SpinGlass.SKPrimitiveExpansion
+EXIT 0
+
+MODULE SpinGlass.SKTraversalPath
+EXIT 0
+
+MODULE Manuscript.ConditionalLowerTail
+EXIT 0
+
+MODULE Manuscript.RestrictedCubes
+EXIT 0
+
+MODULE Manuscript.RestrictedLabelPass
+EXIT 0
+Manuscript/RestrictedLabelPass.lean:90:72: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+Manuscript/RestrictedLabelPass.lean:146:75: warning: This simp argument is unused:
+  List.filter_cons
+
+Hint: Omit it from the simp argument list.
+  simp [̵l̵a̵b̵e̵l̵s̵,̵h̵s̵,̵L̵i̵s̵t̵.̵f̵i̵n̵R̵a̵n̵g̵e̵_̵s̵u̵c̵c̵,̵L̵i̵s̵t̵.̵f̵i̵l̵t̵e̵r̵_̵c̵o̵n̵s̵,̵L̵i̵s̵t̵.̵f̵i̵l̵t̵e̵r̵_̵m̵a̵p̵,̵L̵i̵s̵t̵.̵m̵a̵p̵_̵m̵a̵p̵,̵i̵h̵,̵
+  ̵ ̵ ̵ ̵ ̵ ̵ ̵ ̵ ̵F̵u̵n̵c̵t̵i̵o̵n̵.̵c̵o̵m̵p̵_̵d̵e̵f̵,̵p̵o̵w̵_̵s̵u̵c̵c̵'̵,̵N̵a̵t̵.̵d̵i̵v̵_̵d̵i̵v̵_̵e̵q̵_̵d̵i̵v̵_̵m̵u̵l̵,̵N̵a̵t̵.̵m̵u̵l̵_̵a̵s̵s̵o̵c̵,̵N̵a̵t̵.̵m̵u̵l̵_̵c̵o̵m̵m̵,̵
+  ̵ ̵ ̵ ̵ ̵ ̵ ̵ ̵ ̵N̵a̵t̵.̵a̵d̵d̵_̵a̵s̵s̵o̵c̵,̵N̵a̵t̵.̵a̵d̵d̵_̵c̵o̵m̵m̵,̵N̵a̵t̵.̵a̵d̵d̵_̵l̵e̵f̵t̵_̵c̵o̵m̵m̵]̵[̲l̲a̲b̲e̲l̲s̲,̲ ̲h̲s̲,̲ ̲L̲i̲s̲t̲.̲f̲i̲n̲R̲a̲n̲g̲e̲_̲s̲u̲c̲c̲,̲ ̲L̲i̲s̲t̲.̲f̲i̲l̲t̲e̲r̲_̲m̲a̲p̲,̲
+  ̲ ̲ ̲ ̲ ̲ ̲ ̲ ̲ ̲L̲i̲s̲t̲.̲m̲a̲p̲_̲m̲a̲p̲,̲ ̲i̲h̲,̲ ̲F̲u̲n̲c̲t̲i̲o̲n̲.̲c̲o̲m̲p̲_̲d̲e̲f̲,̲ ̲p̲o̲w̲_̲s̲u̲c̲c̲'̲,̲ ̲N̲a̲t̲.̲d̲i̲v̲_̲d̲i̲v̲_̲e̲q̲_̲d̲i̲v̲_̲m̲u̲l̲,̲ ̲N̲a̲t̲.̲m̲u̲l̲_̲a̲s̲s̲o̲c̲,̲
+  ̲ ̲ ̲ ̲ ̲ ̲ ̲ ̲ ̲N̲a̲t̲.̲m̲u̲l̲_̲c̲o̲m̲m̲,̲ ̲N̲a̲t̲.̲a̲d̲d̲_̲a̲s̲s̲o̲c̲,̲ ̲N̲a̲t̲.̲a̲d̲d̲_̲c̲o̲m̲m̲,̲ ̲N̲a̲t̲.̲a̲d̲d̲_̲l̲e̲f̲t̲_̲c̲o̲m̲m̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+Manuscript/RestrictedLabelPass.lean:147:59: warning: This simp argument is unused:
+  Nat.mul_assoc
+
+Hint: Omit it from the simp argument list.
+  simp [̵l̵a̵b̵e̵l̵s̵,̵h̵s̵,̵L̵i̵s̵t̵.̵f̵i̵n̵R̵a̵n̵g̵e̵_̵s̵u̵c̵c̵,̵L̵i̵s̵t̵.̵f̵i̵l̵t̵e̵r̵_̵c̵o̵n̵s̵,̵L̵i̵s̵t̵.̵f̵i̵l̵t̵e̵r̵_̵m̵a̵p̵,̵L̵i̵s̵t̵.̵m̵a̵p̵_̵m̵a̵p̵,̵i̵h̵,̵
+  ̵ ̵ ̵ ̵ ̵ ̵ ̵ ̵ ̵F̵u̵n̵c̵t̵i̵o̵n̵.̵c̵o̵m̵p̵_̵d̵e̵f̵,̵p̵o̵w̵_̵s̵u̵c̵c̵'̵,̵N̵a̵t̵.̵d̵i̵v̵_̵d̵i̵v̵_̵e̵q̵_̵d̵i̵v̵_̵m̵u̵l̵,̵N̵a̵t̵.̵m̵u̵l̵_̵a̵s̵s̵o̵c̵,̵N̵a̵t̵.̵m̵u̵l̵_̵c̵o̵m̵m̵,̵
+  ̵ ̵ ̵ ̵ ̵ ̵ ̵ ̵ ̵N̵a̵t̵.̵a̵d̵d̵_̵a̵s̵s̵o̵c̵,̵N̵a̵t̵.̵a̵d̵d̵_̵c̵o̵m̵m̵,̵N̵a̵t̵.̵a̵d̵d̵_̵l̵e̵f̵t̵_̵c̵o̵m̵m̵]̵[̲l̲a̲b̲e̲l̲s̲,̲ ̲h̲s̲,̲ ̲L̲i̲s̲t̲.̲f̲i̲n̲R̲a̲n̲g̲e̲_̲s̲u̲c̲c̲,̲ ̲L̲i̲s̲t̲.̲f̲i̲l̲t̲e̲r̲_̲c̲o̲n̲s̲,̲
+  ̲ ̲ ̲ ̲ ̲ ̲ ̲ ̲ ̲L̲i̲s̲t̲.̲f̲i̲l̲t̲e̲r̲_̲m̲a̲p̲,̲ ̲L̲i̲s̲t̲.̲m̲a̲p̲_̲m̲a̲p̲,̲ ̲i̲h̲,̲ ̲F̲u̲n̲c̲t̲i̲o̲n̲.̲c̲o̲m̲p̲_̲d̲e̲f̲,̲ ̲p̲o̲w̲_̲s̲u̲c̲c̲'̲,̲ ̲N̲a̲t̲.̲d̲i̲v̲_̲d̲i̲v̲_̲e̲q̲_̲d̲i̲v̲_̲m̲u̲l̲,̲
+  ̲ ̲ ̲ ̲ ̲ ̲ ̲ ̲ ̲N̲a̲t̲.̲m̲u̲l̲_̲c̲o̲m̲m̲,̲ ̲N̲a̲t̲.̲a̲d̲d̲_̲a̲s̲s̲o̲c̲,̲ ̲N̲a̲t̲.̲a̲d̲d̲_̲c̲o̲m̲m̲,̲ ̲N̲a̲t̲.̲a̲d̲d̲_̲l̲e̲f̲t̲_̲c̲o̲m̲m̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+Manuscript/RestrictedLabelPass.lean:147:73: warning: This simp argument is unused:
+  Nat.mul_comm
+
+Hint: Omit it from the simp argument list.
+  simp [̵l̵a̵b̵e̵l̵s̵,̵h̵s̵,̵L̵i̵s̵t̵.̵f̵i̵n̵R̵a̵n̵g̵e̵_̵s̵u̵c̵c̵,̵L̵i̵s̵t̵.̵f̵i̵l̵t̵e̵r̵_̵c̵o̵n̵s̵,̵L̵i̵s̵t̵.̵f̵i̵l̵t̵e̵r̵_̵m̵a̵p̵,̵L̵i̵s̵t̵.̵m̵a̵p̵_̵m̵a̵p̵,̵i̵h̵,̵
+  ̵ ̵ ̵ ̵ ̵ ̵ ̵ ̵ ̵F̵u̵n̵c̵t̵i̵o̵n̵.̵c̵o̵m̵p̵_̵d̵e̵f̵,̵p̵o̵w̵_̵s̵u̵c̵c̵'̵,̵N̵a̵t̵.̵d̵i̵v̵_̵d̵i̵v̵_̵e̵q̵_̵d̵i̵v̵_̵m̵u̵l̵,̵N̵a̵t̵.̵m̵u̵l̵_̵a̵s̵s̵o̵c̵,̵N̵a̵t̵.̵m̵u̵l̵_̵c̵o̵m̵m̵,̵
+  ̵ ̵ ̵ ̵ ̵ ̵ ̵ ̵ ̵N̵a̵t̵.̵a̵d̵d̵_̵a̵s̵s̵o̵c̵,̵N̵a̵t̵.̵a̵d̵d̵_̵c̵o̵m̵m̵,̵N̵a̵t̵.̵a̵d̵d̵_̵l̵e̵f̵t̵_̵c̵o̵m̵m̵]̵[̲l̲a̲b̲e̲l̲s̲,̲ ̲h̲s̲,̲ ̲L̲i̲s̲t̲.̲f̲i̲n̲R̲a̲n̲g̲e̲_̲s̲u̲c̲c̲,̲ ̲L̲i̲s̲t̲.̲f̲i̲l̲t̲e̲r̲_̲c̲o̲n̲s̲,̲
+  ̲ ̲ ̲ ̲ ̲ ̲ ̲ ̲ ̲L̲i̲s̲t̲.̲f̲i̲l̲t̲e̲r̲_̲m̲a̲p̲,̲ ̲L̲i̲s̲t̲.̲m̲a̲p̲_̲m̲a̲p̲,̲ ̲i̲h̲,̲ ̲F̲u̲n̲c̲t̲i̲o̲n̲.̲c̲o̲m̲p̲_̲d̲e̲f̲,̲ ̲p̲o̲w̲_̲s̲u̲c̲c̲'̲,̲ ̲N̲a̲t̲.̲d̲i̲v̲_̲d̲i̲v̲_̲e̲q̲_̲d̲i̲v̲_̲m̲u̲l̲,̲
+  ̲ ̲ ̲ ̲ ̲ ̲ ̲ ̲ ̲N̲a̲t̲.̲m̲u̲l̲_̲a̲s̲s̲o̲c̲,̲ ̲N̲a̲t̲.̲a̲d̲d̲_̲a̲s̲s̲o̲c̲,̲ ̲N̲a̲t̲.̲a̲d̲d̲_̲c̲o̲m̲m̲,̲ ̲N̲a̲t̲.̲a̲d̲d̲_̲l̲e̲f̲t̲_̲c̲o̲m̲m̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+Manuscript/RestrictedLabelPass.lean:148:8: warning: This simp argument is unused:
+  Nat.add_assoc
+
+Hint: Omit it from the simp argument list.
+  simp [̵l̵a̵b̵e̵l̵s̵,̵h̵s̵,̵L̵i̵s̵t̵.̵f̵i̵n̵R̵a̵n̵g̵e̵_̵s̵u̵c̵c̵,̵L̵i̵s̵t̵.̵f̵i̵l̵t̵e̵r̵_̵c̵o̵n̵s̵,̵L̵i̵s̵t̵.̵f̵i̵l̵t̵e̵r̵_̵m̵a̵p̵,̵L̵i̵s̵t̵.̵m̵a̵p̵_̵m̵a̵p̵,̵i̵h̵,̵
+  ̵ ̵ ̵ ̵ ̵ ̵ ̵ ̵ ̵F̵u̵n̵c̵t̵i̵o̵n̵.̵c̵o̵m̵p̵_̵d̵e̵f̵,̵p̵o̵w̵_̵s̵u̵c̵c̵'̵,̵N̵a̵t̵.̵d̵i̵v̵_̵d̵i̵v̵_̵e̵q̵_̵d̵i̵v̵_̵m̵u̵l̵,̵N̵a̵t̵.̵m̵u̵l̵_̵a̵s̵s̵o̵c̵,̵N̵a̵t̵.̵m̵u̵l̵_̵c̵o̵m̵m̵,̵
+  ̵ ̵ ̵ ̵ ̵ ̵ ̵ ̵ ̵N̵a̵t̵.̵a̵d̵d̵_̵a̵s̵s̵o̵c̵,̵N̵a̵t̵.̵a̵d̵d̵_̵c̵o̵m̵m̵,̵N̵a̵t̵.̵a̵d̵d̵_̵l̵e̵f̵t̵_̵c̵o̵m̵m̵]̵[̲l̲a̲b̲e̲l̲s̲,̲ ̲h̲s̲,̲ ̲L̲i̲s̲t̲.̲f̲i̲n̲R̲a̲n̲g̲e̲_̲s̲u̲c̲c̲,̲ ̲L̲i̲s̲t̲.̲f̲i̲l̲t̲e̲r̲_̲c̲o̲n̲s̲,̲
+  ̲ ̲ ̲ ̲ ̲ ̲ ̲ ̲ ̲L̲i̲s̲t̲.̲f̲i̲l̲t̲e̲r̲_̲m̲a̲p̲,̲ ̲L̲i̲s̲t̲.̲m̲a̲p̲_̲m̲a̲p̲,̲ ̲i̲h̲,̲ ̲F̲u̲n̲c̲t̲i̲o̲n̲.̲c̲o̲m̲p̲_̲d̲e̲f̲,̲ ̲p̲o̲w̲_̲s̲u̲c̲c̲'̲,̲ ̲N̲a̲t̲.̲d̲i̲v̲_̲d̲i̲v̲_̲e̲q̲_̲d̲i̲v̲_̲m̲u̲l̲,̲
+  ̲ ̲ ̲ ̲ ̲ ̲ ̲ ̲ ̲N̲a̲t̲.̲m̲u̲l̲_̲a̲s̲s̲o̲c̲,̲ ̲N̲a̲t̲.̲m̲u̲l̲_̲c̲o̲m̲m̲,̲ ̲N̲a̲t̲.̲a̲d̲d̲_̲c̲o̲m̲m̲,̲ ̲N̲a̲t̲.̲a̲d̲d̲_̲l̲e̲f̲t̲_̲c̲o̲m̲m̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+
+MODULE Manuscript.SKBranchingFinite
+EXIT 0
+
+MODULE Manuscript.SKColorEstimator
+EXIT 0
+Manuscript/SKColorEstimator.lean:59:0: warning: automatically included section variable(s) unused in theorem `Manuscript.SKColorEstimator.graphMass_nonneg`:
+  [Fintype E]
+  [DecidableEq E]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype E] [DecidableEq E] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+Manuscript/SKColorEstimator.lean:67:0: warning: automatically included section variable(s) unused in theorem `Manuscript.SKColorEstimator.outside_card_of_mem_retained`:
+  [Fintype E]
+  [DecidableEq E]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype E] [DecidableEq E] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+
+MODULE Manuscript.SupportExecution
+EXIT 0
+Manuscript/SupportExecution.lean:101:0: warning: automatically included section variable(s) unused in theorem `Manuscript.SupportExecution.layer_operations`:
+  [DecidableEq E]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq E] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+
+MODULE Manuscript.SupportMassWeights
+EXIT 0
+
+MODULE Manuscript.UniformMixedMass
+EXIT 0
+Manuscript/UniformMixedMass.lean:110:12: warning: 'ring' tactic does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+Manuscript/UniformMixedMass.lean:110:12: warning: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+
+MODULE SpinGlass.SKDenseExecution
+EXIT 0
+
+MODULE SpinGlass.SKGraphMonomial
+EXIT 0
+SpinGlass/SKGraphMonomial.lean:55:8: warning: automatically included section variable(s) unused in theorem `SpinGlass.SKGraphMonomial.outside_union`:
+  [Fintype V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+SpinGlass/SKGraphMonomial.lean:73:0: warning: automatically included section variable(s) unused in theorem `SpinGlass.SKGraphMonomial.degree_union`:
+  [Fintype V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+SpinGlass/SKGraphMonomial.lean:180:0: warning: automatically included section variable(s) unused in theorem `SpinGlass.SKGraphMonomial.basis_eq_target_iff`:
+  [Fintype V]
+  [DecidableEq E]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] [DecidableEq E] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+SpinGlass/SKGraphMonomial.lean:219:0: warning: automatically included section variable(s) unused in theorem `SpinGlass.SKGraphMonomial.accepts_iff_even_branch`:
+  [DecidableEq E]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq E] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+
+MODULE SpinGlass.SKTraversalRooted
+EXIT 0
+SpinGlass/SKTraversalRooted.lean:37:0: warning: automatically included section variable(s) unused in theorem `SpinGlass.SKTraversal.head_ne_last`:
+  [DecidableEq V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+SpinGlass/SKTraversalRooted.lean:60:0: warning: automatically included section variable(s) unused in theorem `SpinGlass.SKTraversal.nodup_append_root`:
+  [DecidableEq V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+SpinGlass/SKTraversalRooted.lean:137:17: warning: Variable name `root` is not explicitly referenced.
+
+The binding can be removed (if unused) or named `_` (if used implicitly).
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+
+MODULE Manuscript.DisorderLowerTail
+EXIT 0
+Manuscript/DisorderLowerTail.lean:27:0: warning: automatically included section variable(s) unused in theorem `Manuscript.DisorderLowerTail.normalizedGraph_eq_sum`:
+  [Fintype E]
+  [DecidableEq E]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype E] [DecidableEq E] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+Manuscript/DisorderLowerTail.lean:34:0: warning: automatically included section variable(s) unused in theorem `Manuscript.DisorderLowerTail.normalizedGraph_pos`:
+  [Fintype E]
+  [DecidableEq E]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype E] [DecidableEq E] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+Manuscript/DisorderLowerTail.lean:50:0: warning: automatically included section variable(s) unused in theorem `Manuscript.DisorderLowerTail.measurableSet_inflationCutoff`:
+  [DecidableEq E]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq E] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+Manuscript/DisorderLowerTail.lean:58:0: warning: automatically included section variable(s) unused in theorem `Manuscript.DisorderLowerTail.weight_signedArray`:
+  [Fintype E]
+  [DecidableEq E]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype E] [DecidableEq E] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+Manuscript/DisorderLowerTail.lean:74:0: warning: automatically included section variable(s) unused in theorem `Manuscript.DisorderLowerTail.inflatedMass_nonneg`:
+  [Fintype E]
+  [DecidableEq E]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype E] [DecidableEq E] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+Manuscript/DisorderLowerTail.lean:84:8: warning: automatically included section variable(s) unused in theorem `_private.Manuscript.DisorderLowerTail.0.Manuscript.DisorderLowerTail.integrable_inflated_product`:
+  [DecidableEq E]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq E] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+
+MODULE Manuscript.RestrictedMaskArithmetic
+EXIT 0
+Manuscript/RestrictedMaskArithmetic.lean:96:43: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+Manuscript/RestrictedMaskArithmetic.lean:119:43: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+
+MODULE Manuscript.RestrictedSupportLowerBound
+EXIT 0
+Manuscript/RestrictedSupportLowerBound.lean:9:0: warning: automatically included section variable(s) unused in theorem `Manuscript.RestrictedSupportLowerBound.local_cube`:
+  [DecidableEq E]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq E] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+
+MODULE Manuscript.SKBranchingSeries
+EXIT 0
+
+MODULE Manuscript.SKChargedMonomial
+EXIT 0
+Manuscript/SKChargedMonomial.lean:66:8: warning: automatically included section variable(s) unused in theorem `Manuscript.SKChargedMonomial.outside_union`:
+  [Fintype V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+Manuscript/SKChargedMonomial.lean:84:0: warning: automatically included section variable(s) unused in theorem `Manuscript.SKChargedMonomial.degree_union`:
+  [Fintype V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+Manuscript/SKChargedMonomial.lean:189:0: warning: automatically included section variable(s) unused in theorem `Manuscript.SKChargedMonomial.basis_eq_target_iff`:
+  [Fintype V]
+  [DecidableEq E]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] [DecidableEq E] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+Manuscript/SKChargedMonomial.lean:287:0: warning: automatically included section variable(s) unused in theorem `Manuscript.SKChargedMonomial.degrees_mem_ghostStates_iff`:
+  [Fintype V]
+  [DecidableEq E]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] [DecidableEq E] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+
+MODULE Manuscript.SKColorTotalError
+EXIT 0
+Manuscript/SKColorTotalError.lean:15:0: warning: automatically included section variable(s) unused in theorem `Manuscript.SKColorEstimator.estimator_eq_all`:
+  [Fintype E]
+  [DecidableEq E]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype E] [DecidableEq E] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+
+MODULE Manuscript.SKRestrictedScatter
+EXIT 0
+
+MODULE Manuscript.SupportMassBound
+EXIT 0
+Manuscript/SupportMassBound.lean:33:6: warning: 'ring' tactic does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+Manuscript/SupportMassBound.lean:33:6: warning: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+
+MODULE SpinGlass.SKBlockProduct
+EXIT 0
+SpinGlass/SKBlockProduct.lean:12:0: warning: automatically included section variable(s) unused in theorem `SpinGlass.SKBlockProduct.valid_subset`:
+  [Fintype V]
+  [DecidableEq E]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] [DecidableEq E] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+SpinGlass/SKBlockProduct.lean:16:8: warning: Variable name `K` is not explicitly referenced.
+
+The binding can be removed (if unused) or named `_` (if used implicitly).
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+SpinGlass/SKBlockProduct.lean:16:13: warning: Variable name `M` is not explicitly referenced.
+
+The binding can be removed (if unused) or named `_` (if used implicitly).
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+SpinGlass/SKBlockProduct.lean:19:0: warning: automatically included section variable(s) unused in theorem `SpinGlass.SKBlockProduct.value_empty`:
+  [Fintype V]
+  [DecidableEq E]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] [DecidableEq E] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+SpinGlass/SKBlockProduct.lean:35:45: warning: This simp argument is unused:
+  SpinGlass.SKCoefficient.one
+
+Hint: Omit it from the simp argument list.
+  simp [SpinGlass.SKGraphMonomial.basis, SpinGlass.SKGraphMonomial.colors,
+          SpinGlass.SKGraphMonomial.outside, S̵p̵i̵n̵G̵l̵a̵s̵s̵.̵S̵K̵C̵o̵e̵f̵f̵i̵c̵i̵e̵n̵t̵.̵o̵n̵e̵,̵ ̵SpinGlass.SKCoefficient.oneBasis]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+SpinGlass/SKBlockProduct.lean:42:0: warning: automatically included section variable(s) unused in theorem `SpinGlass.SKBlockProduct.outside_biUnion`:
+  [Fintype V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+
+MODULE SpinGlass.SKPrimitiveTables
+EXIT 0
+
+MODULE SpinGlass.SKTraversalCycles
+EXIT 0
+
+MODULE Manuscript.OriginalLawLowerTail
+EXIT 0
+Manuscript/OriginalLawLowerTail.lean:93:0: warning: automatically included section variable(s) unused in theorem `Manuscript.OriginalLawLowerTail.measurableSet_rawCutoff`:
+  [DecidableEq E]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq E] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+Manuscript/OriginalLawLowerTail.lean:101:0: warning: automatically included section variable(s) unused in theorem `Manuscript.OriginalLawLowerTail.rawCutoff_failure_le_sum`:
+  [DecidableEq E]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq E] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+
+MODULE Manuscript.RestrictedSpinTerm
+EXIT 0
+
+MODULE Manuscript.SKAugmentFinset
+EXIT 0
+Manuscript/SKAugmentFinset.lean:21:8: warning: automatically included section variable(s) unused in theorem `Manuscript.SKAugmentFinset.some_mem_liftEdge`:
+  [Fintype V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+Manuscript/SKAugmentFinset.lean:24:8: warning: automatically included section variable(s) unused in theorem `Manuscript.SKAugmentFinset.none_not_mem_liftEdge`:
+  [Fintype V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+Manuscript/SKAugmentFinset.lean:26:8: warning: automatically included section variable(s) unused in theorem `Manuscript.SKAugmentFinset.some_mem_ghostEdge`:
+  [Fintype V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+Manuscript/SKAugmentFinset.lean:29:8: warning: automatically included section variable(s) unused in theorem `Manuscript.SKAugmentFinset.none_mem_ghostEdge`:
+  [Fintype V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+Manuscript/SKAugmentFinset.lean:121:6: warning: try 'simp' instead of 'simpa'
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+
+MODULE Manuscript.SKBranchingMajorant
+EXIT 0
+Manuscript/SKBranchingMajorant.lean:14:0: warning: automatically included section variable(s) unused in theorem `Manuscript.SKBranching.field_degree_product`:
+  [DecidableEq V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+
+MODULE Manuscript.SKChargedBlockProduct
+EXIT 0
+Manuscript/SKChargedBlockProduct.lean:13:0: warning: automatically included section variable(s) unused in theorem `Manuscript.SKChargedBlockProduct.valid_subset`:
+  [Fintype V]
+  [DecidableEq E]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] [DecidableEq E] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+Manuscript/SKChargedBlockProduct.lean:17:8: warning: Variable name `K` is not explicitly referenced.
+
+The binding can be removed (if unused) or named `_` (if used implicitly).
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+Manuscript/SKChargedBlockProduct.lean:17:13: warning: Variable name `M` is not explicitly referenced.
+
+The binding can be removed (if unused) or named `_` (if used implicitly).
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+Manuscript/SKChargedBlockProduct.lean:20:0: warning: automatically included section variable(s) unused in theorem `Manuscript.SKChargedBlockProduct.value_empty`:
+  [Fintype V]
+  [DecidableEq E]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] [DecidableEq E] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+Manuscript/SKChargedBlockProduct.lean:36:48: warning: This simp argument is unused:
+  SpinGlass.SKCoefficient.one
+
+Hint: Omit it from the simp argument list.
+  simp [Manuscript.SKChargedMonomial.basis, Manuscript.SKChargedMonomial.colors,
+           ̵ ̵Manuscript.SKChargedMonomial.outside, SpinGlass.SKCoefficient.one,̵ ̵S̵p̵i̵n̵G̵l̵a̵s̵s̵.̵S̵K̵C̵o̵e̵f̵f̵i̵c̵i̵e̵n̵t̵.̵o̵n̵e̵Basis]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+Manuscript/SKChargedBlockProduct.lean:43:0: warning: automatically included section variable(s) unused in theorem `Manuscript.SKChargedBlockProduct.outside_biUnion`:
+  [Fintype V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+
+MODULE Manuscript.SKRestrictedAlgebra
+EXIT 0
+
+MODULE Manuscript.SupportMassScale
+EXIT 0
+
+MODULE SpinGlass.SKFastEvaluator
+EXIT 0
+
+MODULE SpinGlass.SKGraphProduct
+EXIT 0
+SpinGlass/SKGraphProduct.lean:13:0: warning: automatically included section variable(s) unused in theorem `SpinGlass.SKGraphProduct.value_mul_zero_of_color_overlap`:
+  [Fintype V]
+  [DecidableEq E]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] [DecidableEq E] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+SpinGlass/SKGraphProduct.lean:62:2: warning: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+SpinGlass/SKGraphProduct.lean:114:0: warning: automatically included section variable(s) unused in theorem `SpinGlass.SKGraphProduct.value_vanishesBelow`:
+  [Fintype V]
+  [DecidableEq E]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] [DecidableEq E] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+SpinGlass/SKGraphProduct.lean:129:0: warning: automatically included section variable(s) unused in theorem `SpinGlass.SKGraphProduct.value_sq_zero`:
+  [Fintype V]
+  [DecidableEq E]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] [DecidableEq E] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+
+MODULE SpinGlass.SKTraversalWeights
+EXIT 0
+SpinGlass/SKTraversalWeights.lean:10:0: warning: automatically included section variable(s) unused in theorem `SpinGlass.SKTraversal.chainWeight_eq_product`:
+  [Fintype V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+SpinGlass/SKTraversalWeights.lean:55:0: warning: automatically included section variable(s) unused in theorem `SpinGlass.SKTraversal.cycle_closing_notin`:
+  [Fintype V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+
+MODULE Manuscript.HigherFieldExponent
+EXIT 0
+
+MODULE Manuscript.InputPreparation
+EXIT 0
+Manuscript/InputPreparation.lean:195:52: warning: This simp argument is unused:
+  add_zero
+
+Hint: Omit it from the simp argument list.
+  simp only [prepareInput, add, literal, prepareEdges_operations, prepareField_operations,
+  ̲  ̲ ̲ ̲sumList_operations, prepareEdges_entries, List.map_map, Function.comp_def, List.length_map,
+  ̲  ̲ ̲ ̲InputIndices.edges_length, List.map_const', List.sum_replicate, smul_zero, a̵d̵d̵_̵z̵e̵r̵o̵,̵ ̵zero_add]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+
+MODULE Manuscript.RestrictedLocalSum
+EXIT 0
+
+MODULE Manuscript.SKBasisEncoding
+EXIT 0
+
+MODULE Manuscript.SKBranchingScalar
+EXIT 0
+Manuscript/SKBranchingScalar.lean:36:18: warning: Variable name `hφ` is not explicitly referenced.
+
+The binding can be removed (if unused) or named `_` (if used implicitly).
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+Manuscript/SKBranchingScalar.lean:107:32: warning: Variable name `hφ` is not explicitly referenced.
+
+The binding can be removed (if unused) or named `_` (if used implicitly).
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+
+MODULE Manuscript.SKChargedExecution
+EXIT 0
+
+MODULE Manuscript.SKChargedGraphProduct
+EXIT 0
+Manuscript/SKChargedGraphProduct.lean:14:0: warning: automatically included section variable(s) unused in theorem `Manuscript.SKChargedGraphProduct.value_mul_zero_of_color_overlap`:
+  [Fintype V]
+  [DecidableEq E]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] [DecidableEq E] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+Manuscript/SKChargedGraphProduct.lean:63:2: warning: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+Manuscript/SKChargedGraphProduct.lean:115:0: warning: automatically included section variable(s) unused in theorem `Manuscript.SKChargedGraphProduct.value_vanishesBelow`:
+  [Fintype V]
+  [DecidableEq E]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] [DecidableEq E] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+Manuscript/SKChargedGraphProduct.lean:130:0: warning: automatically included section variable(s) unused in theorem `Manuscript.SKChargedGraphProduct.value_sq_zero`:
+  [Fintype V]
+  [DecidableEq E]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] [DecidableEq E] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+
+MODULE Manuscript.SKGhostBijection
+EXIT 0
+Manuscript/SKGhostBijection.lean:43:35: warning: This simp argument is unused:
+  Finset.filter_true
+
+Hint: Omit it from the simp argument list.
+  simp only [̵n̵o̵n̵e̵_̵n̵o̵t̵_̵m̵e̵m̵_̵l̵i̵f̵t̵E̵d̵g̵e̵,̵F̵i̵n̵s̵e̵t̵.̵f̵i̵l̵t̵e̵r̵_̵t̵r̵u̵e̵,̵n̵o̵n̵e̵_̵m̵e̵m̵_̵g̵h̵o̵s̵t̵E̵d̵g̵e̵,̵
+  ̵ ̵ ̵ ̵ ̵n̵o̵t̵_̵t̵r̵u̵e̵_̵e̵q̵_̵f̵a̵l̵s̵e̵,̵F̵i̵n̵s̵e̵t̵.̵f̵i̵l̵t̵e̵r̵_̵f̵a̵l̵s̵e̵,̵F̵i̵n̵s̵e̵t̵.̵i̵m̵a̵g̵e̵_̵e̵m̵p̵t̵y̵,̵F̵i̵n̵s̵e̵t̵.̵u̵n̵i̵o̵n̵_̵e̵m̵p̵t̵y̵]̵[̲n̲o̲n̲e̲_̲n̲o̲t̲_̲m̲e̲m̲_̲l̲i̲f̲t̲E̲d̲g̲e̲,̲ ̲n̲o̲n̲e̲_̲m̲e̲m̲_̲g̲h̲o̲s̲t̲E̲d̲g̲e̲,̲ ̲n̲o̲t̲_̲t̲r̲u̲e̲_̲e̲q̲_̲f̲a̲l̲s̲e̲,̲ ̲F̲i̲n̲s̲e̲t̲.̲f̲i̲l̲t̲e̲r̲_̲f̲a̲l̲s̲e̲,̲
+  ̲ ̲ ̲ ̲ ̲F̲i̲n̲s̲e̲t̲.̲i̲m̲a̲g̲e̲_̲e̲m̲p̲t̲y̲,̲ ̲F̲i̲n̲s̲e̲t̲.̲u̲n̲i̲o̲n̲_̲e̲m̲p̲t̲y̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+Manuscript/SKGhostBijection.lean:52:0: warning: automatically included section variable(s) unused in theorem `Manuscript.SKAugmentFinset.pair_with_ghost`:
+  [Fintype V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+
+MODULE Manuscript.SupportTail
+EXIT 0
+Manuscript/SupportTail.lean:18:0: warning: automatically included section variable(s) unused in theorem `Manuscript.SupportTail.supportTail_split`:
+  [DecidableEq E]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq E] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+Manuscript/SupportTail.lean:36:20: warning: This simp argument is unused:
+  hn
+
+Hint: Omit it from the simp argument list.
+  simp [hk, hK,̵ ̵h̵n̵]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+Manuscript/SupportTail.lean:41:18: warning: This simp argument is unused:
+  hn
+
+Hint: Omit it from the simp argument list.
+  simp [hk, hK,̵ ̵h̵n̵]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+Manuscript/SupportTail.lean:44:0: warning: automatically included section variable(s) unused in theorem `Manuscript.SupportTail.support_card_le_max_order_mul`:
+  [Fintype V]
+  [DecidableEq E]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] [DecidableEq E] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+
+MODULE Manuscript.UniformTailMoments
+EXIT 0
+
+MODULE SpinGlass.SKActualEvaluator
+EXIT 0
+SpinGlass/SKActualEvaluator.lean:26:0: warning: automatically included section variable(s) unused in theorem `SpinGlass.SKActualEvaluator.branch_injective`:
+  [Fintype V]
+  [DecidableEq V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] [DecidableEq V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+SpinGlass/SKActualEvaluator.lean:31:8: warning: automatically included section variable(s) unused in theorem `SpinGlass.SKActualEvaluator.branch_mem`:
+  [Fintype V]
+  [DecidableEq V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] [DecidableEq V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+SpinGlass/SKActualEvaluator.lean:42:0: warning: automatically included section variable(s) unused in theorem `SpinGlass.SKActualEvaluator.outside_injective`:
+  [Fintype V]
+  [DecidableEq V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] [DecidableEq V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+SpinGlass/SKActualEvaluator.lean:55:8: warning: automatically included section variable(s) unused in theorem `SpinGlass.SKActualEvaluator.totalColor_outside`:
+  [Fintype V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+SpinGlass/SKActualEvaluator.lean:89:0: warning: automatically included section variable(s) unused in theorem `SpinGlass.SKActualEvaluator.degree_zero_of_not_outside`:
+  [Fintype V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+
+MODULE SpinGlass.SKOperationCount
+EXIT 0
+
+MODULE SpinGlass.SKTraversalStructure
+EXIT 0
+
+MODULE Manuscript.CountedCeil
+EXIT 0
+
+MODULE Manuscript.CutoffExecution
+EXIT 0
+
+MODULE Manuscript.EdgePreparationInstructions
+EXIT 0
+
+MODULE Manuscript.RestrictedInteractions
+EXIT 0
+Manuscript/RestrictedInteractions.lean:209:6: warning: This simp argument is unused:
+  h40
+
+Hint: Omit it from the simp argument list.
+  simp [tableSuffix, runCode, step, writeRealMem, hw, hl, hnr, pre, tablePrefix,
+  ̵  ̵ ̵ ̵ ̵ ̵h40̵,̵h̵4̵3, ̲h62, ̲h63,
+  ̲ ̲ ̲ ̲ ̲ ̲ ̲h65, ̲h64, Function.update_apply]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+Manuscript/RestrictedInteractions.lean:209:10: warning: This simp argument is unused:
+  h43
+
+Hint: Omit it from the simp argument list.
+  simp [tableSuffix, runCode, step, writeRealMem, hw, hl, hnr, pre, tablePrefix,
+  ̵  ̵ ̵ ̵ ̵ ̵h40, ̲h4̵3̵,̵h̵62, ̲h63,
+  ̲ ̲ ̲ ̲ ̲ ̲ ̲h65, ̲h64, Function.update_apply]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+Manuscript/RestrictedInteractions.lean:209:31: warning: This simp argument is unused:
+  Function.update_apply
+
+Hint: Omit it from the simp argument list.
+  simp [tableSuffix, runCode, step, writeRealMem, hw, hl, hnr, pre, tablePrefix, h̵4̵0̵,̵h̵4̵3̵,̵h̵6̵2̵,̵h̵6̵3̵,̵h̵6̵5̵,̵h̵6̵4̵,̵ ̵F̵u̵n̵c̵t̵i̵o̵n̵.̵u̵p̵d̵a̵t̵e̵_̵a̵p̵p̵l̵y̵]̵h̲4̲0̲,̲ ̲h̲4̲3̲,̲ ̲h̲6̲2̲,̲
+  ̲ ̲ ̲ ̲ ̲ ̲ ̲h̲6̲3̲,̲ ̲h̲6̲5̲,̲ ̲h̲6̲4̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+Manuscript/RestrictedInteractions.lean:217:6: warning: This simp argument is unused:
+  h40
+
+Hint: Omit it from the simp argument list.
+  simp [tableSuffix, runCode, step, writeRealMem, hm, hw, hl, hnr, pre, tablePrefix,
+  ̵  ̵ ̵ ̵ ̵ ̵h40̵,̵h̵4̵3, ̲h62,
+  ̲ ̲ ̲ ̲ ̲ ̲ ̲h63, ̲h65, ̲h64, Function.update_apply, hne1, ̲hne2, ̲hne3, ̲hne4, hjw̵,̵h̵j̵w̲,̲ ̲h̲j̲l]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+Manuscript/RestrictedInteractions.lean:217:10: warning: This simp argument is unused:
+  h43
+
+Hint: Omit it from the simp argument list.
+  simp [tableSuffix, runCode, step, writeRealMem, hm, hw, hl, hnr, pre, tablePrefix,
+  ̵  ̵ ̵ ̵ ̵ ̵h40, ̲h4̵3̵,̵h̵62,
+  ̲ ̲ ̲ ̲ ̲ ̲ ̲h63, ̲h65, ̲h64, Function.update_apply, hne1, ̲hne2, ̲hne3, ̲hne4, hjw̵,̵h̵j̵w̲,̲ ̲h̲j̲l]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+Manuscript/RestrictedInteractions.lean:217:31: warning: This simp argument is unused:
+  Function.update_apply
+
+Hint: Omit it from the simp argument list.
+  simp [tableSuffix, runCode, step, writeRealMem, hm, hw, hl, hnr, pre, tablePrefix, h̵4̵0̵,̵h̵4̵3̵,̵h̵6̵2̵,̵h̵6̵3̵,̵h̵6̵5̵,̵h̵6̵4̵,̵ ̵F̵u̵n̵c̵t̵i̵o̵n̵.̵u̵p̵d̵a̵t̵e̵_̵a̵p̵p̵l̵y̵,̵ ̵h̵n̵e̵1̵,̵h̵n̵e̵2̵,̵h̵n̵e̵3̵,̵h̵n̵e̵4̵,̵ ̵h̵j̵w̵,̵h̵j̵l̵]̵h̲4̲0̲,̲ ̲h̲4̲3̲,̲
+  ̲ ̲ ̲ ̲ ̲ ̲ ̲h̲6̲2̲,̲ ̲h̲6̲3̲,̲ ̲h̲6̲5̲,̲ ̲h̲6̲4̲,̲ ̲h̲n̲e̲1̲,̲ ̲h̲n̲e̲2̲,̲ ̲h̲n̲e̲3̲,̲ ̲h̲n̲e̲4̲,̲ ̲h̲j̲w̲,̲ ̲h̲j̲l̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+Manuscript/RestrictedInteractions.lean:217:69: warning: This simp argument is unused:
+  hne4
+
+Hint: Omit it from the simp argument list.
+  simp [tableSuffix, runCode, step, writeRealMem, hm, hw, hl, hnr, pre, tablePrefix,
+  ̵  ̵ ̵ ̵ ̵ ̵h40, ̲h43,
+  ̲ ̲ ̲ ̲ ̲ ̲ ̲h62, ̲h63, ̲h65, ̲h64, Function.update_apply, hne1, ̲hne2, ̲hne3, ̲hn̵e̵4̵j̲w̲, hjw̵,̵h̵j̵l]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+Manuscript/RestrictedInteractions.lean:236:43: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+Manuscript/RestrictedInteractions.lean:237:27: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+Manuscript/RestrictedInteractions.lean:259:41: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+
+MODULE Manuscript.RestrictedLocalEvaluation
+EXIT 0
+
+MODULE Manuscript.RestrictedMaskBridge
+EXIT 0
+
+MODULE Manuscript.SKBranchReindex
+EXIT 0
+
+MODULE Manuscript.SKBranchingGaussian
+EXIT 0
+Manuscript/SKBranchingGaussian.lean:83:30: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+
+MODULE Manuscript.SKChargedAlgebraExecution
+EXIT 0
+Manuscript/SKChargedAlgebraExecution.lean:96:4: warning: This simp argument is unused:
+  SKCoefficient.card_basis
+
+Hint: Omit it from the simp argument list.
+  simp [scaleArray, ofComputation, ArithmeticEvaluation.mul, literal, S̵K̵C̵o̵e̵f̵f̵i̵c̵i̵e̵n̵t̵.̵c̵a̵r̵d̵_̵b̵a̵s̵i̵s̵,̵ ̵SKOperationCount.registers,
+  ̲  ̲ ̲ ̲Nat.mul_assoc]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+Manuscript/SKChargedAlgebraExecution.lean:101:4: warning: This simp argument is unused:
+  SKCoefficient.card_basis
+
+Hint: Omit it from the simp argument list.
+  simp [addArray, ofComputation, ArithmeticEvaluation.add, literal, S̵K̵C̵o̵e̵f̵f̵i̵c̵i̵e̵n̵t̵.̵c̵a̵r̵d̵_̵b̵a̵s̵i̵s̵,̵ ̵SKOperationCount.registers,
+  ̲  ̲ ̲ ̲Nat.mul_assoc]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+
+MODULE Manuscript.SKDirectIndex
+EXIT 0
+
+MODULE Manuscript.SKIndexSpecifications
+EXIT 0
+
+MODULE Manuscript.SKOutsideReindex
+EXIT 0
+
+MODULE Manuscript.SKRestrictedArrays
+EXIT 0
+Manuscript/SKRestrictedArrays.lean:47:61: warning: Variable name `params` is not explicitly referenced.
+
+The binding can be removed (if unused) or named `_` (if used implicitly).
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+Manuscript/SKRestrictedArrays.lean:48:5: warning: Variable name `input` is not explicitly referenced.
+
+The binding can be removed (if unused) or named `_` (if used implicitly).
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+
+MODULE Manuscript.SupportDisorder
+EXIT 0
+Manuscript/SupportDisorder.lean:56:18: warning: Variable name `hplus` is not explicitly referenced.
+
+The binding can be removed (if unused) or named `_` (if used implicitly).
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+Manuscript/SupportDisorder.lean:62:13: warning: This simp argument is unused:
+  div_pow
+
+Hint: Omit it from the simp argument list.
+  simp only [div_p̵o̵w̵,̵ ̵d̵i̵v̵_̵eq_mul_inv, mul_inv_rev, inv_pow, inv_inv]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+Manuscript/SupportDisorder.lean:62:38: warning: This simp argument is unused:
+  mul_inv_rev
+
+Hint: Omit it from the simp argument list.
+  simp only [div_pow, div_eq_mul_inv, m̵u̵l̵_̵i̵n̵v̵_̵r̵e̵v̵,̵ ̵inv_pow, inv_inv]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+Manuscript/SupportDisorder.lean:62:51: warning: This simp argument is unused:
+  inv_pow
+
+Hint: Omit it from the simp argument list.
+  simp only [div_pow, div_eq_mul_inv, mul_inv_rev, inv_p̵o̵w̵,̵ ̵inv_̵i̵n̵v̵]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+Manuscript/SupportDisorder.lean:62:60: warning: This simp argument is unused:
+  inv_inv
+
+Hint: Omit it from the simp argument list.
+  simp only [div_pow, div_eq_mul_inv, mul_inv_rev, inv_pow,̵ ̵i̵n̵v̵_̵i̵n̵v̵]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+
+MODULE Manuscript.UniformTau
+EXIT 0
+Manuscript/UniformTau.lean:67:13: warning: `tendsto_finset_sum` has been deprecated: Use `tendsto_finsetSum` instead
+
+MODULE SpinGlass.SKCountedExecutionCache
+EXIT 0
+SpinGlass/SKCountedExecutionCache.lean:53:8: warning: automatically included section variable(s) unused in theorem `SpinGlass.SKCountedExecution.cachedPath_operations`:
+  [DecidableEq W]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq W] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+SpinGlass/SKCountedExecutionCache.lean:92:0: warning: automatically included section variable(s) unused in theorem `SpinGlass.SKCountedExecution.cachedCycle_operations_le`:
+  [DecidableEq W]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq W] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+
+MODULE SpinGlass.SKTraversalDegrees
+EXIT 0
+SpinGlass/SKTraversalDegrees.lean:45:36: warning: This simp argument is unused:
+  List.getLast?_cons_cons
+
+Hint: Omit it from the simp argument list.
+  simp only [List.head?_cons, L̵i̵s̵t̵.̵g̵e̵t̵L̵a̵s̵t̵?̵_̵c̵o̵n̵s̵_̵c̵o̵n̵s̵,̵ ̵Option.some.injEq, hxy, if_false, hlast, hx, Nat.add_zero] at ht
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+SpinGlass/SKTraversalDegrees.lean:50:38: warning: This simp argument is unused:
+  Option.some.injEq
+
+Hint: Omit it from the simp argument list.
+  simp only [List.head?_cons, O̵p̵t̵i̵o̵n̵.̵s̵o̵m̵e̵.̵i̵n̵j̵E̵q̵,̵ ̵if_pos rfl, List.mem_cons_self, if_true] at ht
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+SpinGlass/SKTraversalDegrees.lean:50:57: warning: This simp argument is unused:
+  if_pos rfl
+
+Hint: Omit it from the simp argument list.
+  simp only [List.head?_cons, Option.some.injEq, i̵f̵_̵p̵o̵s̵ ̵r̵f̵l̵,̵
+  ̵ ̵ ̵ ̵ ̵ ̵ ̵ ̵ ̵ ̵ ̵ ̵ ̵List.mem_cons_self, if_true] at ht
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+
+MODULE SpinGlass.SKTraversalFiniteClosure
+EXIT 0
+SpinGlass/SKTraversalFiniteClosure.lean:14:0: warning: automatically included section variable(s) unused in theorem `SpinGlass.SKTraversal.rooted_filter_eq_representations`:
+  [Fintype V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+SpinGlass/SKTraversalFiniteClosure.lean:25:0: warning: automatically included section variable(s) unused in theorem `SpinGlass.SKTraversal.cycle_filter_eq_representations`:
+  [Fintype V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+SpinGlass/SKTraversalFiniteClosure.lean:83:0: warning: automatically included section variable(s) unused in theorem `SpinGlass.SKTraversal.between_list_nodup`:
+  [Fintype V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+
+MODULE Manuscript.CountingConsequences
+EXIT 0
+Try this:
+  [apply] ring_nf
+  
+  The `ring` tactic failed to close the goal. Use `ring_nf` to obtain a normal form.
+    
+  Note that `ring` works primarily in *commutative* rings. If you have a noncommutative ring, abelian group or module, consider using `noncomm_ring`, `abel` or `module` instead.
+Manuscript/CountingConsequences.lean:34:10: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+Manuscript/CountingConsequences.lean:34:2: warning: 'congr 1' tactic does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+Manuscript/CountingConsequences.lean:83:34: warning: `MeasureTheory.measureReal_univ_eq_one` has been deprecated: Use `MeasureTheory.probReal_univ` instead
+Manuscript/CountingConsequences.lean:112:5: warning: Variable name `hA` is not explicitly referenced.
+
+The binding can be removed (if unused) or named `_` (if used implicitly).
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+
+MODULE Manuscript.CurrentCutoff
+EXIT 0
+
+MODULE Manuscript.RestrictedCeiling
+EXIT 0
+Manuscript/RestrictedCeiling.lean:96:49: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+
+MODULE Manuscript.RestrictedCutoffScan
+EXIT 0
+
+MODULE Manuscript.RestrictedFloor
+EXIT 0
+Manuscript/RestrictedFloor.lean:41:62: warning: This simp argument is unused:
+  hle
+
+Hint: Omit it from the simp argument list.
+  simp [bodyCode, testCode, runCode, step, hone, hzero, hn,̵ ̵h̵l̵e̵]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+
+MODULE Manuscript.RestrictedHigherLayer
+EXIT 0
+
+MODULE Manuscript.RestrictedInputCache
+EXIT 0
+Manuscript/RestrictedInputCache.lean:47:41: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+
+MODULE Manuscript.RestrictedInputEncoding
+EXIT 0
+
+MODULE Manuscript.RestrictedMaskLists
+EXIT 0
+Manuscript/RestrictedMaskLists.lean:58:62: warning: This simp argument is unused:
+  List.filter_cons
+
+Hint: Omit it from the simp argument list.
+  simp [̵R̵e̵s̵t̵r̵i̵c̵t̵e̵d̵C̵u̵b̵e̵s̵.̵s̵e̵l̵e̵c̵t̵e̵d̵P̵l̵a̵c̵e̵s̵,̵L̵i̵s̵t̵.̵f̵i̵n̵R̵a̵n̵g̵e̵_̵s̵u̵c̵c̵,̵L̵i̵s̵t̵.̵f̵i̵l̵t̵e̵r̵_̵c̵o̵n̵s̵,̵L̵i̵s̵t̵.̵f̵i̵l̵t̵e̵r̵_̵m̵a̵p̵,̵
+  ̵ ̵ ̵ ̵ ̵ ̵ ̵ ̵ ̵L̵i̵s̵t̵.̵m̵a̵p̵_̵m̵a̵p̵,̵i̵h̵,̵F̵u̵n̵c̵t̵i̵o̵n̵.̵c̵o̵m̵p̵_̵d̵e̵f̵,̵h̵,̵p̵o̵w̵_̵s̵u̵c̵c̵'̵,̵N̵a̵t̵.̵d̵i̵v̵_̵d̵i̵v̵_̵e̵q̵_̵d̵i̵v̵_̵m̵u̵l̵,̵
+  ̵ ̵ ̵ ̵ ̵ ̵ ̵ ̵ ̵N̵a̵t̵.̵m̵u̵l̵_̵a̵s̵s̵o̵c̵,̵N̵a̵t̵.̵m̵u̵l̵_̵c̵o̵m̵m̵]̵[̲R̲e̲s̲t̲r̲i̲c̲t̲e̲d̲C̲u̲b̲e̲s̲.̲s̲e̲l̲e̲c̲t̲e̲d̲P̲l̲a̲c̲e̲s̲,̲ ̲L̲i̲s̲t̲.̲f̲i̲n̲R̲a̲n̲g̲e̲_̲s̲u̲c̲c̲,̲ ̲L̲i̲s̲t̲.̲f̲i̲l̲t̲e̲r̲_̲m̲a̲p̲,̲ ̲L̲i̲s̲t̲.̲m̲a̲p̲_̲m̲a̲p̲,̲ ̲i̲h̲,̲
+  ̲ ̲ ̲ ̲ ̲ ̲ ̲ ̲ ̲F̲u̲n̲c̲t̲i̲o̲n̲.̲c̲o̲m̲p̲_̲d̲e̲f̲,̲ ̲h̲,̲ ̲p̲o̲w̲_̲s̲u̲c̲c̲'̲,̲ ̲N̲a̲t̲.̲d̲i̲v̲_̲d̲i̲v̲_̲e̲q̲_̲d̲i̲v̲_̲m̲u̲l̲,̲ ̲N̲a̲t̲.̲m̲u̲l̲_̲a̲s̲s̲o̲c̲,̲ ̲N̲a̲t̲.̲m̲u̲l̲_̲c̲o̲m̲m̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+
+MODULE Manuscript.SKBranchingBound
+EXIT 0
+Manuscript/SKBranchingBound.lean:56:8: warning: 'ring' tactic does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+Manuscript/SKBranchingBound.lean:56:8: warning: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+
+MODULE Manuscript.SKChargedPrimitiveExecution
+EXIT 0
+
+MODULE Manuscript.SKMemoMetadata
+EXIT 0
+
+MODULE Manuscript.SKMetadataSchedule
+EXIT 0
+Manuscript/SKMetadataSchedule.lean:47:25: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+
+MODULE Manuscript.SKPairReindex
+EXIT 0
+Manuscript/SKPairReindex.lean:21:20: warning: This simp argument is unused:
+  hp
+
+Hint: Omit it from the simp argument list.
+  simp [ordered, ̲h,h̵p̵,̵ ̲not_lt_of_ge (le_of_lt hp)]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+
+MODULE Manuscript.SKPhysicalLookup
+EXIT 0
+
+MODULE Manuscript.SKPrimitivePath
+EXIT 0
+
+MODULE Manuscript.SKRestrictedCopy
+EXIT 0
+
+MODULE Manuscript.SKRestrictedMultiply
+EXIT 0
+
+MODULE Manuscript.SKRestrictedOne
+EXIT 0
+
+MODULE Manuscript.SKRestrictedScaleAdd
+EXIT 0
+
+MODULE Manuscript.UniformPhysicalMass
+EXIT 0
+Manuscript/UniformPhysicalMass.lean:83:76: warning: 'omega' tactic does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+Manuscript/UniformPhysicalMass.lean:83:76: warning: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+
+MODULE SpinGlass.SKTraversalClosure
+EXIT 0
+SpinGlass/SKTraversalClosure.lean:38:8: warning: automatically included section variable(s) unused in theorem `_private.SpinGlass.SKTraversalClosure.0.SpinGlass.SKTraversal.exists_preimage_list`:
+  [Fintype V]
+  [Fintype W]
+  [DecidableEq V]
+  [DecidableEq W]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] [Fintype W] [DecidableEq V] [DecidableEq W] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+SpinGlass/SKTraversalClosure.lean:47:0: warning: automatically included section variable(s) unused in theorem `SpinGlass.SKTraversal.liftedChains_nodup`:
+  [Fintype V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+SpinGlass/SKTraversalClosure.lean:52:0: warning: automatically included section variable(s) unused in theorem `SpinGlass.SKTraversal.liftedChains_length`:
+  [Fintype V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+SpinGlass/SKTraversalClosure.lean:57:0: warning: automatically included section variable(s) unused in theorem `SpinGlass.SKTraversal.liftedChains_nonempty`:
+  [Fintype V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+SpinGlass/SKTraversalClosure.lean:62:0: warning: automatically included section variable(s) unused in theorem `SpinGlass.SKTraversal.liftedChains_avoid`:
+  [Fintype V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+SpinGlass/SKTraversalClosure.lean:96:0: warning: automatically included section variable(s) unused in theorem `SpinGlass.SKTraversal.chainWeight_map`:
+  [Fintype V]
+  [Fintype W]
+  [DecidableEq V]
+  [DecidableEq W]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] [Fintype W] [DecidableEq V] [DecidableEq W] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+
+MODULE Manuscript.HigherOrderTail
+EXIT 0
+
+MODULE Manuscript.RestrictedCandidateLabels
+EXIT 0
+Manuscript/RestrictedCandidateLabels.lean:51:4: warning: try 'simp' instead of 'simpa'
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+
+MODULE Manuscript.RestrictedCutoff
+EXIT 0
+
+MODULE Manuscript.RestrictedLayerProgram
+EXIT 0
+Manuscript/RestrictedLayerProgram.lean:174:84: warning: 'omega' tactic does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+Manuscript/RestrictedLayerProgram.lean:174:84: warning: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+
+MODULE Manuscript.RestrictedLocalBridge
+EXIT 0
+
+MODULE Manuscript.SKBranchingTail
+EXIT 0
+Manuscript/SKBranchingTail.lean:40:20: warning: This simp argument is unused:
+  hn
+
+Hint: Omit it from the simp argument list.
+  simp [hD, hK,̵ ̵h̵n̵]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+Manuscript/SKBranchingTail.lean:47:18: warning: This simp argument is unused:
+  hn
+
+Hint: Omit it from the simp argument list.
+  simp [hD, hK,̵ ̵h̵n̵]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+Manuscript/SKBranchingTail.lean:87:5: warning: Variable name `hcut` is not explicitly referenced.
+
+The binding can be removed (if unused) or named `_` (if used implicitly).
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+
+MODULE Manuscript.SKChargedExtractionExecution
+EXIT 0
+Manuscript/SKChargedExtractionExecution.lean:68:32: warning: This simp argument is unused:
+  Finset.sum_ite_irrel
+
+Hint: Omit it from the simp argument list.
+  simp only [mul_ite, mul_zero,̵ ̵F̵i̵n̵s̵e̵t̵.̵s̵u̵m̵_̵i̵t̵e̵_̵i̵r̵r̵e̵l̵]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+
+MODULE Manuscript.SKMemoUpdate
+EXIT 0
+Manuscript/SKMemoUpdate.lean:74:30: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+Manuscript/SKMemoUpdate.lean:74:42: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+
+MODULE Manuscript.SKMetadataPairOrder
+EXIT 0
+
+MODULE Manuscript.SKPhysicalPair
+EXIT 0
+
+MODULE Manuscript.SKPrimitiveInsert
+EXIT 0
+Manuscript/SKPrimitiveInsert.lean:32:100: warning: This simp argument is unused:
+  Nat.add_left_comm
+
+Hint: Omit it from the simp argument list.
+  simp [̵t̵,̵a̵,̵c̵h̵e̵c̵k̵C̵o̵d̵e̵,̵u̵p̵d̵a̵t̵e̵C̵o̵d̵e̵,̵r̵u̵n̵C̵o̵d̵e̵,̵s̵t̵e̵p̵,̵w̵r̵i̵t̵e̵R̵e̵a̵l̵M̵e̵m̵,̵a̵d̵d̵r̵e̵s̵s̵,̵h̵,̵N̵a̵t̵.̵a̵d̵d̵_̵a̵s̵s̵o̵c̵,̵N̵a̵t̵.̵a̵d̵d̵_̵c̵o̵m̵m̵,̵N̵a̵t̵.̵a̵d̵d̵_̵l̵e̵f̵t̵_̵c̵o̵m̵m̵]̵[̲t̲,̲ ̲a̲,̲ ̲c̲h̲e̲c̲k̲C̲o̲d̲e̲,̲ ̲u̲p̲d̲a̲t̲e̲C̲o̲d̲e̲,̲ ̲r̲u̲n̲C̲o̲d̲e̲,̲ ̲s̲t̲e̲p̲,̲ ̲w̲r̲i̲t̲e̲R̲e̲a̲l̲M̲e̲m̲,̲ ̲a̲d̲d̲r̲e̲s̲s̲,̲ ̲h̲,̲ ̲N̲a̲t̲.̲a̲d̲d̲_̲a̲s̲s̲o̲c̲,̲
+  ̲ ̲ ̲ ̲ ̲ ̲ ̲N̲a̲t̲.̲a̲d̲d̲_̲c̲o̲m̲m̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+Manuscript/SKPrimitiveInsert.lean:41:37: warning: This simp argument is unused:
+  writeRealMem
+
+Hint: Omit it from the simp argument list.
+  simp [̵a̵,̵c̵h̵e̵c̵k̵C̵o̵d̵e̵,̵r̵u̵n̵C̵o̵d̵e̵,̵s̵t̵e̵p̵,̵w̵r̵i̵t̵e̵R̵e̵a̵l̵M̵e̵m̵]̵[̲a̲,̲ ̲c̲h̲e̲c̲k̲C̲o̲d̲e̲,̲ ̲r̲u̲n̲C̲o̲d̲e̲,̲ ̲s̲t̲e̲p̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+
+MODULE Manuscript.SKPrimitiveNormalize
+EXIT 0
+
+MODULE Manuscript.SKRawColorTape
+EXIT 0
+Manuscript/SKRawColorTape.lean:48:39: warning: This simp argument is unused:
+  h0
+
+Hint: Omit it from the simp argument list.
+  simp [RestrictedInputEncoding.encode, ̲h0̵,̵h̵1, ̲hfirst, ̲hsecond]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+
+MODULE Manuscript.SKRestrictedDirectStep
+EXIT 0
+
+MODULE Manuscript.SKRestrictedExponential
+EXIT 0
+
+MODULE Manuscript.SKRestrictedSingle
+EXIT 0
+
+MODULE Manuscript.UniformLowerTail
+EXIT 0
+
+MODULE Manuscript.UniformSKTransport
+EXIT 0
+Manuscript/UniformSKTransport.lean:99:35: warning: try 'simp' instead of 'simpa'
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+
+MODULE SpinGlass.SKTraversalPrimitives
+EXIT 0
+SpinGlass/SKTraversalPrimitives.lean:10:0: warning: automatically included section variable(s) unused in theorem `SpinGlass.SKTraversal.betweenEdges_support`:
+  [Fintype V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+SpinGlass/SKTraversalPrimitives.lean:40:64: warning: This simp argument is unused:
+  List.mem_singleton
+
+Hint: Omit it from the simp argument list.
+  simp only [Option.some.injEq, List.mem_cons, List.mem_append, L̵i̵s̵t̵.̵m̵e̵m̵_̵s̵i̵n̵g̵l̵e̵t̵o̵n̵,̵ ̵List.not_mem_nil, or_false] at ht
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+SpinGlass/SKTraversalPrimitives.lean:44:38: warning: This simp argument is unused:
+  if_pos rfl
+
+Hint: Omit it from the simp argument list.
+  simp only [Ne.symm hab, if_false, i̵f̵_̵p̵o̵s̵ ̵r̵f̵l̵,̵ ̵Nat.add_zero, or_true, if_true] at ht
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+SpinGlass/SKTraversalPrimitives.lean:48:17: warning: This simp argument is unused:
+  if_pos rfl
+
+Hint: Omit it from the simp argument list.
+  simp only [i̵f̵_̵p̵o̵s̵ ̵r̵f̵l̵,̵ ̵hab, if_false, Nat.add_zero, true_or, if_true] at ht
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+SpinGlass/SKTraversalPrimitives.lean:55:0: warning: automatically included section variable(s) unused in theorem `SpinGlass.SKTraversal.rootedEdges_isEven`:
+  [Fintype V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+SpinGlass/SKTraversalPrimitives.lean:62:0: warning: automatically included section variable(s) unused in theorem `SpinGlass.SKTraversal.cycleEdges_isEven`:
+  [Fintype V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+
+MODULE Manuscript.HigherOrderAlgorithm
+EXIT 0
+
+MODULE Manuscript.LogApprox
+EXIT 0
+Manuscript/LogApprox.lean:92:61: warning: Variable name `hd1` is not explicitly referenced.
+
+The binding can be removed (if unused) or named `_` (if used implicitly).
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+
+MODULE Manuscript.RestrictedCandidateCharges
+EXIT 0
+
+MODULE Manuscript.RestrictedLayerSemantics
+EXIT 0
+
+MODULE Manuscript.SKChargedControlExecution
+EXIT 0
+Manuscript/SKChargedControlExecution.lean:33:23: warning: Variable name `b` is not explicitly referenced.
+
+The binding can be removed (if unused) or named `_` (if used implicitly).
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+Manuscript/SKChargedControlExecution.lean:179:25: warning: This simp argument is unused:
+  SKCoefficient.card_basis
+
+Hint: Omit it from the simp argument list.
+  simp only [visitControl_eq, Finset.length_toList, Finset.card_univ, memoControl_eq, Root,
+  ̲  ̲ ̲ ̲PrimitiveKey, Fintype.card_sum, Fintype.card_fin, Fintype.card_prod, F̵i̵n̵t̵y̵p̵e̵.̵c̵a̵r̵d̵_̵f̵i̵n̵s̵e̵t̵,̵ ̵S̵K̵C̵o̵e̵f̵f̵i̵c̵i̵e̵n̵t̵.̵c̵a̵r̵d̵_̵b̵a̵s̵i̵s̵]̵F̲i̲n̲t̲y̲p̲e̲.̲c̲a̲r̲d̲_̲f̲i̲n̲s̲e̲t̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+
+MODULE Manuscript.SKColorCorrection
+EXIT 0
+Manuscript/SKColorCorrection.lean:42:39: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+
+MODULE Manuscript.SKDirectFactor
+EXIT 0
+
+MODULE Manuscript.SKMemoPass
+EXIT 0
+Manuscript/SKMemoPass.lean:181:26: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+Manuscript/SKMemoPass.lean:200:4: warning: try 'simp' instead of 'simpa'
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+
+MODULE Manuscript.SKPhysicalMatrix
+EXIT 0
+
+MODULE Manuscript.SKPrimitiveCycle
+EXIT 0
+Manuscript/SKPrimitiveCycle.lean:51:27: warning: This simp argument is unused:
+  Nat.mul_one
+
+Hint: Omit it from the simp argument list.
+  simp only [̵h̵N̵,̵h̵T̵,̵h̵b̵,̵h̵S̵,̵N̵a̵t̵.̵m̵u̵l̵_̵o̵n̵e̵,̵N̵a̵t̵.̵a̵d̵d̵_̵z̵e̵r̵o̵,̵h̵g̵a̵p̵]̵[̲h̲N̲,̲ ̲h̲T̲,̲ ̲h̲b̲,̲ ̲h̲S̲,̲ ̲N̲a̲t̲.̲a̲d̲d̲_̲z̲e̲r̲o̲,̲ ̲h̲g̲a̲p̲]̲ at hv
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+Manuscript/SKPrimitiveCycle.lean:51:39: warning: This simp argument is unused:
+  Nat.add_zero
+
+Hint: Omit it from the simp argument list.
+  simp only [̵h̵N̵,̵h̵T̵,̵h̵b̵,̵h̵S̵,̵N̵a̵t̵.̵m̵u̵l̵_̵o̵n̵e̵,̵N̵a̵t̵.̵a̵d̵d̵_̵z̵e̵r̵o̵,̵h̵g̵a̵p̵]̵[̲h̲N̲,̲ ̲h̲T̲,̲ ̲h̲b̲,̲ ̲h̲S̲,̲ ̲N̲a̲t̲.̲m̲u̲l̲_̲o̲n̲e̲,̲ ̲h̲g̲a̲p̲]̲ at hv
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+
+MODULE Manuscript.SKPrimitiveIndex
+EXIT 0
+
+MODULE Manuscript.SKPrimitiveReturn
+EXIT 0
+
+MODULE Manuscript.SKRestrictedDirect
+EXIT 0
+
+MODULE Manuscript.SKRestrictedInitialize
+EXIT 0
+
+MODULE Manuscript.SKTruncation
+EXIT 0
+
+MODULE SpinGlass.SKColorfulCatalog
+EXIT 0
+SpinGlass/SKColorfulCatalog.lean:63:8: warning: automatically included section variable(s) unused in theorem `_private.SpinGlass.SKColorfulCatalog.0.SpinGlass.SKColorfulCatalog.support_sdiff_eq`:
+  [Fintype V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+SpinGlass/SKColorfulCatalog.lean:88:46: warning: try 'simp' instead of 'simpa'
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+SpinGlass/SKColorfulCatalog.lean:107:8: warning: automatically included section variable(s) unused in theorem `_private.SpinGlass.SKColorfulCatalog.0.SpinGlass.SKColorfulCatalog.support_inter_eq`:
+  [Fintype V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+SpinGlass/SKColorfulCatalog.lean:131:46: warning: try 'simp' instead of 'simpa'
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+
+MODULE SpinGlass.SKPrimitiveCatalogWalk
+EXIT 0
+SpinGlass/SKPrimitiveCatalogWalk.lean:35:0: warning: automatically included section variable(s) unused in theorem `SpinGlass.SKPrimitiveCatalogWalk.walk_pathEdges_subset`:
+  [Fintype V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+SpinGlass/SKPrimitiveCatalogWalk.lean:57:0: warning: automatically included section variable(s) unused in theorem `SpinGlass.SKPrimitiveCatalogWalk.cycleEdges_tail_eq`:
+  [Fintype V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+SpinGlass/SKPrimitiveCatalogWalk.lean:115:0: warning: automatically included section variable(s) unused in theorem `SpinGlass.SKPrimitiveCatalogWalk.betweenEdges_decompose`:
+  [Fintype V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+SpinGlass/SKPrimitiveCatalogWalk.lean:176:4: warning: Try `simp at hh` instead of `simpa using hh`
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+
+MODULE SpinGlass.SKPrimitiveMonomials
+EXIT 0
+SpinGlass/SKPrimitiveMonomials.lean:13:0: warning: automatically included section variable(s) unused in theorem `SpinGlass.SKPrimitiveMonomials.value_of_coordinates`:
+  [Fintype V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+SpinGlass/SKPrimitiveMonomials.lean:98:4: warning: try 'simp' instead of 'simpa'
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+
+MODULE Manuscript.HigherOrderCost
+EXIT 0
+
+MODULE Manuscript.HigherOrderTheorem
+EXIT 0
+
+MODULE Manuscript.RestrictedCandidateColors
+EXIT 0
+
+MODULE Manuscript.RestrictedScalars
+EXIT 0
+
+MODULE Manuscript.RestrictedSupportProgram
+EXIT 0
+
+MODULE Manuscript.SKCandidateExecution
+EXIT 0
+
+MODULE Manuscript.SKChargedTrialExecution
+EXIT 0
+Manuscript/SKChargedTrialExecution.lean:84:25: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+
+MODULE Manuscript.SKDirectBank
+EXIT 0
+
+MODULE Manuscript.SKMemoLayers
+EXIT 0
+Manuscript/SKMemoLayers.lean:147:26: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+
+MODULE Manuscript.SKPhysicalMatrixFrames
+EXIT 0
+
+MODULE Manuscript.SKPhysicalTruncation
+EXIT 0
+
+MODULE Manuscript.SKPrimitiveCycleInsert
+EXIT 0
+
+MODULE Manuscript.SKPrimitivePair
+EXIT 0
+
+MODULE Manuscript.SKRestrictedCombination
+EXIT 0
+
+MODULE SpinGlass.SKCatalogSelection
+EXIT 0
+
+MODULE SpinGlass.SKPrimitiveCatalogConnected
+EXIT 0
+
+MODULE SpinGlass.SKPrimitiveMonomialValues
+EXIT 0
+
+MODULE Manuscript.HigherOrderExecution
+EXIT 0
+Manuscript/HigherOrderExecution.lean:97:15: warning: This simp argument is unused:
+  logarithm
+
+Hint: Omit it from the simp argument list.
+  simp only [̵l̵o̵g̵a̵r̵i̵t̵h̵m̵,̵d̵i̵v̵i̵d̵e̵,̵l̵i̵t̵e̵r̵a̵l̵]̵[̲d̲i̲v̲i̲d̲e̲,̲ ̲l̲i̲t̲e̲r̲a̲l̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+Manuscript/HigherOrderExecution.lean:97:25: warning: This simp argument is unused:
+  divide
+
+Hint: Omit it from the simp argument list.
+  simp only [̵l̵o̵g̵a̵r̵i̵t̵h̵m̵,̵d̵i̵v̵i̵d̵e̵,̵l̵i̵t̵e̵r̵a̵l̵]̵[̲l̲o̲g̲a̲r̲i̲t̲h̲m̲,̲ ̲l̲i̲t̲e̲r̲a̲l̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+Manuscript/HigherOrderExecution.lean:97:32: warning: This simp argument is unused:
+  literal
+
+Hint: Omit it from the simp argument list.
+  simp only [̵l̵o̵g̵a̵r̵i̵t̵h̵m̵,̵d̵i̵v̵i̵d̵e̵,̵l̵i̵t̵e̵r̵a̵l̵]̵[̲l̲o̲g̲a̲r̲i̲t̲h̲m̲,̲ ̲d̲i̲v̲i̲d̲e̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+
+MODULE Manuscript.RestrictedCandidateLabelPreparation
+EXIT 0
+
+MODULE Manuscript.RestrictedInputScalars
+EXIT 0
+
+MODULE Manuscript.RestrictedSKFinish
+EXIT 0
+
+MODULE Manuscript.RestrictedSupportBridge
+EXIT 0
+Manuscript/RestrictedSupportBridge.lean:53:12: warning: This simp argument is unused:
+  Nat.add_assoc
+
+Hint: Omit it from the simp argument list.
+  simp [̵N̵a̵t̵.̵a̵d̵d̵_̵a̵s̵s̵o̵c̵,̵N̵a̵t̵.̵a̵d̵d̵_̵c̵o̵m̵m̵,̵N̵a̵t̵.̵a̵d̵d̵_̵l̵e̵f̵t̵_̵c̵o̵m̵m̵]̵[̲N̲a̲t̲.̲a̲d̲d̲_̲c̲o̲m̲m̲,̲ ̲N̲a̲t̲.̲a̲d̲d̲_̲l̲e̲f̲t̲_̲c̲o̲m̲m̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+
+MODULE Manuscript.RestrictedSupportCost
+EXIT 0
+Manuscript/RestrictedSupportCost.lean:54:12: warning: This simp argument is unused:
+  Nat.add_assoc
+
+Hint: Omit it from the simp argument list.
+  simp [̵N̵a̵t̵.̵a̵d̵d̵_̵a̵s̵s̵o̵c̵,̵N̵a̵t̵.̵a̵d̵d̵_̵c̵o̵m̵m̵,̵N̵a̵t̵.̵a̵d̵d̵_̵l̵e̵f̵t̵_̵c̵o̵m̵m̵]̵[̲N̲a̲t̲.̲a̲d̲d̲_̲c̲o̲m̲m̲,̲ ̲N̲a̲t̲.̲a̲d̲d̲_̲l̲e̲f̲t̲_̲c̲o̲m̲m̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+
+MODULE Manuscript.SKChargedPrimitiveCounts
+EXIT 0
+Manuscript/SKChargedPrimitiveCounts.lean:17:0: warning: automatically included section variable(s) unused in theorem `Manuscript.SKChargedPrimitiveCounts.edgeCount_add_ghost_degree`:
+  [Fintype V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+Manuscript/SKChargedPrimitiveCounts.lean:32:61: warning: This simp argument is unused:
+  true_or
+
+Hint: Omit it from the simp argument list.
+  simp only [hag, hcg, eq_comm, if_true, if_false, t̵r̵u̵e̵_̵or,̵ ̵o̵r̵_true,
+  ̵  ̵ ̵ ̵false_or, or_false] at he ⊢
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+Manuscript/SKChargedPrimitiveCounts.lean:33:4: warning: This simp argument is unused:
+  false_or
+
+Hint: Omit it from the simp argument list.
+  simp only [hag, hcg, eq_comm, if_true, if_false, true_or, or_true,
+  ̵  ̵ ̵ ̵f̵a̵l̵s̵e̵_̵or,̵ ̵o̵r̵_false] at he ⊢
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+Manuscript/SKChargedPrimitiveCounts.lean:33:32: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+Manuscript/SKChargedPrimitiveCounts.lean:42:60: warning: This simp argument is unused:
+  false_or
+
+Hint: Omit it from the simp argument list.
+  simp only [hg, hag, eq_comm, if_true, if_false, f̵a̵l̵s̵e̵_̵or,̵ ̵o̵r̵_false] at he ⊢
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+Manuscript/SKChargedPrimitiveCounts.lean:42:88: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+Manuscript/SKChargedPrimitiveCounts.lean:51:0: warning: automatically included section variable(s) unused in theorem `Manuscript.SKChargedPrimitiveCounts.direct_edgeCount`:
+  [Fintype V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+
+MODULE Manuscript.SKCombinationFrames
+EXIT 0
+
+MODULE Manuscript.SKDirectBankSemantics
+EXIT 0
+
+MODULE Manuscript.SKMemoInitialization
+EXIT 0
+
+MODULE Manuscript.SKPhysicalMatrixStage
+EXIT 0
+
+MODULE Manuscript.SKPhysicalModel
+EXIT 0
+Manuscript/SKPhysicalModel.lean:15:33: warning: try 'simp' instead of 'simpa'
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+
+MODULE Manuscript.SKPrimitiveTerms
+EXIT 0
+Manuscript/SKPrimitiveTerms.lean:46:17: warning: This simp argument is unused:
+  Function.update
+
+Hint: Omit it from the simp argument list.
+  simp [̵h̵v̵,̵F̵u̵n̵c̵t̵i̵o̵n̵.̵u̵p̵d̵a̵t̵e̵,̵h̵i̵,̵h̵y̵,̵h̵m̵,̵p̵a̵i̵r̵T̵e̵r̵m̵,̵h̵v̵a̵l̵i̵d̵,̵i̵n̵s̵e̵r̵t̵M̵o̵n̵o̵m̵i̵a̵l̵,̵h̵c̵u̵t̵,̵S̵K̵R̵i̵n̵g̵.̵m̵o̵n̵o̵m̵i̵a̵l̵,̵S̵K̵C̵o̵e̵f̵f̵i̵c̵i̵e̵n̵t̵.̵s̵i̵n̵g̵l̵e̵,̵z̵,̵N̵e̵.̵s̵y̵m̵m̵[̲h̲v̲,̲ ̲h̲i̲,̲ ̲h̲y̲,̲ ̲h̲m̲,̲ ̲p̲a̲i̲r̲T̲e̲r̲m̲,̲ ̲h̲v̲a̲l̲i̲d̲,̲ ̲i̲n̲s̲e̲r̲t̲M̲o̲n̲o̲m̲i̲a̲l̲,̲ ̲h̲c̲u̲t̲,̲ ̲S̲K̲R̲i̲n̲g̲.̲m̲o̲n̲o̲m̲i̲a̲l̲,̲
+  ̲ ̲ ̲ ̲ ̲ ̲ ̲ ̲ ̲ ̲ ̲S̲K̲C̲o̲e̲f̲f̲i̲c̲i̲e̲n̲t̲.̲s̲i̲n̲g̲l̲e̲,̲ ̲z̲,̲ ̲N̲e̲.̲s̲y̲m̲m̲ hy]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+Manuscript/SKPrimitiveTerms.lean:46:36: warning: This simp argument is unused:
+  hy
+
+Hint: Omit it from the simp argument list.
+  simp [hv, ̲Function.update, ̲hi, ̲hy̵,̵h̵m, ̲pairTerm, ̲hvalid, ̲insertMonomial, ̲hcut, ̲SKRing.monomial,
+  ̲ ̲ ̲ ̲ ̲ ̲ ̲ ̲ ̲ ̲ ̲SKCoefficient.single, ̲z, ̲Ne.symm hy]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+Manuscript/SKPrimitiveTerms.lean:49:15: warning: This simp argument is unused:
+  Function.update
+
+Hint: Omit it from the simp argument list.
+  simp [̵h̵v̵,̵F̵u̵n̵c̵t̵i̵o̵n̵.̵u̵p̵d̵a̵t̵e̵,̵h̵n̵]̵[̲h̲v̲,̲ ̲h̲n̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+Manuscript/SKPrimitiveTerms.lean:53:6: warning: '(intro address hlt; simp [hv, hvalid, hcut])' tactic does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+Manuscript/SKPrimitiveTerms.lean:53:6: warning: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+Manuscript/SKPrimitiveTerms.lean:79:17: warning: This simp argument is unused:
+  Function.update
+
+Hint: Omit it from the simp argument list.
+  simp [̵h̵v̵,̵F̵u̵n̵c̵t̵i̵o̵n̵.̵u̵p̵d̵a̵t̵e̵,̵h̵i̵,̵h̵y̵,̵h̵m̵,̵c̵y̵c̵l̵e̵T̵e̵r̵m̵,̵h̵v̵a̵l̵i̵d̵,̵i̵n̵s̵e̵r̵t̵M̵o̵n̵o̵m̵i̵a̵l̵,̵h̵c̵u̵t̵,̵S̵K̵R̵i̵n̵g̵.̵m̵o̵n̵o̵m̵i̵a̵l̵,̵S̵K̵C̵o̵e̵f̵f̵i̵c̵i̵e̵n̵t̵.̵s̵i̵n̵g̵l̵e̵,̵z̵,̵N̵e̵.̵s̵y̵m̵m̵[̲h̲v̲,̲ ̲h̲i̲,̲ ̲h̲y̲,̲ ̲h̲m̲,̲ ̲c̲y̲c̲l̲e̲T̲e̲r̲m̲,̲ ̲h̲v̲a̲l̲i̲d̲,̲ ̲i̲n̲s̲e̲r̲t̲M̲o̲n̲o̲m̲i̲a̲l̲,̲ ̲h̲c̲u̲t̲,̲ ̲S̲K̲R̲i̲n̲g̲.̲m̲o̲n̲o̲m̲i̲a̲l̲,̲
+  ̲ ̲ ̲ ̲ ̲ ̲ ̲ ̲ ̲ ̲ ̲S̲K̲C̲o̲e̲f̲f̲i̲c̲i̲e̲n̲t̲.̲s̲i̲n̲g̲l̲e̲,̲ ̲z̲,̲ ̲N̲e̲.̲s̲y̲m̲m̲ hy]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+Manuscript/SKPrimitiveTerms.lean:79:36: warning: This simp argument is unused:
+  hy
+
+Hint: Omit it from the simp argument list.
+  simp [hv, ̲Function.update, ̲hi, ̲hy̵,̵h̵m, ̲cycleTerm, ̲hvalid, ̲insertMonomial, ̲hcut, ̲SKRing.monomial,
+  ̲ ̲ ̲ ̲ ̲ ̲ ̲ ̲ ̲ ̲ ̲SKCoefficient.single, ̲z, ̲Ne.symm hy]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+Manuscript/SKPrimitiveTerms.lean:82:15: warning: This simp argument is unused:
+  Function.update
+
+Hint: Omit it from the simp argument list.
+  simp [̵h̵v̵,̵F̵u̵n̵c̵t̵i̵o̵n̵.̵u̵p̵d̵a̵t̵e̵,̵h̵n̵]̵[̲h̲v̲,̲ ̲h̲n̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+Manuscript/SKPrimitiveTerms.lean:119:96: warning: This simp argument is unused:
+  eq_comm
+
+Hint: Omit it from the simp argument list.
+  simp ̵[̵e̵q̵_̵c̵o̵m̵m̵]̵
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+
+MODULE SpinGlass.SKCatalogMembership
+EXIT 0
+SpinGlass/SKCatalogMembership.lean:20:0: warning: automatically included section variable(s) unused in theorem `SpinGlass.SKCatalogMembership.properties_of_list`:
+  [Fintype V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+SpinGlass/SKCatalogMembership.lean:97:0: warning: automatically included section variable(s) unused in theorem `SpinGlass.SKCatalogMembership.lift_outside_list`:
+  [Fintype V]
+  [DecidableEq V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] [DecidableEq V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+SpinGlass/SKCatalogMembership.lean:130:0: warning: automatically included section variable(s) unused in theorem `SpinGlass.SKCatalogMembership.betweenEdges_reverse_swap`:
+  [Fintype V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+SpinGlass/SKCatalogMembership.lean:179:48: warning: This simp argument is unused:
+  if_pos rfl
+
+Hint: Omit it from the simp argument list.
+  simp only [̵e̵n̵t̵r̵y̵,̵l̵t̵_̵s̵e̵l̵f̵_̵i̵f̵f̵_̵f̵a̵l̵s̵e̵,̵i̵f̵_̵f̵a̵l̵s̵e̵,̵i̵f̵_̵p̵o̵s̵ ̵r̵f̵l̵,̵i̵f̵_̵p̵o̵s̵[̲e̲n̲t̲r̲y̲,̲ ̲l̲t̲_̲s̲e̲l̲f̲_̲i̲f̲f̲_̲f̲a̲l̲s̲e̲,̲ ̲i̲f̲_̲f̲a̲l̲s̲e̲,̲ ̲i̲f̲_̲p̲o̲s̲ hS]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+
+MODULE SpinGlass.SKPrimitiveAssembly
+EXIT 0
+SpinGlass/SKPrimitiveAssembly.lean:77:77: warning: This simp argument is unused:
+  Finset.sum_ite_eq'
+
+Hint: Omit it from the simp argument list.
+  simp only [Finset.sum_ite_irrel, Finset.sum_const_zero, Finset.sum_ite_eq,̵ ̵F̵i̵n̵s̵e̵t̵.̵s̵u̵m̵_̵i̵t̵e̵_̵e̵q̵'̵]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+
+MODULE Manuscript.HigherOrderFinal
+EXIT 0
+
+MODULE Manuscript.RestrictedKappa
+EXIT 0
+
+MODULE Manuscript.RestrictedPreparation
+EXIT 0
+
+MODULE Manuscript.RestrictedSKTrials
+EXIT 0
+
+MODULE Manuscript.RestrictedSupportExecution
+EXIT 0
+
+MODULE Manuscript.SKAlgorithm
+EXIT 0
+Manuscript/SKAlgorithm.lean:55:48: warning: try 'simp' instead of 'simpa'
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+Manuscript/SKAlgorithm.lean:154:4: warning: try 'simp' instead of 'simpa'
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+Manuscript/SKAlgorithm.lean:160:18: warning: try 'simp' instead of 'simpa'
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+
+MODULE Manuscript.SKChargedPrimitiveValues
+EXIT 0
+Manuscript/SKChargedPrimitiveValues.lean:16:0: warning: automatically included section variable(s) unused in theorem `Manuscript.SKChargedPrimitiveValues.charged_value_of_coordinates`:
+  [Fintype V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+Manuscript/SKChargedPrimitiveValues.lean:156:4: warning: try 'simp' instead of 'simpa'
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+
+MODULE Manuscript.SKPathSymmetry
+EXIT 0
+
+MODULE Manuscript.SKPrimitiveScan
+EXIT 0
+
+MODULE Manuscript.SKRootCacheLayout
+EXIT 0
+
+MODULE SpinGlass.SKDirectCatalog
+EXIT 0
+
+MODULE Manuscript.HigherOrderCorollaries
+EXIT 0
+
+MODULE Manuscript.RestrictedPhysicalPreparation
+EXIT 0
+
+MODULE Manuscript.RestrictedSKMaskFold
+EXIT 0
+
+MODULE Manuscript.RestrictedSupportSharpCost
+EXIT 0
+
+MODULE Manuscript.SKChargedPrimitiveAssembly
+EXIT 0
+Manuscript/SKChargedPrimitiveAssembly.lean:79:77: warning: This simp argument is unused:
+  Finset.sum_ite_eq'
+
+Hint: Omit it from the simp argument list.
+  simp only [Finset.sum_ite_irrel, Finset.sum_const_zero, Finset.sum_ite_eq,̵ ̵F̵i̵n̵s̵e̵t̵.̵s̵u̵m̵_̵i̵t̵e̵_̵e̵q̵'̵]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+
+MODULE Manuscript.SKControl
+EXIT 0
+
+MODULE Manuscript.SKPrimitiveLoops
+EXIT 0
+
+MODULE Manuscript.SKPrimitiveReindex
+EXIT 0
+Manuscript/SKPrimitiveReindex.lean:27:0: warning: automatically included section variable(s) unused in theorem `Manuscript.SKPrimitiveReindex.betweenTerm_map`:
+  [Fintype V]
+  [DecidableEq W]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] [DecidableEq W] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+Manuscript/SKPrimitiveReindex.lean:62:0: warning: automatically included section variable(s) unused in theorem `Manuscript.SKPrimitiveReindex.direct_symm`:
+  [Fintype V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+Manuscript/SKPrimitiveReindex.lean:67:0: warning: automatically included section variable(s) unused in theorem `Manuscript.SKPrimitiveReindex.direct_map`:
+  [Fintype V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+
+MODULE Manuscript.SKRootCacheBody
+EXIT 0
+
+MODULE Manuscript.SKTheorem
+EXIT 0
+Manuscript/SKTheorem.lean:37:57: warning: try 'simp' instead of 'simpa'
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+Manuscript/SKTheorem.lean:48:37: warning: try 'simp' instead of 'simpa'
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+
+MODULE SpinGlass.SKColorfulGraphSum
+EXIT 0
+SpinGlass/SKColorfulGraphSum.lean:99:0: warning: automatically included section variable(s) unused in theorem `SpinGlass.SKColorfulGraphSum.value_zero_of_not_colorful`:
+  [Fintype V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+
+MODULE Manuscript.RestrictedSKLayer
+EXIT 0
+Manuscript/RestrictedSKLayer.lean:26:4: warning: try 'simp' instead of 'simpa'
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+Manuscript/RestrictedSKLayer.lean:88:103: warning: 'omega' tactic does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+Manuscript/RestrictedSKLayer.lean:88:103: warning: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+Manuscript/RestrictedSKLayer.lean:149:6: warning: 'change b.natReg 501 ≤ b.natReg 530' tactic does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+
+MODULE Manuscript.RestrictedSKParameters
+EXIT 0
+
+MODULE Manuscript.SKChargedGraphSum
+EXIT 0
+
+MODULE Manuscript.SKControlDimension
+EXIT 0
+
+MODULE Manuscript.SKPrimitiveAssembly
+EXIT 0
+
+MODULE Manuscript.SKRootCache
+EXIT 0
+
+MODULE Manuscript.SKRuntime
+EXIT 0
+
+MODULE Manuscript.RestrictedControl
+EXIT 0
+
+MODULE Manuscript.RestrictedSKOuter
+EXIT 0
+
+MODULE Manuscript.SKChargedEvaluatorCorrect
+EXIT 0
+
+MODULE Manuscript.SKCostBounds
+EXIT 0
+
+MODULE Manuscript.SKGhostAdmissible
+EXIT 0
+Manuscript/SKGhostAdmissible.lean:16:8: warning: automatically included section variable(s) unused in theorem `Manuscript.SKGhostAdmissible.none_mem_distinguished`:
+  [Fintype V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+Manuscript/SKGhostAdmissible.lean:19:8: warning: automatically included section variable(s) unused in theorem `Manuscript.SKGhostAdmissible.some_mem_distinguished`:
+  [Fintype V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+Manuscript/SKGhostAdmissible.lean:22:8: warning: automatically included section variable(s) unused in theorem `Manuscript.SKGhostAdmissible.distinguished_card`:
+  [Fintype V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+Manuscript/SKGhostAdmissible.lean:116:0: warning: automatically included section variable(s) unused in theorem `Manuscript.SKGhostAdmissible.outside_degree_cases`:
+  [Fintype V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+
+MODULE Manuscript.SKPrimitiveFrames
+EXIT 0
+
+MODULE Manuscript.SKRootCacheInitialization
+EXIT 0
+
+MODULE Manuscript.RestrictedSKControl
+EXIT 0
+
+MODULE Manuscript.SKDegreeAcceptance
+EXIT 0
+Manuscript/SKDegreeAcceptance.lean:57:36: warning: This simp argument is unused:
+  otherCode
+
+Hint: Omit it from the simp argument list.
+  simp [̵n̵e̵x̵t̵,̵h̵e̵a̵d̵C̵o̵d̵e̵,̵g̵h̵o̵s̵t̵C̵o̵d̵e̵,̵o̵t̵h̵e̵r̵C̵o̵d̵e̵,̵t̵a̵i̵l̵C̵o̵d̵e̵,̵r̵u̵n̵C̵o̵d̵e̵,̵s̵t̵e̵p̵,̵C̵o̵n̵s̵t̵a̵n̵t̵s̵,̵g̵o̵o̵d̵,̵h̵g̵,̵h̵v̵,̵h̵6̵,̵h̵2̵,̵h̵4̵,̵h̵0̵,̵h̵1̵]̵[̲n̲e̲x̲t̲,̲ ̲h̲e̲a̲d̲C̲o̲d̲e̲,̲ ̲g̲h̲o̲s̲t̲C̲o̲d̲e̲,̲ ̲t̲a̲i̲l̲C̲o̲d̲e̲,̲ ̲r̲u̲n̲C̲o̲d̲e̲,̲ ̲s̲t̲e̲p̲,̲ ̲C̲o̲n̲s̲t̲a̲n̲t̲s̲,̲ ̲g̲o̲o̲d̲,̲ ̲h̲g̲,̲ ̲h̲v̲,̲ ̲h̲6̲,̲ ̲h̲2̲,̲ ̲h̲4̲,̲
+  ̲ ̲ ̲ ̲ ̲ ̲ ̲ ̲ ̲h̲0̲,̲ ̲h̲1̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+Manuscript/SKDegreeAcceptance.lean:59:26: warning: This simp argument is unused:
+  ghostCode
+
+Hint: Omit it from the simp argument list.
+  simp [̵n̵e̵x̵t̵,̵h̵e̵a̵d̵C̵o̵d̵e̵,̵g̵h̵o̵s̵t̵C̵o̵d̵e̵,̵o̵t̵h̵e̵r̵C̵o̵d̵e̵,̵t̵a̵i̵l̵C̵o̵d̵e̵,̵r̵u̵n̵C̵o̵d̵e̵,̵s̵t̵e̵p̵,̵C̵o̵n̵s̵t̵a̵n̵t̵s̵,̵g̵o̵o̵d̵,̵h̵g̵,̵h̵v̵,̵h̵6̵,̵h̵2̵,̵h̵4̵,̵h̵0̵,̵h̵1̵]̵[̲n̲e̲x̲t̲,̲ ̲h̲e̲a̲d̲C̲o̲d̲e̲,̲ ̲o̲t̲h̲e̲r̲C̲o̲d̲e̲,̲ ̲t̲a̲i̲l̲C̲o̲d̲e̲,̲ ̲r̲u̲n̲C̲o̲d̲e̲,̲ ̲s̲t̲e̲p̲,̲ ̲C̲o̲n̲s̲t̲a̲n̲t̲s̲,̲ ̲g̲o̲o̲d̲,̲ ̲h̲g̲,̲ ̲h̲v̲,̲ ̲h̲6̲,̲ ̲h̲2̲,̲ ̲h̲4̲,̲
+  ̲ ̲ ̲ ̲ ̲ ̲ ̲ ̲ ̲h̲0̲,̲ ̲h̲1̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+Manuscript/SKDegreeAcceptance.lean:91:15: warning: `Nat.add_eq_zero` has been deprecated: Use `Nat.add_eq_zero_iff` instead
+Manuscript/SKDegreeAcceptance.lean:97:76: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+Manuscript/SKDegreeAcceptance.lean:139:17: warning: This simp argument is unused:
+  Fin.ext_iff
+
+Hint: Omit it from the simp argument list.
+  simp [̵g̵o̵o̵d̵,̵F̵i̵n̵.̵e̵x̵t̵_̵i̵f̵f̵,̵h̵g̵,̵h̵i̵]̵[̲g̲o̲o̲d̲,̲ ̲h̲g̲,̲ ̲h̲i̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+Manuscript/SKDegreeAcceptance.lean:139:29: warning: This simp argument is unused:
+  hg
+
+Hint: Omit it from the simp argument list.
+  simp [good, ̲Fin.ext_iff, ̲hg̵,̵h̵i]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+
+MODULE Manuscript.SKGhostColors
+EXIT 0
+
+MODULE Manuscript.SKRootCacheCanonical
+EXIT 0
+
+MODULE Manuscript.SKRootCacheFrames
+EXIT 0
+
+MODULE Manuscript.RestrictedControlFrames
+EXIT 0
+
+MODULE Manuscript.SKCandidateLayout
+EXIT 0
+Manuscript/SKCandidateLayout.lean:97:49: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+
+MODULE Manuscript.SKExtractionCell
+EXIT 0
+
+MODULE Manuscript.SKGhostCoefficient
+EXIT 0
+
+MODULE Manuscript.RestrictedHighFrames
+EXIT 0
+
+MODULE Manuscript.RestrictedParameters
+EXIT 0
+
+MODULE Manuscript.SKCandidatePrimitives
+EXIT 0
+
+MODULE Manuscript.SKGhostOutsideSize
+EXIT 0
+
+MODULE Manuscript.SKRestrictedExtraction
+EXIT 0
+
+MODULE Manuscript.SKTrialReindex
+EXIT 0
+
+MODULE Manuscript.RestrictedHigherControl
+EXIT 0
+
+MODULE Manuscript.RestrictedSKController
+EXIT 0
+
+MODULE Manuscript.SKCanonicalLabels
+EXIT 0
+
+MODULE Manuscript.SKExtractionFrames
+EXIT 0
+
+MODULE Manuscript.SKGhostAggregation
+EXIT 0
+Manuscript/SKGhostAggregation.lean:53:0: warning: automatically included section variable(s) unused in theorem `Manuscript.SKGhostCoefficient.candidate_sum`:
+  [DecidableEq V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+
+MODULE Manuscript.RestrictedHigherEndpoint
+EXIT 0
+
+MODULE Manuscript.RestrictedHigherGraphEndpoint
+EXIT 0
+
+MODULE Manuscript.RestrictedSKControlCost
+EXIT 0
+
+MODULE Manuscript.SKCandidateBackendFrames
+EXIT 0
+
+MODULE Manuscript.SKGeneratedExecution
+EXIT 0
+
+MODULE Manuscript.SKGhostPhysicalEvaluation
+EXIT 0
+
+MODULE Manuscript.RestrictedHigherRuntime
+EXIT 0
+
+MODULE Manuscript.RestrictedSKOuterBridge
+EXIT 0
+Manuscript/RestrictedSKOuterBridge.lean:16:15: warning: This simp argument is unused:
+  Nat.add_assoc
+
+Hint: Omit it from the simp argument list.
+  simp [̵i̵h̵,̵N̵a̵t̵.̵a̵d̵d̵_̵a̵s̵s̵o̵c̵,̵N̵a̵t̵.̵a̵d̵d̵_̵c̵o̵m̵m̵,̵N̵a̵t̵.̵a̵d̵d̵_̵l̵e̵f̵t̵_̵c̵o̵m̵m̵,̵a̵d̵d̵_̵c̵o̵m̵m̵]̵[̲i̲h̲,̲ ̲N̲a̲t̲.̲a̲d̲d̲_̲c̲o̲m̲m̲,̲ ̲N̲a̲t̲.̲a̲d̲d̲_̲l̲e̲f̲t̲_̲c̲o̲m̲m̲,̲ ̲a̲d̲d̲_̲c̲o̲m̲m̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+Manuscript/RestrictedSKOuterBridge.lean:16:29: warning: This simp argument is unused:
+  Nat.add_comm
+
+Hint: Omit it from the simp argument list.
+  simp [̵i̵h̵,̵N̵a̵t̵.̵a̵d̵d̵_̵a̵s̵s̵o̵c̵,̵N̵a̵t̵.̵a̵d̵d̵_̵c̵o̵m̵m̵,̵N̵a̵t̵.̵a̵d̵d̵_̵l̵e̵f̵t̵_̵c̵o̵m̵m̵,̵a̵d̵d̵_̵c̵o̵m̵m̵]̵[̲i̲h̲,̲ ̲N̲a̲t̲.̲a̲d̲d̲_̲a̲s̲s̲o̲c̲,̲ ̲N̲a̲t̲.̲a̲d̲d̲_̲l̲e̲f̲t̲_̲c̲o̲m̲m̲,̲ ̲a̲d̲d̲_̲c̲o̲m̲m̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+Manuscript/RestrictedSKOuterBridge.lean:30:56: warning: This simp argument is unused:
+  Nat.add_assoc
+
+Hint: Omit it from the simp argument list.
+  simp [̵N̵a̵t̵.̵a̵d̵d̵_̵a̵s̵s̵o̵c̵,̵N̵a̵t̵.̵a̵d̵d̵_̵c̵o̵m̵m̵,̵N̵a̵t̵.̵a̵d̵d̵_̵l̵e̵f̵t̵_̵c̵o̵m̵m̵]̵[̲N̲a̲t̲.̲a̲d̲d̲_̲c̲o̲m̲m̲,̲ ̲N̲a̲t̲.̲a̲d̲d̲_̲l̲e̲f̲t̲_̲c̲o̲m̲m̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+Manuscript/RestrictedSKOuterBridge.lean:44:56: warning: This simp argument is unused:
+  Nat.add_assoc
+
+Hint: Omit it from the simp argument list.
+  simp [̵N̵a̵t̵.̵a̵d̵d̵_̵a̵s̵s̵o̵c̵,̵N̵a̵t̵.̵a̵d̵d̵_̵c̵o̵m̵m̵,̵N̵a̵t̵.̵a̵d̵d̵_̵l̵e̵f̵t̵_̵c̵o̵m̵m̵]̵[̲N̲a̲t̲.̲a̲d̲d̲_̲c̲o̲m̲m̲,̲ ̲N̲a̲t̲.̲a̲d̲d̲_̲l̲e̲f̲t̲_̲c̲o̲m̲m̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+Manuscript/RestrictedSKOuterBridge.lean:70:12: warning: This simp argument is unused:
+  Nat.add_assoc
+
+Hint: Omit it from the simp argument list.
+  simp [̵N̵a̵t̵.̵a̵d̵d̵_̵a̵s̵s̵o̵c̵,̵N̵a̵t̵.̵a̵d̵d̵_̵c̵o̵m̵m̵,̵N̵a̵t̵.̵a̵d̵d̵_̵l̵e̵f̵t̵_̵c̵o̵m̵m̵,̵a̵d̵d̵_̵c̵o̵m̵m̵]̵[̲N̲a̲t̲.̲a̲d̲d̲_̲c̲o̲m̲m̲,̲ ̲N̲a̲t̲.̲a̲d̲d̲_̲l̲e̲f̲t̲_̲c̲o̲m̲m̲,̲ ̲a̲d̲d̲_̲c̲o̲m̲m̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+Manuscript/RestrictedSKOuterBridge.lean:70:26: warning: This simp argument is unused:
+  Nat.add_comm
+
+Hint: Omit it from the simp argument list.
+  simp [̵N̵a̵t̵.̵a̵d̵d̵_̵a̵s̵s̵o̵c̵,̵N̵a̵t̵.̵a̵d̵d̵_̵c̵o̵m̵m̵,̵N̵a̵t̵.̵a̵d̵d̵_̵l̵e̵f̵t̵_̵c̵o̵m̵m̵,̵a̵d̵d̵_̵c̵o̵m̵m̵]̵[̲N̲a̲t̲.̲a̲d̲d̲_̲a̲s̲s̲o̲c̲,̲ ̲N̲a̲t̲.̲a̲d̲d̲_̲l̲e̲f̲t̲_̲c̲o̲m̲m̲,̲ ̲a̲d̲d̲_̲c̲o̲m̲m̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+Manuscript/RestrictedSKOuterBridge.lean:81:26: warning: This simp argument is unused:
+  Nat.add_comm
+
+Hint: Omit it from the simp argument list.
+  simp [̵N̵a̵t̵.̵a̵d̵d̵_̵a̵s̵s̵o̵c̵,̵N̵a̵t̵.̵a̵d̵d̵_̵c̵o̵m̵m̵,̵N̵a̵t̵.̵a̵d̵d̵_̵l̵e̵f̵t̵_̵c̵o̵m̵m̵,̵a̵d̵d̵_̵c̵o̵m̵m̵]̵[̲N̲a̲t̲.̲a̲d̲d̲_̲a̲s̲s̲o̲c̲,̲ ̲N̲a̲t̲.̲a̲d̲d̲_̲l̲e̲f̲t̲_̲c̲o̲m̲m̲,̲ ̲a̲d̲d̲_̲c̲o̲m̲m̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+
+MODULE Manuscript.SKCandidateBackend
+EXIT 0
+
+MODULE Manuscript.SKChargeProjection
+EXIT 0
+
+MODULE Manuscript.SKExecutionLowerBound
+EXIT 0
+
+MODULE Manuscript.SKPhysicalEstimator
+EXIT 0
+Manuscript/SKPhysicalEstimator.lean:30:19: warning: try 'simp' instead of 'simpa'
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+Manuscript/SKPhysicalEstimator.lean:48:19: warning: try 'simp' instead of 'simpa'
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+Manuscript/SKPhysicalEstimator.lean:50:18: warning: try 'simp' instead of 'simpa'
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+
+MODULE Manuscript.SKPhysicalExecution
+EXIT 0
+
+MODULE Manuscript.SKPhysicalPairCanonical
+EXIT 0
+
+MODULE Manuscript.RestrictedHigherFinal
+EXIT 0
+
+MODULE Manuscript.RestrictedHigherGraphRuntime
+EXIT 0
+
+MODULE Manuscript.SKCandidateMatrices
+EXIT 0
+
+MODULE Manuscript.SKExecutionCost
+EXIT 0
+
+MODULE Manuscript.SKGeneratedLabels
+EXIT 0
+
+MODULE Manuscript.SKRestrictedCandidateExecution
+EXIT 0
+
+MODULE Manuscript.SKRuntimeNumeric
+EXIT 0
+
+MODULE Manuscript.RestrictedHigherGraphFinal
+EXIT 0
+
+MODULE Manuscript.SKCandidateCoefficientOutput
+EXIT 0
+
+MODULE Manuscript.SKCandidateCost
+EXIT 0
+
+MODULE Manuscript.SKFinal
+EXIT 0
+Manuscript/SKFinal.lean:15:59: warning: try 'simp' instead of 'simpa'
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+Manuscript/SKFinal.lean:58:57: warning: try 'simp' instead of 'simpa'
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+Manuscript/SKFinal.lean:98:57: warning: try 'simp' instead of 'simpa'
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+Manuscript/SKFinal.lean:134:72: warning: try 'simp' instead of 'simpa'
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+
+MODULE Manuscript.SKGeneratedLabelMemory
+EXIT 0
+
+MODULE Manuscript.SKRestrictedCandidateCost
+EXIT 0
+
+MODULE Manuscript.SKCandidateSource
+EXIT 0
+
+MODULE Manuscript.SKCorollaries
+EXIT 0
+
+MODULE Manuscript.SKGlobalLowerBound
+EXIT 0
+
+MODULE Manuscript.SKProjectedOutput
+EXIT 0
+
+MODULE Manuscript.MainTheorem
+EXIT 0
+
+MODULE Manuscript.RestrictedSKStart
+EXIT 0
+
+MODULE Manuscript.SKCandidateSourceFacts
+EXIT 0
+
+MODULE Manuscript.SKFinalLowerBound
+EXIT 0
+
+MODULE Manuscript.SKRawCandidate
+EXIT 0
+
+MODULE Manuscript.OutputMeasurability
+EXIT 0
+
+MODULE Manuscript.RestrictedSKExact
+EXIT 0
+
+MODULE Manuscript.RestrictedSKGraphStart
+EXIT 0
+
+MODULE Manuscript.SKRawCandidateCost
+EXIT 0
+
+MODULE Manuscript.SKCandidateContract
+EXIT 0
+Manuscript/SKCandidateContract.lean:60:24: warning: This simp argument is unused:
+  Function.update_apply
+
+Hint: Omit it from the simp argument list.
+  simp [̵w̵r̵i̵t̵e̵N̵a̵t̵M̵e̵m̵,̵F̵u̵n̵c̵t̵i̵o̵n̵.̵u̵p̵d̵a̵t̵e̵_̵a̵p̵p̵l̵y̵,̵s̵h̵o̵w̵ ̵k̵≠̵j̵[̲w̲r̲i̲t̲e̲N̲a̲t̲M̲e̲m̲,̲ ̲s̲h̲o̲w̲ ̲k̲ ̲≠̲ ̲j̲ by omega]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+
+MODULE Manuscript.SKRestrictedCandidateSharpCost
+EXIT 0
+
+MODULE Manuscript.RestrictedSKTruncated
+EXIT 0
+
+MODULE Manuscript.SKCandidateContractSemantics
+EXIT 0
+Manuscript/SKCandidateContractSemantics.lean:26:10: warning: This simp argument is unused:
+  Nat.add_assoc
+
+Hint: Omit it from the simp argument list.
+  simp [̵N̵a̵t̵.̵a̵d̵d̵_̵a̵s̵s̵o̵c̵,̵N̵a̵t̵.̵a̵d̵d̵_̵c̵o̵m̵m̵,̵N̵a̵t̵.̵a̵d̵d̵_̵l̵e̵f̵t̵_̵c̵o̵m̵m̵,̵a̵d̵d̵_̵c̵o̵m̵m̵]̵[̲N̲a̲t̲.̲a̲d̲d̲_̲c̲o̲m̲m̲,̲ ̲N̲a̲t̲.̲a̲d̲d̲_̲l̲e̲f̲t̲_̲c̲o̲m̲m̲,̲ ̲a̲d̲d̲_̲c̲o̲m̲m̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+Manuscript/SKCandidateContractSemantics.lean:26:24: warning: This simp argument is unused:
+  Nat.add_comm
+
+Hint: Omit it from the simp argument list.
+  simp [̵N̵a̵t̵.̵a̵d̵d̵_̵a̵s̵s̵o̵c̵,̵N̵a̵t̵.̵a̵d̵d̵_̵c̵o̵m̵m̵,̵N̵a̵t̵.̵a̵d̵d̵_̵l̵e̵f̵t̵_̵c̵o̵m̵m̵,̵a̵d̵d̵_̵c̵o̵m̵m̵]̵[̲N̲a̲t̲.̲a̲d̲d̲_̲a̲s̲s̲o̲c̲,̲ ̲N̲a̲t̲.̲a̲d̲d̲_̲l̲e̲f̲t̲_̲c̲o̲m̲m̲,̲ ̲a̲d̲d̲_̲c̲o̲m̲m̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+
+MODULE Manuscript.SKColorfulCoefficientOutput
+EXIT 0
+
+MODULE Manuscript.SKOuterCost
+EXIT 0
+
+MODULE Manuscript.RestrictedSKEndpoint
+EXIT 0
+Manuscript/RestrictedSKEndpoint.lean:102:61: warning: try 'simp' instead of 'simpa'
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+
+MODULE Manuscript.RestrictedSKSharpOuter
+EXIT 0
+
+MODULE Manuscript.RestrictedSKGraphEndpoint
+EXIT 0
+
+MODULE Manuscript.RestrictedSKRuntime
+EXIT 0
+
+MODULE Manuscript.RestrictedSKFinal
+EXIT 0
+
+MODULE Manuscript.RestrictedSKGraphRuntime
+EXIT 0
+
+MODULE Manuscript.RestrictedSKGraphFinal
+EXIT 0
+
+MODULE Manuscript.PrimitiveTheorem
+EXIT 0
+
+MODULE Manuscript
+EXIT 0
