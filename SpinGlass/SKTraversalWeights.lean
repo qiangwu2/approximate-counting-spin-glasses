@@ -94,7 +94,7 @@ theorem rootedRepresentations_weight_sum (f : Finset V → ℝ) {root : V} {l : 
   rw [Finset.sum_congr rfl hf, Finset.sum_const, rootedRepresentations_card hl hr hlen]
   simp
 
-/-- The coefficient one half in (66) removes exactly the orientation multiplicity. -/
+/-- The anchored-cycle coefficient one half removes exactly the orientation multiplicity. -/
 theorem rooted_normalization (f : Finset V → ℝ) {root : V} {l : List V}
     (hl : l.Nodup) (hr : root∉l) (hlen : 2≤l.length) :
     (∑ q∈rootedRepresentations root l, returnWeight f root q) / 2 =
@@ -117,7 +117,7 @@ theorem cycleRepresentations_weight_sum (f : Finset V → ℝ) {l : List V}
   rw [Finset.sum_congr rfl hf, Finset.sum_const, cycleRepresentations_card hl hlen]
   simp
 
-/-- The exact coefficient in (69) is one over twice the number of used colors. -/
+/-- The outside-cycle coefficient is one over twice the number of used colors. -/
 theorem cycle_normalization (f : Finset V → ℝ) {l : List V}
     (hl : l.Nodup) (hlen : 3≤l.length) :
     (∑ q∈cycleRepresentations l, cycleWeight f q) / (2*l.length:ℝ) =

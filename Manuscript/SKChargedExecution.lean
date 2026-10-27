@@ -13,7 +13,7 @@ open SKFastEvaluator (pairWeight pathDegrees insertMonomial pathCoefficient
   returnCoefficient cycleCoefficient insertMonomial_vanishesBelow vanishesBelow_add)
 variable {V W : Type*} [Fintype W] [DecidableEq W] [DecidableEq V]
 
-/-- Primitive polynomial (73), constructed from the actual recurrence outputs. -/
+/-- The primitive polynomial in equation (46), constructed from the actual recurrence outputs. -/
 def primitives {b L : ℕ} (endpointCharge : Fin b → ℕ) (branch : Fin b → V) (outside : W → V)
     (χ : W → Fin L) (f : Finset V → ℝ) : Element b L :=
   (∑ S : Finset (Fin L), if 3 ≤ S.card then
@@ -73,7 +73,7 @@ theorem primitives_vanishesBelow {b L : ℕ} (endpointCharge : Fin b → ℕ) (b
       exact Finset.card_pos.mp (by omega)
     · intro z hz; rfl
 
-/-- The scheduled implementation computes exactly polynomial (74) for its computed primitives. -/
+/-- The scheduled implementation computes exactly the assembled polynomial in equation (49) for its computed primitives. -/
 theorem evaluate_eq_polynomial {b L : ℕ} (endpointCharge : Fin b → ℕ) (branch : Fin b → V) (outside : W → V)
     (χ : W → Fin L) (f : Finset V → ℝ) :
     evaluate endpointCharge branch outside χ f =

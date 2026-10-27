@@ -110,7 +110,7 @@ theorem mean_averageCoefficient {V : Type*} [Fintype V] [DecidableEq V]
   simp_rw [mean_eval, mean_coefficient hL hm]
   simp [hr]
 
-/-- The repeated coefficient has exactly the variance stated in (83). -/
+/-- The repeated coefficient has exactly the variance used in the color-averaging argument. -/
 theorem mean_averageCoefficient_variance {V : Type*} [Fintype V] [DecidableEq V]
     {L R : ℕ} (hL : 0 < L) (hR : 0 < R) (hm : Fintype.card V ≤ L) :
     mean (fun χ : Fin R → (V → Fin L) => (averageCoefficient L R χ - 1) ^ 2) =

@@ -5,7 +5,7 @@ import Lean.Elab.Tactic.Omega
 # The SK ghost augmentation and degree states
 
 This file proves the finite graph assertions at the beginning of Section 4.2
-and the degree-state arithmetic used in equations (40)--(44). The graph is
+and the degree-state arithmetic used in Section 4.3. The graph is
 constructed from its actual adjacency relation: `none` is the ghost vertex,
 and `some v` is the original vertex `v`.
 

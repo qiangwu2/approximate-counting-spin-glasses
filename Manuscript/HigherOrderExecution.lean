@@ -23,7 +23,7 @@ theorem absolute_operations (x : ℝ) : (absolute x).operations ≤ 2 := by
 
 def minimum (x : ℝ) (y : Computation) : Computation := ⟨min x y.value,y.operations+1⟩
 
-/-- Equation (25) is computed from the cached field mean. The quantities
+/-- The field-dependent exponent is computed from the cached field mean. The quantities
 involving only fixed model parameters are reusable design constants. -/
 def kappaComputation (N : ℕ) (rho p h mean : ℝ) : Computation :=
   if h = 0 then ⟨(p-2)/p,1⟩ else

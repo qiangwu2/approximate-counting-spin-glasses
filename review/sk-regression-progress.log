@@ -1,1 +1,0 @@
-{"scenarios": 672, "capacity_variants_per_scenario": 2, "coefficient_comparisons": 1344, "N_min": 2, "N_max": 5, "result": "all exact rational coefficient comparisons passed"}

@@ -247,7 +247,7 @@ def pathTable (χ : V → C) (start : V → ℝ) (w : V → V → ℝ)
     (w : V → V → ℝ) (j : V) : pathTable χ start w {χ j} j = start j := by
   simp [pathTable, table]
 
-/-- Equation (65) with strictly smaller color-subset dependencies. -/
+/-- The colorful path recurrence with strictly smaller color-subset dependencies. -/
 theorem pathTable_recurrence (χ : V → C) (start : V → ℝ) (w : V → V → ℝ)
     (S : Finset C) (j : V) (hj : χ j ∈ S) (hcard : 2 ≤ S.card) :
     pathTable χ start w S j =

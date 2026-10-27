@@ -1,7 +1,7 @@
 import Manuscript.UniformPhysicalMass
 import Manuscript.OriginalLawLowerTail
 
-/-! Proposition 5.4 with their actual uniform constant and the
+/-! Proposition 5.5 with the actual uniform constant and the
 literal raw-disorder remainder, including temperature zero. -/
 noncomputable section
 open scoped BigOperators
@@ -60,7 +60,7 @@ theorem integrableOn_raw_negative_moment (μ : Measure ℝ) [IsProbabilityMeasur
     exact hi
   exact hi'.mono_set (physicalRawCutoff_subset_inflation hN P a hbeta hbetaB hB hθ hθ1)
 
-/-- The exact negative-moment estimate (62) on the literal raw cutoff event,
+/-- The intermediate negative-moment estimate in the proof on the literal raw cutoff event,
 with the fixed constant C₊ from the mixed high-temperature window. -/
 theorem raw_negative_moment_uniform (μ : Measure ℝ) [IsProbabilityMeasure μ]
     (hμ : SymmetricLaw μ) (hunit : UnitSecondMoment μ)

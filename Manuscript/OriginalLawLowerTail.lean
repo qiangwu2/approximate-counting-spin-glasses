@@ -194,7 +194,7 @@ theorem physicalRawCutoff_subset_inflation {N : ℕ} (hN : 0 < N)
     _ ≤ beta0 * rawConstant beta0 θ := mul_le_mul_of_nonneg_right hβB hc.le
     _ = Real.artanh (θ / 2) := by unfold rawConstant; field_simp
 
-/-- Proposition 5.4's probability reduction with the manuscript's literal raw
+/-- Proposition 5.5's probability reduction with the manuscript's literal raw
 tail remainder; only the separate uniform graphical-mass estimate remains to
 be inserted into the explicit finite sum on the right. -/
 theorem physical_lower_tail (μ : Measure ℝ) [IsProbabilityMeasure μ]

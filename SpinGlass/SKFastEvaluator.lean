@@ -5,7 +5,7 @@ import SpinGlass.ColorMemoExecution
 /-!
 # The actual SK color-subset evaluator
 
-This module instantiates equations (66)--(75) with an explicit branch labeling and
+This module instantiates the colorful path, cycle and assembly formulas with an explicit branch labeling and
 outside-vertex embedding. Every primitive coefficient is computed by the chain
 recurrences, and every polynomial product uses the point-update multiplication.
 -/
@@ -50,12 +50,12 @@ def pathCoefficient {b L : ℕ} (branch : Fin b → V) (outside : W → V)
     (fun i j => pairWeight f (outside i) (outside j))
     (fun j => pairWeight f (outside j) (branch c)) S
 
-/-- Rooted-cycle coefficient (67), with its two-orientation normalization. -/
+/-- Rooted-cycle coefficient, with its two-orientation normalization. -/
 def returnCoefficient {b L : ℕ} (branch : Fin b → V) (outside : W → V)
     (χ : W → Fin L) (f : Finset V → ℝ) (a : Fin b) (S : Finset (Fin L)) : ℝ :=
   if 2 ≤ S.card then (2 : ℝ)⁻¹ * pathCoefficient branch outside χ f a a S else 0
 
-/-- Entirely outside cycle coefficient (69), normalized by roots and directions. -/
+/-- Entirely outside cycle coefficient, normalized by roots and directions. -/
 def cycleCoefficient {L : ℕ} (outside : W → V) (χ : W → Fin L)
     (f : Finset V → ℝ) (S : Finset (Fin L)) : ℝ :=
   if 3 ≤ S.card then (2 * S.card : ℝ)⁻¹ *

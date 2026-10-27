@@ -4,7 +4,7 @@ import SpinGlass.SKGraphMonomial
 /-!
 # Actual primitive closure tables
 
-Equations (66)--(69) are assembled from the proved path recurrences. These
+The path and cycle closure formulas in Section 4.3 are assembled from the proved path recurrences. These
 identities identify their literal finite traversal sums; orientation-to-graph
 normalization is established separately in the traversal modules.
 -/
@@ -64,12 +64,12 @@ theorem pathClosure_eq_chain_sum (χ : V → C) (start : V → ℝ) (w : V → V
   · intro i hi j hj hij
     exact chains_disjoint χ S hij
 
-/-- Equation (67), with its simple-cycle minimum length. -/
+/-- The cycle-return formula, with its simple-cycle minimum length. -/
 def rootedClosure (χ : V → C) (start : V → ℝ) (w : V → V → ℝ)
     (finish : V → ℝ) (S : Finset C) : ℝ :=
   if 2 ≤ S.card then (2 : ℝ)⁻¹ * pathClosure χ start w finish S else 0
 
-/-- Equation (69), including both root and endpoint sums. -/
+/-- The outside-cycle formula, including both root and endpoint sums. -/
 def outsideClosure (χ : V → C) (w : V → V → ℝ) (S : Finset C) : ℝ :=
   if 3 ≤ S.card then (2 * S.card : ℝ)⁻¹ *
     ∑ r, ∑ j, ColorCycleChain.rootTable χ w r S j * w j r else 0

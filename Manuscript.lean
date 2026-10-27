@@ -30,6 +30,7 @@ import Manuscript.Model
 import Manuscript.MomentExponents
 import Manuscript.OriginalLawLowerTail
 import Manuscript.OutputMeasurability
+import Manuscript.PDF16Noise
 import Manuscript.PrimitiveTheorem
 import Manuscript.RestrictedExpression
 import Manuscript.RestrictedSKSharpOuter
@@ -115,6 +116,4 @@ import Manuscript.UniformTau
 
 /-! Complete mathematical proofs and fixed-program realization for the
 current mixed p-spin manuscript. PrimitiveTheorem exposes the two main
-accuracy/runtime endpoints and both full-u mean-square algorithms.
-See manuscript-map.json for the reviewed statement correspondence and
-verification-status.json for the frozen kernel and axiom verification. -/
+accuracy/runtime endpoints and both full-u mean-square algorithms. -/

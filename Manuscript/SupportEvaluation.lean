@@ -5,7 +5,7 @@ import Mathlib.Data.Nat.Choose.Sum
 /-!
 # Exact support evaluation in a homogeneous field
 
-This module proves the finite biased local-spin formula (27), support Möbius
+This module proves the finite biased local-spin formula (28), support Möbius
 inversion, and the exact retained-support sum for arbitrary indexed hyperedges.
 No assumptions on disorder, edge order, positivity of weights, or runtimes occur.
 -/
@@ -182,7 +182,7 @@ theorem edgeCharacter_restrict (incidence : E → Finset V) (U : Finset V)
       edgeCharacter incidence σ e := by
   exact Finset.prod_subtype_of_mem (fun v => spinSign (σ v)) (fun v hv => he hv)
 
-/-- Equation (27), expressed as a product of normalized single-spin weights. -/
+/-- Equation (28), expressed as a product of normalized single-spin weights. -/
 def localG (incidence : E → Finset V) (edges : Finset E)
     (h : ℝ) (w : E → ℝ) (U : Finset V) : ℝ :=
   fieldMean h (fun σ : U → Bool =>
@@ -190,7 +190,7 @@ def localG (incidence : E → Finset V) (edges : Finset E)
       (1 + w e * edgeCharacter (localIncidence incidence U) σ e))
 
 omit [Fintype V] [DecidableEq E] in
-/-- The exact exponential-weight expression of equation (27), with only `|U|`
+/-- The exact exponential-weight expression of equation (28), with only `|U|`
 spin coordinates rather than the full ambient cube. -/
 theorem localG_eq_exp_spin_sum (incidence : E → Finset V) (edges : Finset E)
     (h : ℝ) (w : E → ℝ) (U : Finset V) :
@@ -288,7 +288,7 @@ theorem retained_local_sum (incidence : E → Finset V) (edges : Finset E)
   simp
 
 
-/-- The scalar inclusion-exclusion coefficient in equation (28). -/
+/-- The scalar inclusion-exclusion coefficient in equation (29). -/
 def coefficient (N k s : ℕ) : ℝ :=
   (-1 : ℝ) ^ (k - s) * ((N - s - 1).choose (k - s) : ℝ)
 
@@ -365,7 +365,7 @@ theorem bounded_alternating_powerset_sum (Q : Finset V) (m : ℕ) (hm : m ≤ Q.
 
 omit [Fintype V] [DecidableEq E] in
 /-- The coefficient of a particular local spin average in the collected
-support transform is exactly equation (28). -/
+support transform is exactly the stated inclusion-exclusion coefficient. -/
 theorem superset_coefficient (Q S : Finset V) (k : ℕ)
     (hSQ : S ⊆ Q) (hs : S.card ≤ k) (hk : k < Q.card) :
     (∑ U ∈ Q.powerset with U.card ≤ k ∧ S ⊆ U,
@@ -379,7 +379,7 @@ theorem superset_coefficient (Q S : Finset V) (k : ℕ)
 
 omit [Fintype V] [DecidableEq E] in
 /-- Collecting the local averages in the nested Möbius transform evaluates each
-local average once, with the explicit binomial coefficient from equation (28). -/
+local average once, with the explicit binomial coefficient from equation (29). -/
 theorem collapsed_transform (Q : Finset V) (k : ℕ) (hk : k < Q.card)
     (G : Finset V → ℝ) :
     (∑ U ∈ Q.powerset.filter (fun U => U.card ≤ k), transform G U) =
@@ -429,7 +429,7 @@ theorem collapsed_transform (Q : Finset V) (k : ℕ) (hk : k < Q.card)
       intro U hU
       split_ifs <;> simp_all
 
-/-- Equation (29) for arbitrary indexed mixed hyperedges and arbitrary real
+/-- The collapsed local-spin sum for arbitrary indexed mixed hyperedges and arbitrary real
 weights: the collapsed local-spin evaluator equals the retained support sum. -/
 theorem collapsed_local_sum (incidence : E → Finset V) (edges : Finset E)
     (h : ℝ) (w : E → ℝ) (k : ℕ) (hk : k < Fintype.card V) :

@@ -6,7 +6,7 @@ import SpinGlass.FiniteLowerTail
 
 The reverse-hypercontractive estimate is proved in the imported source, not
 introduced as an axiom. This file proves the conditional sign-cube step of
-Proposition 5.4. The right-hand side is the actual inflated graphical mass;
+Proposition 5.5. The right-hand side is the actual inflated graphical mass;
 the uniform bound on its disorder average remains a separate obligation.
 -/
 
@@ -20,7 +20,7 @@ open Manuscript.FieldExpansion Manuscript.SignPolynomial
 
 variable {V E : Type*} [Fintype V] [DecidableEq V] [Fintype E] [DecidableEq E]
 
-/-- The negative exponent used in equation (60), written without a negative square root. -/
+/-- The negative exponent used in equation (67), written without a negative square root. -/
 def exponent (θ : ℝ) : ℝ := (1 - Real.sqrt θ) / Real.sqrt θ
 
 theorem exponent_pos {θ : ℝ} (hθ : 0 < θ) (hθ1 : θ < 1) :
@@ -31,7 +31,7 @@ theorem exponent_eq_inv_sqrt_sub_one {θ : ℝ} (hθ : 0 < θ) :
   unfold exponent
   field_simp
 
-/-- Lemma 5.3, in the manuscript's negative-exponent norm formulation. -/
+/-- The uniform-sign, opposite-sign-exponent case of Lemma 5.3. -/
 theorem reverse_hypercontractivity {θ q s : ℝ}
     (hq : 0 < q) (hq1 : q < 1) (hs : 0 < s)
     (hθ : 0 < θ) (hparam : θ ≤ (1 - q) / (1 + s))

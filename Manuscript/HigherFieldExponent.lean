@@ -3,7 +3,7 @@ import Manuscript.OriginalLawLowerTail
 import SpinGlass.TanhBound
 import Mathlib.Analysis.SpecialFunctions.Pow.Real
 
-/-! The input-dependent effective field exponent in equation (25). -/
+/-! The input-dependent effective field exponent in equation (26). -/
 noncomputable section
 namespace Manuscript.HigherFieldExponent
 open Manuscript.SupportExponent
@@ -71,7 +71,7 @@ theorem selectedKappa_zero (N : ℕ) (rho : ℝ) {p : ℝ} (hp : 0 < p) :
   simp only [ite_true]
   exact kappa_eq_zero_field p _ hp le_rfl
 
-/-- The literal piecewise exponent in equation (25). -/
+/-- The literal piecewise exponent in equation (26). -/
 theorem selectedKappa_eq (N : ℕ) (rho : ℝ) {p h : ℝ} (hp : 0 < p) :
     selectedKappa N rho p h =
       if h = 0 then (p - 2) / p else

@@ -1,7 +1,7 @@
 import SpinGlass.BoundedSearch
 
 /-!
-The explicit common cutoffs (52)--(56), including the finite first-crossing
+The explicit common cutoffs in Section 5.1, including the finite first-crossing
 search and the uniform retained-work estimate of Lemma 5.1.  The exponent
 `kap` may depend on the field and on N; every design constant and the work
 exponent depend only on the fixed lower bound `kapMin`.

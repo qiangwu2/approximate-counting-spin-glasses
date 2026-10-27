@@ -116,7 +116,7 @@ theorem pathClosure_eq_lifted_sum (ι : W → V) (hι : Function.Injective ι)
   · intro l hl q hq h
     exact hι.list_map h
 
-/-- Equation (66), with each genuine branch-to-branch graph counted once. -/
+/-- The branch-to-branch closure formula, with each genuine branch-to-branch graph counted once. -/
 theorem pathClosure_eq_graph_sum (ι : W → V) (hι : Function.Injective ι)
     (χ : W → C) (S : Finset C) (f : Finset V → ℝ) {a b : V}
     (hab : a≠b) (ha : a∉Set.range ι) (hb : b∉Set.range ι) :
@@ -128,7 +128,7 @@ theorem pathClosure_eq_graph_sum (ι : W → V) (hι : Function.Injective ι)
     (fun l hl => liftedChains_avoid ι χ S hb hl)
     (fun l hl => liftedChains_nonempty ι χ S hl)
 
-/-- Equation (67), with the orientation factor derived from actual graph fibers. -/
+/-- The anchored-cycle closure formula, with the orientation factor derived from actual graph fibers. -/
 theorem rootedClosure_eq_graph_sum (ι : W → V) (hι : Function.Injective ι)
     (χ : W → C) (S : Finset C) (f : Finset V → ℝ) {a : V}
     (ha : a∉Set.range ι) (hS : 2≤S.card) :
@@ -150,7 +150,7 @@ theorem cycleWeight_map (ι : W → V) (f : Finset V → ℝ) (l : List W) :
   rw [List.head?_map, List.getLast?_map]
   cases l.head? <;> cases l.getLast? <;> rfl
 
-/-- Equation (69), with each outside cycle counted once across all roots and directions. -/
+/-- The outside-cycle closure formula, with each outside cycle counted once across all roots and directions. -/
 theorem outsideClosure_eq_graph_sum (ι : W → V) (hι : Function.Injective ι)
     (χ : W → C) (S : Finset C) (f : Finset V → ℝ) (hS : 3≤S.card) :
     outsideClosure χ (fun i j => f {ι i,ι j}) S =

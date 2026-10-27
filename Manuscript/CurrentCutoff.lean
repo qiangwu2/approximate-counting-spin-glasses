@@ -4,8 +4,7 @@ import SpinGlass.AlgorithmBudgets
 /-!
 # Current manuscript Lemma 5.1, stated in the requested MSE budget
 
-Source: the frozen 2026-10-22 `main-12-2-2.tex`, SHA-256
-`edbea067f5db10e67d31935a68778b0e1fcc786ed0e050ef06b1152b132642c6`.
+Source: Section 5.1 of the manuscript dated 27 October 2026.
 
 `A` is the manuscript's `C_star`; `CΛ` is `C_Lambda`. The fixed design
 constants are exactly `Cutoffs.gamma`, `Cutoffs.nu`, and

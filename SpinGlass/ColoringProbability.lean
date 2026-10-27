@@ -106,7 +106,7 @@ theorem exp_neg_le_probability_self {L : ℕ} (hL : 0 < L) :
       ring
     _ ≤ (L.factorial : ℝ) := (div_le_iff₀ he).mpr (by nlinarith)
 
-/-- The uniform bound (80) for every allowed outside support size. -/
+/-- The uniform inverse-inclusion bound for every allowed outside support size. -/
 theorem exp_neg_le_probability {L m : ℕ} (hL : 0 < L) (hm : m ≤ L) :
     Real.exp (-(L : ℝ)) ≤ probability L m :=
   le_trans (exp_neg_le_probability_self hL) (probability_antitone hL hm)
